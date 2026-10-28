@@ -1,0 +1,18 @@
+Omarchy Customizer
+Copyright (c) 2026 KamradSmeshnyavy
+
+Licensed under the GNU General Public License v3.0 (see LICENSE).
+
+This project includes or is based on:
+
+- Omarchy — https://github.com/basecamp/omarchy
+  MIT License, Copyright (c) David Heinemeier Hansson.
+  The overlay follows the structure and styling of Omarchy's own shell plugins
+  (qs.Commons, qs.Ui).
+
+- Hyprland animation presets in animations/ — see animations/CREDITS.md. They come from
+  projects licensed under GPL-3.0:
+    HyDE        https://github.com/HyDE-Project/HyDE
+    ML4W        https://github.com/mylinuxforwork/dotfiles
+    end-4       https://github.com/end-4/dots-hyprland
+  They were converted to Hyprland's Lua config format.
