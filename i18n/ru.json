@@ -110,7 +110,7 @@
   "Recoloring %s with lutgen…": "Перекрашиваю %s через lutgen…",
   "Reduce motion": "Меньше анимации",
   "Ripples on water": "Круги на воде",
-  "Saved %s": "Сохранено %s",
+  "Saved %s": "Сохранён: %s",
   "Saved: %s": "Сохранено: %s",
   "Scroll animation, ms": "Анимация перелистывания, мс",
   "Search %1…": "Поиск: %1…",
@@ -237,5 +237,13 @@
   "Accent colour": "Цвет акцента",
   "Screens": "Мониторы",
   "Dashboard: weather city": "Дашборд: город для погоды",
-  "Dashboard: temperature units": "Дашборд: единицы температуры"
+  "Dashboard: temperature units": "Дашборд: единицы температуры",
+  "💾 Save the current skin…": "💾 Сохранить текущий скин…",
+  "Save what is on the bar now as your own skin in %s — it shows up here with a ★.": "Сохранить то, что сейчас на баре, как свой скин в %s — он появится здесь со ★.",
+  "Your skin: %s": "Свой скин: %s",
+  "Save the bar skin": "Сохранить скин бара",
+  "Skin name (latin letters, digits, - and _):": "Имя скина (латиница, цифры, - и _):",
+  "Empty skin name": "Пустое имя скина",
+  "Skin %s already exists. Overwrite?": "Скин %s уже есть. Перезаписать?",
+  "Description (optional):": "Описание (необязательно):"
 }

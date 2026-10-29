@@ -34,6 +34,8 @@ ANIM_ACTIVE="$STATE_DIR/animations.lua"
 # Плагины берём по ссылкам в ~/.config/omarchy/plugins: они — сабмодули и могут жить где угодно.
 BAR_DIR="$HOME/.config/omarchy/plugins/kamradsmeshnyavy.bar"
 BAR_SKIN="$HOME/.config/omarchy/bar-skin.json"
+# Свои скины бара (Bar Skin → «Сохранить текущий»): по файлу на скин, как пресеты плагина.
+USER_SKINS="$HOME/.config/omarchy/bar-skins"
 # Экран блокировки (плагин kamradsmeshnyavy.lock): выбор и настройки — lock-design.json.
 LOCK_PLUGIN="$HOME/.config/omarchy/plugins/kamradsmeshnyavy.lock"
 LOCK_CFG="$HOME/.config/omarchy/lock-design.json"
@@ -169,8 +171,8 @@ current_skin() {
   [[ -s $BAR_SKIN ]] || { echo stock; return; }
   local f cur
   cur=$(skin_canon "$BAR_SKIN")
-  for f in "$BAR_DIR"/skins/*.json; do
-    [[ $(skin_canon "$f") == "$cur" ]] && { basename "$f" .json; return; }
+  for f in "$USER_SKINS"/*.json "$BAR_DIR"/skins/*.json; do
+    [[ -f $f && $(skin_canon "$f") == "$cur" ]] && { basename "$f" .json; return; }
   done
   echo custom
 }
@@ -629,8 +631,31 @@ PRUNE
 }
 
 bar_skin_preview() {
+  # Строка «Сохранить текущий» — показать то, что было на баре до превью.
+  if [[ $1 == save ]]; then set -- "$SKIN_BACKUP"; fi
+  [[ -f $1 ]] || return 0
   cp "$1" "$BAR_SKIN"
   set_transparent "$(jq -r '.transparent // false' "$1")"
+}
+
+# Сохранить скин, который был на баре до превью (снимок SKIN_BACKUP), в $USER_SKINS/<имя>.json.
+save_user_skin() {
+  local name file note
+  name=$(zenity --entry --title="$(t "Save the bar skin")" --text="$(t "Skin name (latin letters, digits, - and _):")" \
+    --entry-text="my-skin" 2>/dev/null) || return 0
+  name=$(tr '[:upper:] ' '[:lower:]-' <<<"$name" | tr -cd 'a-z0-9_-')
+  [[ -n $name ]] || { notify-send -u critical "Bar Skin" "$(t "Empty skin name")"; return 1; }
+  file="$USER_SKINS/$name.json"
+  if [[ -e $file ]]; then
+    zenity --question --title="$(t "Save the bar skin")" --text="$(t "Skin %s already exists. Overwrite?" "$name")" 2>/dev/null || return 0
+  fi
+  note=$(zenity --entry --title="$(t "Save the bar skin")" --text="$(t "Description (optional):")" 2>/dev/null) || note=""
+  mkdir -p "$USER_SKINS"
+  { [[ -s $SKIN_BACKUP ]] && cat "$SKIN_BACKUP" || echo '{}'; } |
+    jq --arg n "$note" 'with_entries(select(.key | test("^note(_[a-z]+)?$") | not)) | if $n == "" then . else {note: $n} + . end' >"$file.tmp" &&
+    mv "$file.tmp" "$file"
+  cp "$SKIN_BACKUP" "$BAR_SKIN" 2>/dev/null
+  notify-send -t 3000 "Bar Skin" "$(t "Saved %s" "$name")"
 }
 
 bar_skin_restore() {
@@ -669,6 +694,13 @@ list() {
     jq -r '.bar.transparent // false' "$SHELL_JSON" >"$TRANSPARENT_BACKUP"
     local f cur
     cur=$(current_skin)
+    printf '%s\t%s\t%s\t0\t%s\n' "$(t "💾 Save the current skin…")" "save" "$SKIN_BACKUP" \
+      "$(t "Save what is on the bar now as your own skin in %s — it shows up here with a ★." "${USER_SKINS/#$HOME/\~}")"
+    for f in "$USER_SKINS"/*.json; do
+      [[ -f $f ]] || continue
+      printf '%s\t%s\t%s\t%s\t%s\n' "★ $(basename "$f" .json)" "$f" "$f" \
+        "$([[ $(basename "$f" .json) == "$cur" ]] && echo 1 || echo 0)" "$(note_of "$f")"'\n\n'"$(t "Your skin: %s" "${f/#$HOME/\~}")"
+    done
     for f in "$BAR_DIR"/skins/*.json; do
       [[ -f $f ]] || continue
       printf '%s\t%s\t%s\t%s\t%s\n' "$(basename "$f" .json)" "$f" "$f" \
@@ -878,6 +910,7 @@ apply() {
     notify-send -t 2000 "Bar Layout" "$(t "Applied %s" "$(basename "$value" .json)")"
     ;;
   bar-skins)
+    if [[ $value == save ]]; then save_user_skin; exit 0; fi
     bar_skin_preview "$value"
     cp "$BAR_SKIN" "$SKIN_BACKUP"
     notify-send -t 2000 "Bar Skin" "$(t "Applied %s" "$(basename "$value" .json)")"

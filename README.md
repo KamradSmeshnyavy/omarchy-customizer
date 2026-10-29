@@ -11,7 +11,7 @@ plugins installed it also drives the bar, the lock screen, wallpaper transitions
 | Group | What's inside |
 |---|---|
 | **Desktop** | Theme (palette + preview), Wallpaper (categories as in the background switcher), Recolor (any image into the current theme with lutgen), Wallpaper FX* |
-| **Bar*** | Bar Skin, Bar Layout, Bar Tweaks — 41 settings, each with its default and a live preview |
+| **Bar*** | Bar Skin (plus “💾 Save the current skin” into `~/.config/omarchy/bar-skins/`, listed with ★), Bar Layout, Bar Tweaks — 41 settings, each with its default and a live preview |
 | **Windows** | Animations (17 presets), Transparency, Blur, Shader (CRT / TFT) — all live while you browse |
 | **Lock*** | Lock design with previews in the current theme, Lock Tweaks |
 | **Pickers*** | Theme / wallpaper picker style, thumbnail cache |
