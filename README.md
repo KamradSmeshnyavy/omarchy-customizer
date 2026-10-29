@@ -62,6 +62,9 @@ Each is a separate plugin; the Customizer finds them on its own.
 | [omarchy-wallpaper-fx](https://github.com/KamradSmeshnyavy/omarchy-wallpaper-fx) | **Wallpaper FX**: 24 transitions with a preview |
 | [omarchy-image-picker-styles](https://github.com/KamradSmeshnyavy/omarchy-image-picker-styles) | **Pickers** group: six picker styles |
 | [omarchy-launcher-skins](https://github.com/KamradSmeshnyavy/omarchy-launcher-skins) | full-screen launcher skins (configured in its own file) |
+| [omarchy-desktop-widgets](https://github.com/KamradSmeshnyavy/omarchy-desktop-widgets) | **Widgets** and **Dashboard** in Desktop: widgets, dashboard, power menu, overview |
+| [omarchy-edge-osd](https://github.com/KamradSmeshnyavy/omarchy-edge-osd) | **OSD** in Windows: volume and brightness at the screen edge |
+| [omarchy-drawer-notifications](https://github.com/KamradSmeshnyavy/omarchy-drawer-notifications) | **Notifications** in Windows: toasts in one panel by the bar |
 
 ### Optional programs
 

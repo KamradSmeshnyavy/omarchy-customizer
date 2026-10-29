@@ -62,6 +62,9 @@ o.bind("SUPER + SHIFT + T", "Omarchy Customizer", "omarchy-shell shell toggle ka
 | [omarchy-wallpaper-fx](https://github.com/KamradSmeshnyavy/omarchy-wallpaper-fx) | **Wallpaper FX**: 24 перехода с превью |
 | [omarchy-image-picker-styles](https://github.com/KamradSmeshnyavy/omarchy-image-picker-styles) | группа **Пикеры**: шесть стилей |
 | [omarchy-launcher-skins](https://github.com/KamradSmeshnyavy/omarchy-launcher-skins) | полноэкранные скины лаунчера (настраиваются своим файлом) |
+| [omarchy-desktop-widgets](https://github.com/KamradSmeshnyavy/omarchy-desktop-widgets) | **Виджеты** и **Дашборд** на Рабочем столе: виджеты, дашборд, меню выключения, обзор столов |
+| [omarchy-edge-osd](https://github.com/KamradSmeshnyavy/omarchy-edge-osd) | **OSD** в Окнах: громкость и яркость у края экрана |
+| [omarchy-drawer-notifications](https://github.com/KamradSmeshnyavy/omarchy-drawer-notifications) | **Уведомления** в Окнах: тосты в одной панели у бара |
 
 ### Необязательные программы
 
