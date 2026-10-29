@@ -245,5 +245,8 @@
   "Skin name (latin letters, digits, - and _):": "Имя скина (латиница, цифры, - и _):",
   "Empty skin name": "Пустое имя скина",
   "Skin %s already exists. Overwrite?": "Скин %s уже есть. Перезаписать?",
-  "Description (optional):": "Описание (необязательно):"
+  "Description (optional):": "Описание (необязательно):",
+  "Volume & brightness · edge or card": "Громкость и яркость · у края или карточкой",
+  "OSD: style (edge — slides out of the screen edge / frame)": "OSD: стиль (edge — выезжает из края экрана / рамки)",
+  "OSD: screen edge": "OSD: край экрана"
 }

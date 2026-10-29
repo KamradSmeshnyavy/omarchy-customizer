@@ -39,6 +39,7 @@ Item {
     { group: "win",  key: "anims",       icon: "󰔡", title: "Animations",   hint: "Live preview while you browse",       image: false, live: true },
     { group: "win",  key: "opacity",     icon: "󰂵", title: "Transparency", hint: "Live preview while you browse",        image: false, live: true },
     { group: "win",  key: "blur",        icon: "󰂷", title: "Blur",         hint: "Live preview while you browse",        image: false, live: true },
+    { group: "win",  key: "osd",         icon: "󰕾", title: "OSD",          hint: "Volume & brightness · edge or card",    image: false, live: false, tweak: true },
     { group: "win",  key: "shaders",     icon: "󰍹", title: "Shader",       hint: "CRT, TFT · scripts/crt-toggle.sh",      image: false, live: false },
     { group: "lock", key: "lock",        icon: "󰌾", title: "Lock",         hint: "p — show it live · T — previews",       image: true,  live: false },
     { group: "lock", key: "lock-tweaks", icon: "󰷛", title: "Lock Tweaks",  hint: "h l change · p — show",                 image: false, live: false, tweak: true },
