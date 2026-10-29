@@ -37,6 +37,7 @@ BAR_SKIN="$HOME/.config/omarchy/bar-skin.json"
 # Экран блокировки (плагин kamradsmeshnyavy.lock): выбор и настройки — lock-design.json.
 LOCK_PLUGIN="$HOME/.config/omarchy/plugins/kamradsmeshnyavy.lock"
 LOCK_CFG="$HOME/.config/omarchy/lock-design.json"
+WIDGET_CFG="$HOME/.config/omarchy/widgets.json"
 LOCK_USER_DIR="$HOME/.config/omarchy/lock-designs"
 LOCK_THUMBS="${XDG_CACHE_HOME:-$HOME/.cache}/omarchy-customizer/lock"
 # Переходы обоев (kamradsmeshnyavy.background) и вид пикера тем/обоев (kamradsmeshnyavy.image-picker).
@@ -314,9 +315,31 @@ PICKER_TWEAKS=(
   "autoCache|bool|false|Cache wallpapers on theme change"
 )
 
+# Виджеты рабочего стола (плагин kamradsmeshnyavy.widgets) — файл widgets.json.
+WIDGET_TWEAKS=(
+  "clock|bool|true|Clock"
+  "clockStyle|enum|big stacked terminal minimal|Clock: style"
+  "clockAnchor|enum|top-left top top-right left center right bottom-left bottom bottom-right|Clock: position"
+  "clock24|bool|true|Clock: 24-hour"
+  "clockSeconds|bool|false|Clock: seconds"
+  "media|bool|true|Now playing"
+  "mediaAnchor|enum|bottom-left bottom bottom-right top-left top top-right left center right|Now playing: position"
+  "visualizer|bool|true|Visualizer (cava)"
+  "visualizerStyle|enum|bars mirror wave|Visualizer: style"
+  "visualizerBars|num|8 128 4 48|Visualizer: bars"
+  "visualizerHeight|num|40 400 20 140|Visualizer: height"
+  "visualizerAlpha|num|0.05 1 0.05 0.45|Visualizer: opacity"
+  "visualizerIdle|bool|false|Visualizer: also without music"
+  "sysinfo|bool|true|System rings"
+  "sysinfoAnchor|enum|top-right left center right bottom-left bottom bottom-right top-left top|System rings: position"
+  "edgeMargin|num|0 200 8 56|Margin from the screen edges"
+  "tint|color|accent|Accent colour"
+  "screens|enum|all primary|Screens"
+)
+
 tweak_spec() {
   local t
-  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
+  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
   return 1
 }
 
@@ -326,6 +349,7 @@ tweak_file() {
   for t in "${LOCK_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$LOCK_CFG"; return; }; done
   for t in "${FX_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$FX_CFG"; return; }; done
   for t in "${PICKER_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$PICKER_CFG"; return; }; done
+  for t in "${WIDGET_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$WIDGET_CFG"; return; }; done
   echo "$BAR_SKIN"
 }
 
@@ -651,6 +675,7 @@ list() {
     ;;
   bar-tweaks) list_tweaks TWEAKS "$BAR_SKIN" ;;
   lock-tweaks) list_tweaks LOCK_TWEAKS "$LOCK_CFG" ;;
+  widgets) list_tweaks WIDGET_TWEAKS "$WIDGET_CFG" ;;
   wallpaper-fx)
     # Сначала настройки (строки tweak:<key>), потом эффекты.
     list_tweaks FX_TWEAKS "$FX_CFG" | awk -F'\t' 'BEGIN { OFS = "\t" } { $2 = "tweak:" $2; print }'
@@ -855,7 +880,7 @@ apply() {
     cp "$BAR_SKIN" "$SKIN_BACKUP"
     notify-send -t 2000 "Bar Skin" "$(t "Applied %s" "$(basename "$value" .json)")"
     ;;
-  bar-tweaks | lock-tweaks) tweak "$value" pick ;;
+  bar-tweaks | lock-tweaks | widgets) tweak "$value" pick ;;
   wallpaper-fx)
     if [[ $value == tweak:* ]]; then tweak "${value#tweak:}" pick; exit 0; fi
     TW_FILE="$FX_CFG"
@@ -1003,6 +1028,7 @@ available() {
   if [[ -f $BAR_DIR/manifest.json ]]; then printf '%s\n' bar-skins bar-layouts bar-tweaks; fi
   if [[ -f $LOCK_PLUGIN/manifest.json ]]; then printf '%s\n' lock lock-tweaks; fi
   [[ -f $plugins/kamradsmeshnyavy.background/manifest.json ]] && echo wallpaper-fx
+  [[ -f $plugins/kamradsmeshnyavy.widgets/manifest.json ]] && echo widgets
   [[ -f $plugins/kamradsmeshnyavy.image-picker/manifest.json ]] && echo theme-switcher
   command -v zenity >/dev/null && echo has:zenity
   return 0

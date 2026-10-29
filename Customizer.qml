@@ -32,6 +32,7 @@ Item {
     { group: "desk", key: "theme-walls", icon: "󰸉", title: "Wallpaper",    hint: "Categories as in SUPER+CTRL+SPACE",      image: true,  live: false },
     { group: "desk", key: "walls",       icon: "󰃣", title: "Recolor",      hint: "Lutgen · O folder · o image(s)",       image: true,  live: false },
     { group: "desk", key: "wallpaper-fx", icon: "󰗘", title: "Wallpaper FX", hint: "Wallpaper transitions · p — play",      image: false, live: false, fx: true },
+    { group: "desk", key: "widgets",     icon: "󰖲", title: "Widgets",      hint: "Desktop widgets · h l change",           image: false, live: false, tweak: true },
     { group: "bar",  key: "bar-skins",   icon: "󰉼", title: "Bar Skin",     hint: "Live preview · form, colors, glass",   image: false, live: true,  bar: true },
     { group: "bar",  key: "bar-layouts", icon: "󰕮", title: "Bar Layout",   hint: "Sections & edge · shell.json",         image: false, live: false, bar: true },
     { group: "bar",  key: "bar-tweaks",  icon: "󰒓", title: "Bar Tweaks",   hint: "h l / − + change · ⏎ custom color",    image: false, live: false, bar: true, tweak: true },
