@@ -36,6 +36,8 @@ BAR_DIR="$HOME/.config/omarchy/plugins/kamradsmeshnyavy.bar"
 BAR_SKIN="$HOME/.config/omarchy/bar-skin.json"
 # Свои скины бара (Bar Skin → «Сохранить текущий»): по файлу на скин, как пресеты плагина.
 USER_SKINS="$HOME/.config/omarchy/bar-skins"
+# Свои раскладки бара (Bar Layout → «Сохранить текущую»): вне плагина, чтобы не пачкать его репо.
+USER_LAYOUTS="$HOME/.config/omarchy/bar-layouts"
 # Экран блокировки (плагин kamradsmeshnyavy.lock): выбор и настройки — lock-design.json.
 LOCK_PLUGIN="$HOME/.config/omarchy/plugins/kamradsmeshnyavy.lock"
 LOCK_CFG="$HOME/.config/omarchy/lock-design.json"
@@ -188,8 +190,8 @@ layout_canon() { jq -S '{position: (.position // "top"), centerAnchor: (.centerA
 current_layout() {
   local f cur
   cur=$(jq '.bar' "$SHELL_JSON" | layout_canon)
-  for f in "$BAR_DIR"/layouts/*.json; do
-    [[ $(layout_canon "$f") == "$cur" ]] && { basename "$f" .json; return; }
+  for f in "$USER_LAYOUTS"/*.json "$BAR_DIR"/layouts/*.json; do
+    [[ -f $f && $(layout_canon "$f") == "$cur" ]] && { basename "$f" .json; return; }
   done
   echo custom
 }
@@ -798,6 +800,34 @@ save_user_skin() {
   notify-send -t 3000 "Bar Skin" "$(t "Saved %s" "$name")"
 }
 
+# Сохранить раскладку из shell.json в $USER_LAYOUTS/<имя>.json.
+save_user_layout() {
+  local name file
+  name=$(zenity --entry --title="$(t "Save the bar layout")" --text="$(t "Layout name (latin letters, digits, - and _):")" \
+    --entry-text="my-layout" 2>/dev/null) || return 0
+  name=$(tr '[:upper:] ' '[:lower:]-' <<<"$name" | tr -cd 'a-z0-9_-')
+  [[ -n $name ]] || { notify-send -u critical "Bar Layout" "$(t "Empty layout name")"; return 1; }
+  file="$USER_LAYOUTS/$name.json"
+  if [[ -e $file ]]; then
+    zenity --question --title="$(t "Save the bar layout")" --text="$(t "Layout %s already exists. Overwrite?" "$name")" 2>/dev/null || return 0
+  fi
+  mkdir -p "$USER_LAYOUTS"
+  jq --arg n "$(t "Saved %s" "$(date +%F)")" '.bar | {note: $n, position, centerAnchor, layout}' "$SHELL_JSON" >"$file.tmp" &&
+    mv "$file.tmp" "$file"
+  notify-send -t 3000 "Bar Layout" "$(t "Saved: %s" "$name")"
+}
+
+# Удалить свою раскладку (только из $USER_LAYOUTS) после подтверждения; файл уходит в корзину.
+delete_user_layout() {
+  local file=$1 name
+  [[ -f $file && $(dirname "$(realpath "$file")") == "$(realpath "$USER_LAYOUTS")" && $file == *.json ]] || {
+    notify-send -u critical "Bar Layout" "$(t "Only your own layouts (★) can be deleted")"; return 1; }
+  name=$(basename "$file" .json)
+  zenity --question --title="$(t "Delete the bar layout")" \
+    --text="$(t "Delete your layout %s? The file goes to the trash." "$name")" 2>/dev/null || return 0
+  gio trash "$file" && notify-send -t 3000 "Bar Layout" "$(t "Deleted %s" "$name")"
+}
+
 # Удалить свой скин (только из $USER_SKINS) после подтверждения; файл уходит в корзину (gio trash).
 delete_user_skin() {
   local file=$1 name
@@ -831,7 +861,13 @@ list() {
     local f cur
     cur=$(current_layout)
     printf '%s\t%s\t\t0\t%s\n' "$(t "💾 Save the current one as a preset…")" "save" \
-      "$(t "Write the layout from shell.json to layouts/<name>.json of the kamradsmeshnyavy.bar plugin.")"
+      "$(t "Save the layout from shell.json as your own in %s — it shows up here with a ★." "${USER_LAYOUTS/#$HOME/\~}")"
+    for f in "$USER_LAYOUTS"/*.json; do
+      [[ -f $f ]] || continue
+      printf '%s\t%s\t%s\t%s\t%s\n' "★ $(basename "$f" .json)" "$f" "$f" \
+        "$([[ $(basename "$f" .json) == "$cur" ]] && echo 1 || echo 0)" \
+        "$(note_of "$f")  ·  $(layout_summary "$f")"'\n\n'"$(t "Your layout: %s" "${f/#$HOME/\~}")"
+    done
     for f in "$BAR_DIR"/layouts/*.json; do
       [[ -f $f ]] || continue
       printf '%s\t%s\t%s\t%s\t%s\n' "$(basename "$f" .json)" "$f" "$f" \
@@ -1052,16 +1088,7 @@ apply() {
     notify-send -t 2000 "Animations" "$(t "Loaded: %s" "$(basename "$value" .lua)")"
     ;;
   bar-layouts)
-    if [[ $value == save ]]; then
-      local name
-      name=$(zenity --entry --title="Bar layout" --text="$(t "Preset name:")" 2>/dev/null) || exit 0
-      name=$(tr -cs 'A-Za-z0-9_-' '-' <<<"$name" | sed 's/^-*//; s/-*$//')
-      [[ -n $name ]] || exit 0
-      jq --arg n "$(t "Saved %s" "$(date +%F)")" '.bar | {note: $n, position, centerAnchor, layout}' "$SHELL_JSON" \
-        >"$BAR_DIR/layouts/$name.json"
-      notify-send -t 2000 "Bar Layout" "$(t "Saved: %s" "$name")"
-      exit 0
-    fi
+    if [[ $value == save ]]; then save_user_layout; exit 0; fi
     # shell.json перечитывается на лету, рестарт шелла не нужен (он убил бы и overlay).
     # Остальное (plugins, idle, bar.id, transparent) не трогаем.
     shell_edit --slurpfile p "$value" '.bar += ($p[0] | del(.note))'
@@ -1248,6 +1275,7 @@ tweak)
   ;;
 lock-preview) omarchy-shell lock previewDesign "${2:-}" >/dev/null ;;
 skin-delete) delete_user_skin "${2:-}" ;;
+layout-delete) delete_user_layout "${2:-}" ;;
 lock-thumbs) lock_thumbs ;;
 fx-replay) omarchy-shell background replay >/dev/null ;;
 picker-cache) picker_cache ;;
