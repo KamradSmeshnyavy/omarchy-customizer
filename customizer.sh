@@ -335,6 +335,8 @@ WIDGET_TWEAKS=(
   "edgeMargin|num|0 200 8 56|Margin from the screen edges"
   "tint|color|accent|Accent colour"
   "screens|enum|all primary|Screens"
+  "weatherCity|text||Dashboard: weather city"
+  "weatherUnits|enum|celsius fahrenheit|Dashboard: temperature units"
 )
 
 tweak_spec() {

@@ -235,5 +235,7 @@
   "System rings: position": "Кольца системы: положение",
   "Margin from the screen edges": "Отступ от краёв экрана",
   "Accent colour": "Цвет акцента",
-  "Screens": "Мониторы"
+  "Screens": "Мониторы",
+  "Dashboard: weather city": "Дашборд: город для погоды",
+  "Dashboard: temperature units": "Дашборд: единицы температуры"
 }
