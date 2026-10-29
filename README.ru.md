@@ -68,6 +68,7 @@ o.bind("SUPER + SHIFT + T", "Omarchy Customizer", "omarchy-shell shell toggle ka
 - `libvips` — быстрые миниатюры тем и обоев (`omarchy pkg add libvips`)
 - `zenity` — диалоги выбора цвета, текста и файла в твиках
 - `lutgen` — Recolor (виден, только когда есть и lutgen, и zenity)
+- `omarchy-wallpaper-theme` в `PATH` + `matugen` — строки «🎨 Тема из обоев» в **Теме**: тема `dynamic` в стиле Material You из текущих обоев ([скрипт](https://github.com/KamradSmeshnyavy/dotfiles/blob/main/omarchy-themes/scripts/omarchy-wallpaper-theme))
 
 ## Клавиши
 
