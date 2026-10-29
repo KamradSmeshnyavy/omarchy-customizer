@@ -253,5 +253,8 @@
   "Only your own skins (★) can be deleted": "Удалять можно только свои скины (★)",
   "Delete the bar skin": "Удалить скин бара",
   "Delete your skin %s? The file goes to the trash.": "Удалить свой скин %s? Файл уйдёт в корзину.",
-  "Deleted %s": "Удалён: %s"
+  "Deleted %s": "Удалён: %s",
+  "OSD & Notifications": "OSD и уведомления",
+  "Volume, brightness, toasts · edge or card": "Громкость, яркость, тосты · у края или карточками",
+  "Notifications: style (drawer — one panel glued to the bar and the edge)": "Уведомления: стиль (drawer — одна панель, прилипшая к бару и краю)"
 }

@@ -41,6 +41,7 @@ LOCK_PLUGIN="$HOME/.config/omarchy/plugins/kamradsmeshnyavy.lock"
 LOCK_CFG="$HOME/.config/omarchy/lock-design.json"
 WIDGET_CFG="$HOME/.config/omarchy/widgets.json"
 OSD_CFG="$HOME/.config/omarchy/osd.json"
+NOTIFY_CFG="$HOME/.config/omarchy/notify-style.json"
 LOCK_USER_DIR="$HOME/.config/omarchy/lock-designs"
 LOCK_THUMBS="${XDG_CACHE_HOME:-$HOME/.cache}/omarchy-customizer/lock"
 # Переходы обоев (kamradsmeshnyavy.background) и вид пикера тем/обоев (kamradsmeshnyavy.image-picker).
@@ -347,10 +348,14 @@ OSD_TWEAKS=(
   "osdStyle|enum|edge stock|OSD: style (edge — slides out of the screen edge / frame)"
   "osdSide|enum|right left|OSD: screen edge"
 )
+# Уведомления (клон kamradsmeshnyavy.notifications): общая подложка у бара или стоковые карточки.
+NOTIFY_TWEAKS=(
+  "notifyStyle|enum|drawer stock|Notifications: style (drawer — one panel glued to the bar and the edge)"
+)
 
 tweak_spec() {
   local t
-  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}" "${OSD_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
+  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}" "${OSD_TWEAKS[@]}" "${NOTIFY_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
   return 1
 }
 
@@ -362,6 +367,7 @@ tweak_file() {
   for t in "${PICKER_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$PICKER_CFG"; return; }; done
   for t in "${WIDGET_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$WIDGET_CFG"; return; }; done
   for t in "${OSD_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$OSD_CFG"; return; }; done
+  for t in "${NOTIFY_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$NOTIFY_CFG"; return; }; done
   echo "$BAR_SKIN"
 }
 
@@ -729,7 +735,11 @@ list() {
   bar-tweaks) list_tweaks TWEAKS "$BAR_SKIN" ;;
   lock-tweaks) list_tweaks LOCK_TWEAKS "$LOCK_CFG" ;;
   widgets) list_tweaks WIDGET_TWEAKS "$WIDGET_CFG" ;;
-  osd) list_tweaks OSD_TWEAKS "$OSD_CFG" ;;
+  osd)
+    [[ -f $HOME/.config/omarchy/plugins/kamradsmeshnyavy.osd/manifest.json ]] && list_tweaks OSD_TWEAKS "$OSD_CFG"
+    [[ -f $HOME/.config/omarchy/plugins/kamradsmeshnyavy.notifications/manifest.json ]] && list_tweaks NOTIFY_TWEAKS "$NOTIFY_CFG"
+    return 0
+    ;;
   wallpaper-fx)
     # Сначала настройки (строки tweak:<key>), потом эффекты.
     list_tweaks FX_TWEAKS "$FX_CFG" | awk -F'\t' 'BEGIN { OFS = "\t" } { $2 = "tweak:" $2; print }'
@@ -1084,7 +1094,7 @@ available() {
   if [[ -f $LOCK_PLUGIN/manifest.json ]]; then printf '%s\n' lock lock-tweaks; fi
   [[ -f $plugins/kamradsmeshnyavy.background/manifest.json ]] && echo wallpaper-fx
   [[ -f $plugins/kamradsmeshnyavy.widgets/manifest.json ]] && echo widgets
-  [[ -f $plugins/kamradsmeshnyavy.osd/manifest.json ]] && echo osd
+  [[ -f $plugins/kamradsmeshnyavy.osd/manifest.json || -f $plugins/kamradsmeshnyavy.notifications/manifest.json ]] && echo osd
   [[ -f $plugins/kamradsmeshnyavy.image-picker/manifest.json ]] && echo theme-switcher
   command -v zenity >/dev/null && echo has:zenity
   return 0
