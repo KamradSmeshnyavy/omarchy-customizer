@@ -47,17 +47,19 @@ Item {
   readonly property bool transparent: bar && bar.transparent === true
   readonly property string shape: {
     var s = String(val("shape", "full"))
-    if (["full", "floating", "pill", "islands", "notch", "underline", "hug"].indexOf(s) === -1) s = "full"
+    if (["full", "floating", "pill", "islands", "notch", "underline", "hug", "frame"].indexOf(s) === -1) s = "full"
     if (vertical && s === "hug") return "full"
-    return vertical && s !== "full" ? "floating" : s
+    return vertical && s !== "full" && s !== "frame" ? "floating" : s
   }
   readonly property int barSize: num("height", 0) > 0 ? num("height", 0) : (vertical ? Style.bar.sizeVertical : Style.bar.sizeHorizontal)
-  readonly property int gap: shape === "full" || shape === "underline" || shape === "notch" || shape === "hug" ? 0 : num("gap", 0)
-  readonly property real margin: shape === "full" || shape === "underline" || shape === "hug" ? 0 : num("margin", 0) * scaleX
+  readonly property int gap: shape === "full" || shape === "underline" || shape === "notch" || shape === "hug" || shape === "frame" ? 0 : num("gap", 0)
+  readonly property real margin: shape === "full" || shape === "underline" || shape === "hug" || shape === "frame" ? 0 : num("margin", 0) * scaleX
   readonly property real widthFraction: shape === "pill" || shape === "notch" || shape === "floating"
     ? Math.max(0.2, Math.min(1, num("width", 1))) : 1
-  readonly property real radius: shape === "pill" ? barSize / 2 : shape === "hug" ? 0 : Math.max(0, Math.min(num("radius", 0), barSize / 2))
+  readonly property real radius: shape === "pill" ? barSize / 2 : shape === "hug" || shape === "frame" ? 0 : Math.max(0, Math.min(num("radius", 0), barSize / 2))
   readonly property int hugRadius: shape === "hug" ? Math.max(8, num("radius", 0)) : 0
+  readonly property int frameWidth: Math.max(1, num("frameWidth", 8))
+  readonly property int frameRadius: Math.max(8, num("radius", 0))
   readonly property string moduleStyle: String(val("moduleStyle", "plain"))
   readonly property color moduleColor: alpha(col(val("moduleBackground", "foreground"), Color.foreground), num("moduleAlpha", 0.08))
   readonly property bool glow: val("glow", false) === true && shape !== "full" && shape !== "hug"
@@ -197,6 +199,39 @@ Item {
           PathLine { x: corner.r; y: 0 }
           PathArc { x: 0; y: corner.r; radiusX: corner.r; radiusY: corner.r; direction: PathArc.Counterclockwise }
           PathLine { x: 0; y: 0 }
+        }
+      }
+    }
+
+    // frame: рамка по краям превью и скруглённые углы рабочей области. Превью — полоса
+    // экрана у бара, поэтому дальний край рамки за кадром.
+    Shape {
+      id: mockFrame
+      visible: mock.shape === "frame" && !mock.transparent
+      anchors.fill: parent
+      preferredRendererType: Shape.CurveRenderer
+      readonly property real far: mock.frameRadius + 1
+      function inset(edge) {
+        if (edge === mock.position) return mock.barSize
+        var opposite = { top: "bottom", bottom: "top", left: "right", right: "left" }
+        return opposite[edge] === mock.position ? -far : mock.frameWidth
+      }
+      ShapePath {
+        fillColor: mock.fill
+        fillRule: ShapePath.OddEvenFill
+        strokeWidth: -1
+        PathRectangle {
+          x: mock.position === "left" ? mock.barSize : 0
+          y: mock.position === "top" ? mock.barSize : 0
+          width: mock.width - (mock.vertical ? mock.barSize : 0)
+          height: mock.height - (mock.vertical ? 0 : mock.barSize)
+        }
+        PathRectangle {
+          x: mockFrame.inset("left")
+          y: mockFrame.inset("top")
+          width: mock.width - mockFrame.inset("left") - mockFrame.inset("right")
+          height: mock.height - mockFrame.inset("top") - mockFrame.inset("bottom")
+          radius: mock.frameRadius
         }
       }
     }

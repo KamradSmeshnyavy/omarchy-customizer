@@ -199,12 +199,13 @@ layout_summary() {
 # Параметры Bar Tweaks: ключ|тип|аргументы|подпись. Дефолты совпадают с BarSkin.qml:
 # у num последнее число, у enum первое слово, у color/bool — сами аргументы.
 TWEAKS=(
-  "shape|enum|full floating pill islands notch underline hug|Shape"
+  "shape|enum|full floating pill islands notch underline hug frame|Shape"
   "height|num|0 48 2 0|Height"
   "gap|num|0 24 2 0|Gap from the screen edge"
   "margin|num|0 300 10 0|Left/right margins"
   "width|num|0.3 1 0.05 1|Width (floating/pill/notch)"
-  "radius|num|0 24 2 0|Radius (hug: corners)"
+  "radius|num|0 24 2 0|Radius (hug, frame: corners)"
+  "frameWidth|num|1 24 1 8|Frame: width around the screen"
   "padding|num|-1 40 2 -1|Module padding"
   "islandGap|num|0 20 2 0|Island padding"
   "background|color|bar|Background"
@@ -454,7 +455,8 @@ bar_tweak_note() {
   gap) need="floating pill islands" ;;
   margin) need="floating pill islands notch" ;;
   width) need="floating pill notch" ;;
-  radius) need="floating islands notch hug" ;;
+  radius) need="floating islands notch hug frame" ;;
+  frameWidth) need="frame" ;;
   islandGap) need="islands" ;;
   shadow | glow) need="floating pill islands notch underline" ;;
   compact) return 0 ;;

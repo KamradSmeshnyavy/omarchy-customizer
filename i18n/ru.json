@@ -105,7 +105,7 @@
   "Previews updated": "Превью обновлены",
   "Radial blur with zoom": "Радиальное размытие с приближением",
   "Radial sweep, like a clock hand": "Радиальная развёртка, как стрелка часов",
-  "Radius (hug: corners)": "Скругление (hug: углы)",
+  "Radius (hug, frame: corners)": "Скругление (hug, frame: углы)",
   "Recoloring %s images from %s with lutgen…": "Перекрашиваю %s картинок из %s через lutgen…",
   "Recoloring %s with lutgen…": "Перекрашиваю %s через lutgen…",
   "Reduce motion": "Меньше анимации",
@@ -216,5 +216,6 @@
   "🎨 Theme from wallpaper: %s": "🎨 Тема из обоев: %s",
   "Build the “dynamic” theme from the current wallpaper with matugen (Material You) and apply it.": "Собрать тему «dynamic» из текущих обоев через matugen (Material You) и применить её.",
   "Building a theme from the wallpaper…": "Собираю тему из обоев…",
-  "matugen failed": "matugen не смог собрать тему"
+  "matugen failed": "matugen не смог собрать тему",
+  "Frame: width around the screen": "Рамка: толщина по краям экрана"
 }

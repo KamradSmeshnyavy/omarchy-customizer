@@ -57,7 +57,7 @@ o.bind("SUPER + SHIFT + T", "Omarchy Customizer", "omarchy-shell shell toggle ka
 
 | Плагин | Что добавляет в Customizer |
 |---|---|
-| [omarchy-bar-skins](https://github.com/KamradSmeshnyavy/omarchy-bar-skins) | группа **Бар**: 18 скинов, 9 раскладок, compact, стили workspaces |
+| [omarchy-bar-skins](https://github.com/KamradSmeshnyavy/omarchy-bar-skins) | группа **Бар**: 19 скинов, 9 раскладок, compact, стили workspaces |
 | [omarchy-lock-designs](https://github.com/KamradSmeshnyavy/omarchy-lock-designs) | группа **Блокировка**: 21 дизайн |
 | [omarchy-wallpaper-fx](https://github.com/KamradSmeshnyavy/omarchy-wallpaper-fx) | **Wallpaper FX**: 24 перехода с превью |
 | [omarchy-image-picker-styles](https://github.com/KamradSmeshnyavy/omarchy-image-picker-styles) | группа **Пикеры**: шесть стилей |

@@ -57,7 +57,7 @@ Each is a separate plugin; the Customizer finds them on its own.
 
 | Plugin | Adds to the Customizer |
 |---|---|
-| [omarchy-bar-skins](https://github.com/KamradSmeshnyavy/omarchy-bar-skins) | **Bar** group: 18 skins, 9 layouts, compact mode, workspace styles |
+| [omarchy-bar-skins](https://github.com/KamradSmeshnyavy/omarchy-bar-skins) | **Bar** group: 19 skins, 9 layouts, compact mode, workspace styles |
 | [omarchy-lock-designs](https://github.com/KamradSmeshnyavy/omarchy-lock-designs) | **Lock** group: 21 designs |
 | [omarchy-wallpaper-fx](https://github.com/KamradSmeshnyavy/omarchy-wallpaper-fx) | **Wallpaper FX**: 24 transitions with a preview |
 | [omarchy-image-picker-styles](https://github.com/KamradSmeshnyavy/omarchy-image-picker-styles) | **Pickers** group: six picker styles |
