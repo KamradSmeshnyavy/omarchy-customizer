@@ -256,5 +256,8 @@
   "Deleted %s": "Удалён: %s",
   "OSD & Notifications": "OSD и уведомления",
   "Volume, brightness, toasts · edge or card": "Громкость, яркость, тосты · у края или карточками",
-  "Notifications: style (drawer — one panel glued to the bar and the edge)": "Уведомления: стиль (drawer — одна панель, прилипшая к бару и краю)"
+  "Notifications: style (drawer — one panel glued to the bar and the edge)": "Уведомления: стиль (drawer — одна панель, прилипшая к бару и краю)",
+  "Volume, brightness, toasts, sounds": "Громкость, яркость, тосты, звуки",
+  "Sounds: on": "Звуки: включены",
+  "Sounds: volume": "Звуки: громкость"
 }

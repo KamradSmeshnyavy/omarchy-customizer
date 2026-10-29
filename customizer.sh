@@ -42,6 +42,7 @@ LOCK_CFG="$HOME/.config/omarchy/lock-design.json"
 WIDGET_CFG="$HOME/.config/omarchy/widgets.json"
 OSD_CFG="$HOME/.config/omarchy/osd.json"
 NOTIFY_CFG="$HOME/.config/omarchy/notify-style.json"
+SOUND_CFG="$HOME/.config/omarchy/sounds.json"
 LOCK_USER_DIR="$HOME/.config/omarchy/lock-designs"
 LOCK_THUMBS="${XDG_CACHE_HOME:-$HOME/.cache}/omarchy-customizer/lock"
 # Переходы обоев (kamradsmeshnyavy.background) и вид пикера тем/обоев (kamradsmeshnyavy.image-picker).
@@ -352,10 +353,15 @@ OSD_TWEAKS=(
 NOTIFY_TWEAKS=(
   "notifyStyle|enum|drawer stock|Notifications: style (drawer — one panel glued to the bar and the edge)"
 )
+# Звуки интерфейса (omarchy-sound из dotfiles): уведомления, громкость, вход, низкий заряд — sounds.json.
+SOUND_TWEAKS=(
+  "sounds|bool|true|Sounds: on"
+  "soundVolume|num|0.1 1 0.1 0.6|Sounds: volume"
+)
 
 tweak_spec() {
   local t
-  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}" "${OSD_TWEAKS[@]}" "${NOTIFY_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
+  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}" "${OSD_TWEAKS[@]}" "${NOTIFY_TWEAKS[@]}" "${SOUND_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
   return 1
 }
 
@@ -368,6 +374,7 @@ tweak_file() {
   for t in "${WIDGET_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$WIDGET_CFG"; return; }; done
   for t in "${OSD_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$OSD_CFG"; return; }; done
   for t in "${NOTIFY_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$NOTIFY_CFG"; return; }; done
+  for t in "${SOUND_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$SOUND_CFG"; return; }; done
   echo "$BAR_SKIN"
 }
 
@@ -738,6 +745,7 @@ list() {
   osd)
     [[ -f $HOME/.config/omarchy/plugins/kamradsmeshnyavy.osd/manifest.json ]] && list_tweaks OSD_TWEAKS "$OSD_CFG"
     [[ -f $HOME/.config/omarchy/plugins/kamradsmeshnyavy.notifications/manifest.json ]] && list_tweaks NOTIFY_TWEAKS "$NOTIFY_CFG"
+    command -v omarchy-sound >/dev/null && list_tweaks SOUND_TWEAKS "$SOUND_CFG"
     return 0
     ;;
   wallpaper-fx)
