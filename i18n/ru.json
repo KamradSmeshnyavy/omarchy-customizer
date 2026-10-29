@@ -248,5 +248,10 @@
   "Description (optional):": "Описание (необязательно):",
   "Volume & brightness · edge or card": "Громкость и яркость · у края или карточкой",
   "OSD: style (edge — slides out of the screen edge / frame)": "OSD: стиль (edge — выезжает из края экрана / рамки)",
-  "OSD: screen edge": "OSD: край экрана"
+  "OSD: screen edge": "OSD: край экрана",
+  "delete skin": "удалить скин",
+  "Only your own skins (★) can be deleted": "Удалять можно только свои скины (★)",
+  "Delete the bar skin": "Удалить скин бара",
+  "Delete your skin %s? The file goes to the trash.": "Удалить свой скин %s? Файл уйдёт в корзину.",
+  "Deleted %s": "Удалён: %s"
 }

@@ -666,6 +666,17 @@ save_user_skin() {
   notify-send -t 3000 "Bar Skin" "$(t "Saved %s" "$name")"
 }
 
+# Удалить свой скин (только из $USER_SKINS) после подтверждения; файл уходит в корзину (gio trash).
+delete_user_skin() {
+  local file=$1 name
+  [[ -f $file && $(dirname "$(realpath "$file")") == "$(realpath "$USER_SKINS")" && $file == *.json ]] || {
+    notify-send -u critical "Bar Skin" "$(t "Only your own skins (★) can be deleted")"; return 1; }
+  name=$(basename "$file" .json)
+  zenity --question --title="$(t "Delete the bar skin")" \
+    --text="$(t "Delete your skin %s? The file goes to the trash." "$name")" 2>/dev/null || return 0
+  gio trash "$file" && notify-send -t 3000 "Bar Skin" "$(t "Deleted %s" "$name")"
+}
+
 bar_skin_restore() {
   # Overlay зовёт это только после превью, так что снимок свежий.
   [[ -f $SKIN_BACKUP ]] && cp "$SKIN_BACKUP" "$BAR_SKIN"
@@ -1095,6 +1106,7 @@ bar-skins-preview) bar_skin_preview "$2" ;;
 bar-skins-restore) bar_skin_restore ;;
 tweak) tweak "$2" "${3:-+}" ;;
 lock-preview) omarchy-shell lock previewDesign "${2:-}" >/dev/null ;;
+skin-delete) delete_user_skin "${2:-}" ;;
 lock-thumbs) lock_thumbs ;;
 fx-replay) omarchy-shell background replay >/dev/null ;;
 picker-cache) picker_cache ;;

@@ -566,6 +566,18 @@ Item {
     Quickshell.execDetached([root.script, "apply", key, value])
   }
 
+  // Bar Skin: удалить свой скин (★, файл в ~/.config/omarchy/bar-skins) — с подтверждением
+  // в customizer.sh. Overlay закрывается первым (откатывая превью), иначе диалог окажется под ним.
+  function isUserSkin(row) {
+    return row !== null && root.category.key === "bar-skins" && /\/\.config\/omarchy\/bar-skins\/[^\/]+\.json$/.test(row.value)
+  }
+  function deleteSkin() {
+    var row = root.selectedRow
+    if (!root.isUserSkin(row)) return
+    root.dismiss()
+    Quickshell.execDetached([root.script, "skin-delete", row.value])
+  }
+
   // Lock: показать дизайн по-настоящему (окно превью экрана блокировки поверх
   // всего). Overlay закрывается первым, иначе превью окажется под ним.
   function previewLock() {
@@ -639,6 +651,7 @@ Item {
     var h = [["j k", "move"], ["⏎", "apply"], ["/", "search"], ["h", "back"]]
     if (root.category.key !== "walls") h.push(["r", "random"])
     else h.push(["o O", "pick"])
+    if (root.isUserSkin(root.selectedRow)) h.push(["D", "delete skin"])
     if (!root.category.image && !root.category.bar && root.category.key !== "opacity" && root.category.key !== "blur") h.push(["J K", "scroll"])
     h.push(["?", "keys"])
     return h
@@ -1011,6 +1024,7 @@ Item {
           else if (t === "?") root.helpOpen = true
           else if (t === "q") root.dismiss()
           else if (t === "r") root.randomPick()
+          else if (t === "D" && root.category.key === "bar-skins") root.deleteSkin()
           else if (root.category.key === "walls" && t === "o") root.run("pick-files")
           else if (root.category.key === "walls" && t === "O") root.run("pick-dir")
           else if (t >= "1" && t <= String(root.groups.length)) root.setGroup(Number(t) - 1)
