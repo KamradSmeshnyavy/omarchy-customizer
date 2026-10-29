@@ -205,6 +205,7 @@ layout_summary() {
 # Параметры Bar Tweaks: ключ|тип|аргументы|подпись. Дефолты совпадают с BarSkin.qml:
 # у num последнее число, у enum первое слово, у color/bool — сами аргументы.
 TWEAKS=(
+  "#Shape & size"
   "shape|enum|full floating pill islands notch underline hug frame|Shape"
   "height|num|0 48 2 0|Height"
   "gap|num|0 24 2 0|Gap from the screen edge"
@@ -214,6 +215,7 @@ TWEAKS=(
   "frameWidth|num|1 24 1 8|Frame: width around the screen"
   "padding|num|-1 40 2 -1|Module padding"
   "islandGap|num|0 20 2 0|Island padding"
+  "#Colours"
   "background|color|bar|Background"
   "backgroundAlpha|num|-1 1 0.05 -1|Background alpha"
   "gradient|color|none|Gradient: second colour"
@@ -222,15 +224,18 @@ TWEAKS=(
   "borderAlpha|num|0 1 0.1 1|Border alpha"
   "text|color|bar|Text"
   "active|color|bar|Attention colour (recording, updates)"
+  "#Modules"
   "moduleStyle|enum|plain pills hover|Module background"
   "moduleBackground|color|foreground|Module background colour"
   "moduleAlpha|num|0 1 0.02 0.08|Module background alpha"
   "spacing|num|0 20 2 0|Gap between modules"
+  "font|font||Font"
+  "#Effects"
   "shadow|bool|false|Shadow"
   "glow|bool|false|Glow in the border colour"
   "autoHide|bool|false|Auto-hide (slides out on hover)"
   "transparent|bool|false|Transparent (stock, text over the wallpaper)"
-  "font|font||Font"
+  "#Workspaces"
   "wsLabelStyle|enum|omarchy numbers circled circled-filled circled-sans circled-sans-filled parens fullwidth superscript roman roman-small kanji greek cyrillic braille dots squares diamonds stars triangles hearts hexagons bars none|Workspaces: labels"
   "wsWindowIcons|bool|false|Workspaces: window icons"
   "wsIconStyle|enum|color mono tinted accent bubble faded glyph letter dots count|Workspaces: window icon style"
@@ -240,6 +245,7 @@ TWEAKS=(
   "wsShowEmpty|bool|true|Workspaces: show empty"
   "wsActivePill|bool|false|Workspaces: pill under the active one"
   "wsActiveColor|color|default|Workspaces: active colour"
+  "#Compact"
   "compact|enum|off single fullscreen always|Compact: when to shrink"
   "compactHeight|num|0 40 2 22|Compact: height"
   "compactModules|enum|essentials all center minimal|Compact: visible modules"
@@ -322,46 +328,94 @@ PICKER_TWEAKS=(
 
 # Виджеты рабочего стола (плагин kamradsmeshnyavy.widgets) — файл widgets.json.
 WIDGET_TWEAKS=(
+  "#Clock"
   "clock|bool|true|Clock"
   "clockStyle|enum|big stacked terminal minimal|Clock: style"
   "clockAnchor|enum|top-left top top-right left center right bottom-left bottom bottom-right|Clock: position"
   "clock24|bool|true|Clock: 24-hour"
   "clockSeconds|bool|false|Clock: seconds"
+  "#Now playing"
   "media|bool|true|Now playing"
   "mediaAnchor|enum|bottom-left bottom bottom-right top-left top top-right left center right|Now playing: position"
+  "#Visualizer"
   "visualizer|bool|true|Visualizer (cava)"
   "visualizerStyle|enum|bars mirror wave|Visualizer: style"
   "visualizerBars|num|8 128 4 48|Visualizer: bars"
   "visualizerHeight|num|40 400 20 140|Visualizer: height"
   "visualizerAlpha|num|0.05 1 0.05 0.45|Visualizer: opacity"
   "visualizerIdle|bool|false|Visualizer: also without music"
+  "#System rings"
   "sysinfo|bool|true|System rings"
   "sysinfoAnchor|enum|top-right left center right bottom-left bottom bottom-right top-left top|System rings: position"
+  "#General"
   "edgeMargin|num|0 200 8 56|Margin from the screen edges"
   "tint|color|accent|Accent colour"
   "screens|enum|all primary|Screens"
-  "weatherCity|text||Dashboard: weather city"
-  "weatherUnits|enum|celsius fahrenheit|Dashboard: temperature units"
 )
 
 # OSD (клон kamradsmeshnyavy.osd): громкость/яркость у края экрана или стоковой карточкой — osd.json.
 OSD_TWEAKS=(
+  "#Style"
   "osdStyle|enum|edge stock|OSD: style (edge — slides out of the screen edge / frame)"
+  "osdFollowBar|bool|true|Follow the bar style (colour, alpha, border, radius)"
+  "osdAttach|enum|auto attached floating|Attach to the edge (auto — only to a solid bar / frame)"
+  "osdBackground|color|background|Background"
+  "osdAlpha|num|0.3 1 0.05 0.94|Background alpha"
+  "osdRadius|num|0 40 2 18|Corner radius"
+  "#Size & position"
   "osdSide|enum|right left|OSD: screen edge"
+  "osdAlign|enum|center top bottom|Position along the edge"
+  "osdSize|enum|normal compact large|Size"
+  "#Behaviour"
+  "osdShowValue|bool|true|Show the percentage"
+  "osdTimeout|num|-1 5000 100 -1|Hide after, ms"
 )
 # Уведомления (клон kamradsmeshnyavy.notifications): общая подложка у бара или стоковые карточки.
 NOTIFY_TWEAKS=(
+  "#Style"
   "notifyStyle|enum|drawer stock|Notifications: style (drawer — one panel glued to the bar and the edge)"
+  "notifyFollowBar|bool|true|Follow the bar style (colour, alpha, border, radius)"
+  "notifyAttach|enum|auto attached floating|Attach to the bar (auto — only to a solid bar at the edge)"
+  "notifyBackground|color|background|Background"
+  "notifyAlpha|num|0.3 1 0.05 0.94|Background alpha"
+  "notifyRadius|num|0 40 2 18|Corner radius"
+  "notifyCards|enum|flat bordered|Cards"
+  "#Size & position"
+  "notifyCorner|enum|top-right top-left top-center|Corner"
+  "notifyWidth|num|280 600 20 380|Width"
+  "notifyMax|num|0 10 1 0|Visible at once (0 — all)"
 )
 # Звуки интерфейса (omarchy-sound из dotfiles): уведомления, громкость, вход, низкий заряд — sounds.json.
 SOUND_TWEAKS=(
+  "#Sounds"
   "sounds|bool|true|Sounds: on"
   "soundVolume|num|0.1 1 0.1 0.6|Sounds: volume"
+)
+# Дашборд (плагин kamradsmeshnyavy.widgets) — тот же widgets.json.
+DASH_TWEAKS=(
+  "#Look"
+  "dashFollowBar|bool|true|Follow the bar style (colour, alpha, border, radius)"
+  "dashAttach|enum|auto attached floating|Attach to the bar (auto — only to a solid bar at the edge)"
+  "dashBackground|color|background|Background"
+  "dashAlpha|num|0.3 1 0.05 0.94|Background alpha"
+  "dashRadius|num|0 40 2 22|Corner radius"
+  "dashBorder|bool|false|Border"
+  "#Blocks"
+  "dashMedia|bool|true|Player"
+  "dashCalendar|bool|true|Calendar"
+  "dashWeather|bool|true|Weather"
+  "dashStats|bool|true|CPU / RAM graphs"
+  "#Weather"
+  "weatherCity|text||Weather city"
+  "weatherUnits|enum|celsius fahrenheit|Temperature units"
+  "#Animation"
+  "dashAnimation|enum|grow slide fade|Animation"
+  "dashDuration|num|100 1000 20 340|Animation, ms"
 )
 
 tweak_spec() {
   local t
-  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}" "${OSD_TWEAKS[@]}" "${NOTIFY_TWEAKS[@]}" "${SOUND_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
+  for t in "${TWEAKS[@]}" "${LOCK_TWEAKS[@]}" "${FX_TWEAKS[@]}" "${PICKER_TWEAKS[@]}" "${WIDGET_TWEAKS[@]}" "${OSD_TWEAKS[@]}" "${NOTIFY_TWEAKS[@]}" "${SOUND_TWEAKS[@]}" "${DASH_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$t"; return; }; done
   return 1
 }
 
@@ -371,7 +425,7 @@ tweak_file() {
   for t in "${LOCK_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$LOCK_CFG"; return; }; done
   for t in "${FX_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$FX_CFG"; return; }; done
   for t in "${PICKER_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$PICKER_CFG"; return; }; done
-  for t in "${WIDGET_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$WIDGET_CFG"; return; }; done
+  for t in "${WIDGET_TWEAKS[@]}" "${DASH_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$WIDGET_CFG"; return; }; done
   for t in "${OSD_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$OSD_CFG"; return; }; done
   for t in "${NOTIFY_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$NOTIFY_CFG"; return; }; done
   for t in "${SOUND_TWEAKS[@]}"; do [[ ${t%%|*} == "$1" ]] && { echo "$SOUND_CFG"; return; }; done
@@ -515,6 +569,65 @@ bar_tweak_note() {
   t "no effect for shape %s — needs: %s" "$shape" "$need"
 }
 
+# dash/osd/notify: свой фон, альфа, радиус и рамка не действуют, пока включено «следовать бару».
+follow_bar_note() {
+  local key=$1 prefix
+  [[ $key =~ ^(dash|osd|notify)(Background|Alpha|Radius|Border)$ ]] || return 0
+  prefix=${BASH_REMATCH[1]}
+  [[ $(tweak_value "${prefix}FollowBar" true) == false ]] && return 0
+  t "no effect while “Follow the bar style” is on"
+}
+
+# Ручной ввод (i в overlay или `customizer.sh tweak <key> set <value>`): значение проверяется по
+# спецификации; неверное не записывается — код 2 и причина на stderr (на языке интерфейса).
+tweak_set() {
+  local key=$1 value=$2 spec kind args lo hi
+  fail() { printf '%s\n' "$1" >&2; exit 2; }
+  spec=$(tweak_spec "$key") || fail "$(t "Unknown setting: %s" "$key")"
+  TW_FILE=$(tweak_file "$key")
+  IFS='|' read -r _ kind args _ <<<"$spec"
+  value=$(sed -E 's/^[[:space:]]+|[[:space:]]+$//g' <<<"$value")
+  case "$kind" in
+  num)
+    read -r lo hi _ _ <<<"$args"
+    [[ $value =~ ^-?[0-9]+([.][0-9]+)?$ ]] || fail "$(t "%s is not a number" "$value")"
+    awk -v v="$value" -v lo="$lo" -v hi="$hi" 'BEGIN { exit !(v + 0 >= lo + 0 && v + 0 <= hi + 0) }' ||
+      fail "$(t "%s is out of range %s … %s — not applied" "$value" "$lo" "$hi")"
+    value=$(awk -v v="$value" 'BEGIN { printf "%g", v + 0 }')
+    skin_edit --arg k "$key" --argjson v "$value" '.[$k] = $v'
+    ;;
+  enum)
+    [[ " $args " == *" $value "* ]] || fail "$(t "%s is not one of: %s" "$value" "$args")"
+    skin_edit --arg k "$key" --arg v "$value" '.[$k] = $v'
+    ;;
+  bool)
+    case "${value,,}" in
+    true | on | yes | 1 | вкл | да) value=true ;;
+    false | off | no | 0 | выкл | нет) value=false ;;
+    *) fail "$(t "%s is not on/off" "$value")" ;;
+    esac
+    [[ $key == transparent ]] && set_transparent "$value"
+    skin_edit --arg k "$key" --argjson v "$value" '.[$k] = $v'
+    ;;
+  color)
+    if [[ ($key == gradient && $value == none) || ($key == wsActiveColor && $value == default) ]]; then
+      skin_edit --arg k "$key" 'del(.[$k])'
+    elif [[ $value =~ ^#[0-9A-Fa-f]{6}$ ]] || color_roles | grep -qxF -- "$value"; then
+      skin_edit --arg k "$key" --arg v "$value" '.[$k] = $v'
+    else
+      fail "$(t "%s is not #rrggbb or a theme colour role" "$value")"
+    fi
+    ;;
+  font)
+    [[ -z $value ]] || font_list | grep -qxF -- "$value" || fail "$(t "Font not found: %s" "$value")"
+    if [[ -z $value ]]; then skin_edit --arg k "$key" 'del(.[$k])'; else skin_edit --arg k "$key" --arg v "$value" '.[$k] = $v'; fi
+    ;;
+  text | file)
+    if [[ -z $value ]]; then skin_edit --arg k "$key" 'del(.[$k])'; else skin_edit --arg k "$key" --arg v "$value" '.[$k] = $v'; fi
+    ;;
+  esac
+}
+
 # Строки Bar Tweaks / Lock Tweaks: $1 — имя массива параметров, $2 — файл настроек.
 list_tweaks() {
   local -n table=$1
@@ -525,6 +638,11 @@ list_tweaks() {
     compact=$(tweak_value compact off)
   fi
   for t in "${table[@]}"; do
+    # "#Раздел" — заголовок раздела: overlay рисует его линией и не выделяет.
+    if [[ $t == '#'* ]]; then
+      printf '%s\t%s\t\t0\t\theader\n' "$(t "${t#\#}")" "section:${t#\#}"
+      continue
+    fi
     IFS='|' read -r key kind args label <<<"$t"
     case "$kind" in
     num) def=${args##* } hint=$(t "h/l or −/+ — step %s, range %s" "$(awk '{print $3}' <<<"$args")" "$(awk '{print $1 " … " $2}' <<<"$args")") ;;
@@ -546,6 +664,7 @@ list_tweaks() {
     sub=$(t "default: %s" "${deflong%% (*}")
     local na=""
     [[ $1 == TWEAKS ]] && na=$(bar_tweak_note "$key" "$shape" "$compact")
+    [[ $1 != TWEAKS ]] && na=$(follow_bar_note "$key")
     [[ -n $na ]] && sub="○ $na"
     printf '%s\t%s\t%s\t0\t%s\t%s\n' "$mark$(t "$label"):  ${long%% (*}" "$key" "$TW_FILE" \
       "$(t "Now: %s" "$long")"'\n'"$(t "Default: %s" "$deflong")${na:+\\n$na}"'\n\n'"$hint · $(t "x — reset to default")" \
@@ -742,9 +861,10 @@ list() {
   bar-tweaks) list_tweaks TWEAKS "$BAR_SKIN" ;;
   lock-tweaks) list_tweaks LOCK_TWEAKS "$LOCK_CFG" ;;
   widgets) list_tweaks WIDGET_TWEAKS "$WIDGET_CFG" ;;
-  osd)
-    [[ -f $HOME/.config/omarchy/plugins/kamradsmeshnyavy.osd/manifest.json ]] && list_tweaks OSD_TWEAKS "$OSD_CFG"
-    [[ -f $HOME/.config/omarchy/plugins/kamradsmeshnyavy.notifications/manifest.json ]] && list_tweaks NOTIFY_TWEAKS "$NOTIFY_CFG"
+  dashboard) list_tweaks DASH_TWEAKS "$WIDGET_CFG" ;;
+  osd) list_tweaks OSD_TWEAKS "$OSD_CFG" ;;
+  notifications)
+    list_tweaks NOTIFY_TWEAKS "$NOTIFY_CFG"
     command -v omarchy-sound >/dev/null && list_tweaks SOUND_TWEAKS "$SOUND_CFG"
     return 0
     ;;
@@ -953,7 +1073,7 @@ apply() {
     cp "$BAR_SKIN" "$SKIN_BACKUP"
     notify-send -t 2000 "Bar Skin" "$(t "Applied %s" "$(basename "$value" .json)")"
     ;;
-  bar-tweaks | lock-tweaks | widgets | osd) tweak "$value" pick ;;
+  bar-tweaks | lock-tweaks | widgets | dashboard | osd | notifications) tweak "$value" pick ;;
   wallpaper-fx)
     if [[ $value == tweak:* ]]; then tweak "${value#tweak:}" pick; exit 0; fi
     TW_FILE="$FX_CFG"
@@ -1101,8 +1221,9 @@ available() {
   if [[ -f $BAR_DIR/manifest.json ]]; then printf '%s\n' bar-skins bar-layouts bar-tweaks; fi
   if [[ -f $LOCK_PLUGIN/manifest.json ]]; then printf '%s\n' lock lock-tweaks; fi
   [[ -f $plugins/kamradsmeshnyavy.background/manifest.json ]] && echo wallpaper-fx
-  [[ -f $plugins/kamradsmeshnyavy.widgets/manifest.json ]] && echo widgets
-  [[ -f $plugins/kamradsmeshnyavy.osd/manifest.json || -f $plugins/kamradsmeshnyavy.notifications/manifest.json ]] && echo osd
+  [[ -f $plugins/kamradsmeshnyavy.widgets/manifest.json ]] && printf '%s\n' widgets dashboard
+  [[ -f $plugins/kamradsmeshnyavy.osd/manifest.json ]] && echo osd
+  [[ -f $plugins/kamradsmeshnyavy.notifications/manifest.json ]] && echo notifications
   [[ -f $plugins/kamradsmeshnyavy.image-picker/manifest.json ]] && echo theme-switcher
   command -v zenity >/dev/null && echo has:zenity
   return 0
@@ -1122,7 +1243,9 @@ blur-preview) "$BLUR" preview "$2" ;;
 blur-restore) "$BLUR" restore ;;
 bar-skins-preview) bar_skin_preview "$2" ;;
 bar-skins-restore) bar_skin_restore ;;
-tweak) tweak "$2" "${3:-+}" ;;
+tweak)
+  if [[ ${3:-} == set ]]; then tweak_set "$2" "${4-}"; else tweak "$2" "${3:-+}"; fi
+  ;;
 lock-preview) omarchy-shell lock previewDesign "${2:-}" >/dev/null ;;
 skin-delete) delete_user_skin "${2:-}" ;;
 lock-thumbs) lock_thumbs ;;

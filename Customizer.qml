@@ -33,13 +33,15 @@ Item {
     { group: "desk", key: "walls",       icon: "󰃣", title: "Recolor",      hint: "Lutgen · O folder · o image(s)",       image: true,  live: false },
     { group: "desk", key: "wallpaper-fx", icon: "󰗘", title: "Wallpaper FX", hint: "Wallpaper transitions · p — play",      image: false, live: false, fx: true },
     { group: "desk", key: "widgets",     icon: "󰖲", title: "Widgets",      hint: "Desktop widgets · h l change",           image: false, live: false, tweak: true },
+    { group: "desk", key: "dashboard",   icon: "󰕮", title: "Dashboard",    hint: "Dashboard: player, calendar, weather, graphs", image: false, live: false, tweak: true },
     { group: "bar",  key: "bar-skins",   icon: "󰉼", title: "Bar Skin",     hint: "Live preview · form, colors, glass",   image: false, live: true,  bar: true },
     { group: "bar",  key: "bar-layouts", icon: "󰕮", title: "Bar Layout",   hint: "Sections & edge · shell.json",         image: false, live: false, bar: true },
     { group: "bar",  key: "bar-tweaks",  icon: "󰒓", title: "Bar Tweaks",   hint: "h l / − + change · ⏎ custom color",    image: false, live: false, bar: true, tweak: true },
     { group: "win",  key: "anims",       icon: "󰔡", title: "Animations",   hint: "Live preview while you browse",       image: false, live: true },
     { group: "win",  key: "opacity",     icon: "󰂵", title: "Transparency", hint: "Live preview while you browse",        image: false, live: true },
     { group: "win",  key: "blur",        icon: "󰂷", title: "Blur",         hint: "Live preview while you browse",        image: false, live: true },
-    { group: "win",  key: "osd",         icon: "󰕾", title: "OSD & Notifications", hint: "Volume, brightness, toasts, sounds",    image: false, live: false, tweak: true },
+    { group: "win",  key: "osd",         icon: "󰕾", title: "OSD",          hint: "Volume & brightness",                   image: false, live: false, tweak: true },
+    { group: "win",  key: "notifications", icon: "󰂚", title: "Notifications", hint: "Toasts and sounds",                   image: false, live: false, tweak: true },
     { group: "win",  key: "shaders",     icon: "󰍹", title: "Shader",       hint: "CRT, TFT · scripts/crt-toggle.sh",      image: false, live: false },
     { group: "lock", key: "lock",        icon: "󰌾", title: "Lock",         hint: "p — show it live · T — previews",       image: true,  live: false },
     { group: "lock", key: "lock-tweaks", icon: "󰷛", title: "Lock Tweaks",  hint: "h l change · p — show",                 image: false, live: false, tweak: true },
@@ -124,6 +126,10 @@ Item {
   property string keepValue: ""      // row (by value) to stay on when a list reloads after a tweak
   property string wallPath: ""       // Wallpaper: папка-категория внутри ~/.config/omarchy/backgrounds/<тема>
   property string pendingTweak: ""   // a step that came in while the previous one ran (held key)
+  // Ручной ввод значения (i): строка, которую правят, её начальный текст и ошибка проверки.
+  property int editingIndex: -1
+  property string editInitial: ""
+  property string editError: ""
   property bool reloadQueued: false  // a reload asked for while the lister was busy
   property var themePalette: ({})    // colors.toml of the current theme, for the bar mock
   property var activeSkin: ({})      // ~/.config/omarchy/bar-skin.json
@@ -299,7 +305,10 @@ Item {
     if (key !== root.category.key) return
     root.loading = false
     root.items = rows
-    root.selectedIndex = root.keepValue ? root.indexOfValue(rows, root.keepValue) : root.currentIndexOf(rows)
+    // Индекс — в отфильтрованном списке (его показывает displayModel), заголовки разделов не выделяются.
+    var shown = root.filteredRows(rows)
+    var at = root.keepValue ? root.indexOfValue(shown, root.keepValue) : root.currentIndexOf(shown)
+    root.selectedIndex = root.selectableFrom(shown, at, 1)
     root.keepValue = ""
     root.rebuild()
     if (root.reloadQueued) { root.reloadQueued = false; root.reloadCategory() }
@@ -332,19 +341,97 @@ Item {
     return 0
   }
 
-  function rebuild() {
+  // Заголовок раздела в списке настроек: value "section:<имя>" (строки "#Раздел" в *_TWEAKS).
+  function isHeader(row) { return row !== null && row !== undefined && /^section:/.test(String(row.value || "")) }
+
+  // Строки под фильтром. Совпало имя раздела — раздел виден целиком; заголовок остаётся,
+  // если под ним есть хоть одна строка.
+  function filteredRows(rows) {
     var needle = root.filterText.toLowerCase()
-    displayModel.clear()
-    for (var i = 0; i < root.items.length; i++) {
-      var row = root.items[i]
-      if (needle && row.label.toLowerCase().indexOf(needle) === -1) continue
-      displayModel.append(row)
+    if (!needle) return rows
+    var out = [], header = null, headerHit = false, headerShown = false
+    for (var i = 0; i < rows.length; i++) {
+      var row = rows[i]
+      if (root.isHeader(row)) {
+        header = row
+        headerHit = row.label.toLowerCase().indexOf(needle) !== -1
+        headerShown = false
+        continue
+      }
+      if (!headerHit && row.label.toLowerCase().indexOf(needle) === -1) continue
+      if (header && !headerShown) { out.push(header); headerShown = true }
+      out.push(row)
+    }
+    return out
+  }
+
+  // Ближайшая выделяемая строка от index в сторону dir (заголовки пропускаются).
+  function selectableFrom(rows, index, dir) {
+    var n = rows.length
+    if (n === 0) return 0
+    var i = Math.max(0, Math.min(n - 1, index))
+    for (var step = 0; step < n && root.isHeader(rows[i]); step++) {
+      var next = i + dir
+      if (next < 0 || next >= n) { dir = -dir; next = i + dir }
+      i = Math.max(0, Math.min(n - 1, next))
+    }
+    return i
+  }
+
+  function rebuild() {
+    var rows = root.filteredRows(root.items)
+    // Тот же набор строк (шаг tweak, обновление значений) — правим на месте: ListView не теряет
+    // прокрутку и выделение. Иначе полная пересборка с сохранённой прокруткой.
+    var same = rows.length === displayModel.count
+    for (var i = 0; same && i < rows.length; i++) same = displayModel.get(i).value === rows[i].value
+    if (same) {
+      for (var j = 0; j < rows.length; j++) displayModel.set(j, rows[j])
+    } else {
+      var y = itemList.contentY
+      displayModel.clear()
+      for (var k = 0; k < rows.length; k++) displayModel.append(rows[k])
+      itemList.contentY = Math.max(0, Math.min(y, itemList.contentHeight - itemList.height))
     }
     if (root.selectedIndex >= displayModel.count) root.selectedIndex = Math.max(0, displayModel.count - 1)
-    Qt.callLater(function() {
+    if (displayModel.count > 0 && root.isHeader(displayModel.get(root.selectedIndex)))
+      root.selectedIndex = root.selectableFrom(rows, root.selectedIndex, 1)
+    if (!same) Qt.callLater(function() {
       if (displayModel.count > 0) itemList.positionViewAtIndex(root.selectedIndex, ListView.Contain)
     })
     root.selectionChanged()
+  }
+
+  // [ / ]: к первой строке предыдущего / следующего раздела.
+  function jumpSection(dir) {
+    if (root.pane !== 1 || displayModel.count === 0) return
+    var i = root.selectedIndex
+    if (dir < 0) {
+      // Назад: сначала к заголовку своего раздела, потом — к предыдущему.
+      var own = i
+      while (own > 0 && !root.isHeader(displayModel.get(own))) own--
+      var target = own
+      if (i - own <= 1 && own > 0) { target = own - 1; while (target > 0 && !root.isHeader(displayModel.get(target))) target-- }
+      i = target
+    } else {
+      var j = i + 1
+      while (j < displayModel.count && !root.isHeader(displayModel.get(j))) j++
+      if (j >= displayModel.count) return
+      i = j
+    }
+    var rows = []
+    for (var r = 0; r < displayModel.count; r++) rows.push(displayModel.get(r))
+    root.selectedIndex = root.selectableFrom(rows, i, 1)
+    itemList.positionViewAtIndex(root.selectedIndex, ListView.Contain)
+    root.selectionChanged()
+  }
+
+  // Раздел строки index (имя ближайшего заголовка выше), "" — если разделов нет.
+  function sectionOf(index) {
+    for (var i = Math.min(index, displayModel.count - 1); i >= 0; i--) {
+      var row = displayModel.get(i)
+      if (root.isHeader(row)) return row.label
+    }
+    return ""
   }
 
   function setFilter(text) {
@@ -397,13 +484,25 @@ Item {
       return
     }
     if (displayModel.count === 0) return
-    root.selectedIndex = Math.max(0, Math.min(displayModel.count - 1, root.selectedIndex + delta))
+    var target = Math.max(0, Math.min(displayModel.count - 1, root.selectedIndex + delta))
+    if (root.isHeader(displayModel.get(target))) {
+      var rows = []
+      for (var r = 0; r < displayModel.count; r++) rows.push(displayModel.get(r))
+      target = root.selectableFrom(rows, target, delta < 0 ? -1 : 1)
+    }
+    root.selectedIndex = target
     itemList.positionViewAtIndex(root.selectedIndex, ListView.Contain)
     root.selectionChanged()
   }
 
   // Called whenever the highlighted row may have changed.
   function selectionChanged() {
+    // Уход со строки закрывает её поле ввода.
+    if (root.editingIndex >= 0 && root.editingIndex !== root.selectedIndex) {
+      root.editingIndex = -1
+      root.editError = ""
+      keyCatcher.forceActiveFocus()
+    }
     previewFlick.contentY = 0
     itemList.currentIndex = root.selectedIndex
     var row = root.selectedIndex >= 0 && root.selectedIndex < displayModel.count
@@ -440,7 +539,7 @@ Item {
       root.selectionChanged()
       return
     }
-    if (!root.selectedRow) return
+    if (!root.selectedRow || root.isHeader(root.selectedRow)) return
     if (root.category.key === "theme-walls" && /^dir:/.test(root.selectedRow.value)) {
       var target = root.selectedRow.value.slice(4)
       // ".." ведёт к родителю — встать на папку, из которой вышли.
@@ -460,7 +559,7 @@ Item {
   // deliver its partial output and drop the selection back to the first row.
   // Строка-настройка: вся категория tweak или строка "tweak:<key>" внутри галереи.
   function isTweakRow(row) {
-    return row !== null && (root.category.tweak === true || /^tweak:/.test(row.value))
+    return row !== null && !root.isHeader(row) && (root.category.tweak === true || /^tweak:/.test(row.value))
   }
   function tweakKey(row) { return String(row.value).replace(/^tweak:/, "") }
 
@@ -470,6 +569,29 @@ Item {
     tweaker.key = root.tweakKey(root.selectedRow)
     tweaker.command = [root.script, "tweak", tweaker.key, dir]
     tweaker.running = true
+  }
+
+  // i: поле ввода прямо в строке. Проверяет customizer.sh (tweak <key> set <value>):
+  // неверное значение не записывается, причина приходит в stderr и остаётся под полем.
+  function startEdit() {
+    var row = root.selectedRow
+    if (root.pane !== 1 || !root.isTweakRow(row)) return
+    var parts = String(row.label).split(":  ")
+    root.editInitial = parts.length > 1 ? parts[parts.length - 1].trim() : ""
+    root.editError = ""
+    root.editingIndex = root.selectedIndex
+  }
+  function submitEdit(text) {
+    var row = root.editingIndex >= 0 && root.editingIndex < displayModel.count ? displayModel.get(root.editingIndex) : null
+    if (!row || editor.running) return
+    editor.key = root.tweakKey(row)
+    editor.command = [root.script, "tweak", editor.key, "set", String(text)]
+    editor.running = true
+  }
+  function cancelEdit() {
+    root.editingIndex = -1
+    root.editError = ""
+    keyCatcher.forceActiveFocus()
   }
 
   function tweakDone() {
@@ -640,8 +762,8 @@ Item {
   function keyHints() {
     if (root.filtering) return [["⏎", "keep filter"], ["Esc", "clear"], ["↑↓", "move"]]
     if (root.pane === 0) return [["Tab", "group"], ["1–" + root.groups.length, "group"], ["j k", "category"], ["l ⏎", "open"], ["/", "search"], ["?", "keys"], ["q", "close"]]
-    if (root.category.key === "lock-tweaks") return [["j k", "move"], ["h l  − +", "change (hold)"], ["x", "default"], ["⏎", "step · pick"], ["p", "preview"], ["Esc", "back"]]
-    if (root.category.tweak) return [["j k", "move"], ["h l  − +", "change (hold)"], ["x", "default"], ["⏎", "step · pick color"], ["Esc", "back"], ["?", "keys"]]
+    if (root.category.key === "lock-tweaks") return [["j k", "move"], ["h l  − +", "change (hold)"], ["i", "type a value"], ["x", "default"], ["⏎", "step · pick"], ["p", "preview"], ["Esc", "back"]]
+    if (root.category.tweak) return [["j k", "move"], ["h l  − +", "change (hold)"], ["i", "type a value"], ["[ ]", "section"], ["x", "default"], ["⏎", "step · pick color"], ["Esc", "back"]]
     if (root.category.fx || root.category.picker) {
       var tw = root.isTweakRow(root.selectedRow)
       return tw ? [["j k", "move"], ["h l  − +", "change (hold)"], ["x", "default"], ["p", root.category.fx ? "play" : "open"], ["Esc", "back"]]
@@ -749,6 +871,20 @@ Item {
     id: tweaker
     property string key: ""
     onExited: root.tweakDone()
+  }
+
+  Process {
+    id: editor
+    property string key: ""
+    stderr: StdioCollector { id: editorErr }
+    onExited: function(code) {
+      if (code === 0) {
+        root.cancelEdit()
+        root.reloadCategory()
+      } else {
+        root.editError = editorErr.text.trim() || root.tr("Not applied")
+      }
+    }
   }
 
   FileView {
@@ -984,6 +1120,9 @@ Item {
           if (tweaking && (t === "h" || t === "-" || k === Qt.Key_Left)) root.tweak("-")
           else if (tweaking && (t === "l" || t === "+" || t === "=" || k === Qt.Key_Right)) root.tweak("+")
           else if (tweaking && t === "x") root.tweak("reset")
+          else if (tweaking && t === "i") root.startEdit()
+          else if (!ctrl && root.pane === 1 && t === "[") root.jumpSection(-1)
+          else if (!ctrl && root.pane === 1 && t === "]") root.jumpSection(1)
           else if (!ctrl && t === "p" && (root.category.key === "lock" || root.category.key === "lock-tweaks")) root.previewLock()
           else if (!ctrl && t === "T" && root.category.key === "lock") root.run("regen-thumbs")
           else if (!ctrl && t === "p" && root.category.key === "wallpaper-fx") root.playFx()
@@ -1584,9 +1723,17 @@ Item {
                 required property string preview
                 required property string note
                 required property string sub
+                required property string value
                 required property bool current
 
+                readonly property bool header: /^section:/.test(value)
+                readonly property bool editing: index === root.editingIndex
                 readonly property bool hasCursor: index === root.selectedIndex
+                onEditingChanged: if (editing) Qt.callLater(function() {
+                  editInput.text = root.editInitial
+                  editInput.selectAll()
+                  editInput.forceActiveFocus()
+                })
                 readonly property var palette: root.paletteOf(note)
 
                 width: itemList.width
@@ -1599,12 +1746,42 @@ Item {
                   Behavior on color { ColorAnimation { duration: 120 } }
                 }
                 // Длинные подписи переносятся (до двух строк) — строка растёт под них.
-                height: root.category.image ? root.listRowHeight()
+                height: header ? Style.space(30)
+                  : root.category.image ? root.listRowHeight()
                   : Math.max(root.listRowHeight(), rowText.implicitHeight + Style.space(12))
+
+                // Заголовок раздела: линия с названием, не выделяется.
+                Item {
+                  visible: itemRow.header
+                  anchors.fill: parent
+                  Text {
+                    id: headerText
+                    anchors.left: parent.left
+                    anchors.leftMargin: Style.space(10)
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: Style.space(4)
+                    text: itemRow.label
+                    color: root.accent
+                    font.family: root.fontFamily
+                    font.pixelSize: Style.font.caption
+                    font.bold: true
+                    font.capitalization: Font.AllUppercase
+                    font.letterSpacing: 1
+                  }
+                  Rectangle {
+                    anchors.left: headerText.right
+                    anchors.leftMargin: Style.space(10)
+                    anchors.right: parent.right
+                    anchors.rightMargin: Style.space(10)
+                    anchors.verticalCenter: headerText.verticalCenter
+                    height: 1
+                    color: root.hairline
+                  }
+                }
 
                 ClippingRectangle {
                   id: thumb
-                  visible: root.category.image
+                  visible: root.category.image && !itemRow.header
                   anchors.left: parent.left
                   anchors.leftMargin: Style.space(6)
                   anchors.verticalCenter: parent.verticalCenter
@@ -1639,7 +1816,7 @@ Item {
 
                 Text {
                   id: rowIcon
-                  visible: !root.category.image
+                  visible: !root.category.image && !itemRow.header
                   anchors.left: parent.left
                   anchors.leftMargin: Style.space(12)
                   anchors.verticalCenter: parent.verticalCenter
@@ -1652,6 +1829,7 @@ Item {
 
                 Column {
                   id: rowText
+                  visible: !itemRow.header
                   anchors.left: root.category.image ? thumb.right : rowIcon.right
                   anchors.leftMargin: Style.space(10)
                   anchors.right: activePill.visible ? activePill.left : parent.right
@@ -1683,6 +1861,43 @@ Item {
                     textFormat: Text.PlainText
                     text: itemRow.sub
                     color: root.muted
+                    font.family: root.fontFamily
+                    font.pixelSize: Style.font.caption
+                  }
+
+                  // i — ручной ввод значения; Enter применяет, Esc отменяет.
+                  Rectangle {
+                    visible: itemRow.editing
+                    width: parent.width
+                    height: visible ? editInput.implicitHeight + Style.space(12) : 0
+                    radius: Math.max(4, root.innerRadius - 4)
+                    color: root.faint
+                    border.width: 1
+                    border.color: root.editError ? Color.urgent : root.accent
+                    TextInput {
+                      id: editInput
+                      anchors.fill: parent
+                      anchors.margins: Style.space(6)
+                      verticalAlignment: TextInput.AlignVCenter
+                      color: root.foreground
+                      selectionColor: Util.alpha(root.accent, 0.4)
+                      font.family: root.fontFamily
+                      font.pixelSize: Style.font.body
+                      selectByMouse: true
+                      clip: true
+                      onTextEdited: root.editError = ""
+                      Keys.onReturnPressed: root.submitEdit(text)
+                      Keys.onEnterPressed: root.submitEdit(text)
+                      Keys.onEscapePressed: root.cancelEdit()
+                    }
+                  }
+                  Text {
+                    visible: itemRow.editing
+                    width: parent.width
+                    wrapMode: Text.Wrap
+                    textFormat: Text.PlainText
+                    text: root.editError ? "⚠ " + root.editError : root.tr("Enter — apply · Esc — cancel")
+                    color: root.editError ? Color.urgent : root.muted
                     font.family: root.fontFamily
                     font.pixelSize: Style.font.caption
                   }
@@ -1719,6 +1934,7 @@ Item {
                   hoverEnabled: true
                   cursorShape: Qt.PointingHandCursor
                   onClicked: {
+                    if (itemRow.header) return
                     root.pane = 1
                     root.selectedIndex = itemRow.index
                     root.selectionChanged()
@@ -1733,13 +1949,39 @@ Item {
                     var last = root.lastPointer
                     root.lastPointer = { x: p.x, y: p.y }
                     if (!last || (Math.abs(p.x - last.x) < 1 && Math.abs(p.y - last.y) < 1)) return
-                    if (root.pane === 1 && root.selectedIndex !== itemRow.index) {
+                    if (root.pane === 1 && !itemRow.header && root.selectedIndex !== itemRow.index) {
                       root.selectedIndex = itemRow.index
                       root.selectionChanged()
                     }
                   }
                 }
               }
+            }
+
+            // Раздел верхней видимой строки — закреплён над списком, пока его заголовок прокручен вверх.
+            Rectangle {
+              id: stickySection
+              readonly property int topIndex: { itemList.contentY; displayModel.count; return itemList.indexAt(Style.space(20), itemList.contentY + 2) }
+              readonly property string name: topIndex >= 0 ? root.sectionOf(topIndex) : ""
+              visible: name !== "" && topIndex >= 0 && !root.isHeader(displayModel.get(topIndex))
+              anchors { top: itemList.top; left: itemList.left; right: itemList.right }
+              height: Style.space(24)
+              radius: 6
+              color: Qt.rgba(root.background.r, root.background.g, root.background.b, 1)
+              z: 5
+              Text {
+                anchors.left: parent.left
+                anchors.leftMargin: Style.space(10)
+                anchors.verticalCenter: parent.verticalCenter
+                text: stickySection.name
+                color: root.accent
+                font.family: root.fontFamily
+                font.pixelSize: Style.font.caption
+                font.bold: true
+                font.capitalization: Font.AllUppercase
+                font.letterSpacing: 1
+              }
+              Rectangle { anchors { left: parent.left; right: parent.right; bottom: parent.bottom } height: 1; color: root.hairline }
             }
 
             Column {
