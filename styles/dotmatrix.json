@@ -134,6 +134,8 @@
     "dashAnimation": "slide",
     "dashDuration": 240,
     "settingsPanel": "drawer",
+    "powerStyle": "edge",
+    "clipboardPanel": "stock",
     "network": true,
     "networkAnchor": "top-left",
     "mediaAnchor": "top-left",

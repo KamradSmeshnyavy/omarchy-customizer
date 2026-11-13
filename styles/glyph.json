@@ -50,6 +50,8 @@
     "dashAnimation": "grow",
     "dashDuration": 240,
     "settingsPanel": "quick",
+    "powerStyle": "glyph",
+    "clipboardPanel": "glyph",
     "network": true,
     "networkAnchor": "top-left",
     "mediaAnchor": "top-left",
@@ -105,7 +107,7 @@
     "texture": ""
   },
   "barSkin": "glyph-pill",
-  "barLayout": "glyph-left",
+  "barLayout": "glyph-rice",
   "theme": {
     "dark": "nothing-glyph-dark",
     "light": "nothing-glyph-light"

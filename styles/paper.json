@@ -62,7 +62,9 @@
     "deckLayout": "panel",
     "deckCards": "style",
     "deckTrigger": "dwell",
-    "settingsPanel": "drawer"
+    "settingsPanel": "drawer",
+    "powerStyle": "edge",
+    "clipboardPanel": "stock"
   },
   "osd": {
     "osdStyle": "edge",

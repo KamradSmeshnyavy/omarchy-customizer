@@ -764,6 +764,8 @@
   "Deck: size": "Deck: размер",
   "Deck: hover delay at the edge, ms": "Deck: задержка у края, мс",
   "Deck: layout — panel (as in glyph-rice) · compact strip · full screen": "Deck: раскладка — panel (как в glyph-rice) · compact (полоска) · full (весь экран)",
+  "Power menu — edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)": "Меню выключения — edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice)",
+  "Super+Ctrl+V clipboard — stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)": "Буфер обмена Super+Ctrl+V — stock (Omarchy) · glyph (Clip из glyph-rice: фильтры, закрепление, карточка превью)",
   "Super+M panel — drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)": "Панель Super+M — drawer (выдвижные настройки DOT-MATRIX) · quick (Quick из glyph-rice: списки Wi-Fi / Bluetooth, плитки, запись экрана)",
   "Deck: open — dwell (rest at the edge) · bump (touch the edge, back off a little, hit it again)": "Deck: открытие — dwell (задержаться у края) · bump (толчок: коснуться края, чуть отвести, снова в край)",
   "Deck (full): background dim": "Deck (full): затемнение фона",

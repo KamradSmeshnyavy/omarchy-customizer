@@ -742,6 +742,18 @@
           "label": "Deck: open — dwell (rest at the edge) · bump (touch the edge, back off a little, hit it again)"
         },
         {
+          "key": "powerStyle",
+          "type": "enum",
+          "values": ["edge", "glyph"],
+          "label": "Power menu — edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)"
+        },
+        {
+          "key": "clipboardPanel",
+          "type": "enum",
+          "values": ["stock", "glyph"],
+          "label": "Super+Ctrl+V clipboard — stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)"
+        },
+        {
           "key": "settingsPanel",
           "type": "enum",
           "values": ["drawer", "quick"],
