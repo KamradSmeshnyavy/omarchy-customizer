@@ -134,9 +134,9 @@ styles = {
         "Liquid glass (after Vitreus): very clear panels under strong vivid blur with a light rim and a soft top highlight, a floating glass pill bar, big soft corners; the dashboard flows out of the bar like a drop and springs into place.",
         "Жидкое стекло (по мотивам Vitreus): очень прозрачные панели под сильным сочным блюром со светлым ободком и мягким бликом сверху, плавающая стеклянная пилюля-бар, крупные мягкие скругления; дашборд вытекает из бара каплей и пружинит на место.",
         geom={"gapsIn": 8, "gapsOut": 16, "borderSize": 1, "rounding": 22, "shadow": True},
-        bar="liquid", opacity="frosted", blur="liquid", anims="HYDE - default", lock="style-glass", launcher="drawer-glass",
-        radius=22, alpha=0.42, cards="bordered", fx={"type": "fade", "duration": 700, "easing": "OutCubic"},
-        picker="cards", dash_anim="liquid", sound_pack="glass", window_sounds=True, fonts="stock",
+        bar="liquid", opacity="frosted", blur="liquid", anims="HYDE - default", lock="liquid", launcher="liquid",
+        radius=22, alpha=0.42, cards="bordered", fx={"type": "hexreveal", "duration": 900, "easing": "OutCubic"},
+        picker="honeycomb", dash_anim="liquid", sound_pack="glass", window_sounds=True, fonts="vitreus-glass",
         look={"elevation": 1, "motion": 1.2, "material": "liquid", "cornerScale": 1.3, "typeface": "shell"}),
     "fluent": plain(
         "Fluent", "Fluent",

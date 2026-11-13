@@ -1,0 +1,10 @@
+{
+  "name": "Liquid Proxy",
+  "name_ru": "Жидкое стекло · Proxy",
+  "note": "After the Vitreus Proxy theme (MIT): the Liquid Glass style on vitreus-proxy. Combat HUD: dark slate with yellow and blue, Titan One titles.",
+  "note_ru": "По мотивам темы Vitreus Proxy (MIT): стиль «Жидкое стекло» на vitreus-proxy. Боевой HUD: тёмный сланец с жёлтым и синим, заголовки Titan One.",
+  "style": "liquid",
+  "theme": "vitreus-proxy",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-proxy/backgrounds/1-liquid.png",
+  "fonts": "vitreus-proxy"
+}

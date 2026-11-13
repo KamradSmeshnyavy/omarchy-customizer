@@ -1,0 +1,10 @@
+{
+  "name": "Liquid Doodle",
+  "name_ru": "Жидкое стекло · Doodle",
+  "note": "After the Vitreus Doodle theme (MIT): the Liquid Glass style on vitreus-doodle. Sketchbook: cream paper, ink, pink and highlighter yellow, Kalam titles.",
+  "note_ru": "По мотивам темы Vitreus Doodle (MIT): стиль «Жидкое стекло» на vitreus-doodle. Скетчбук: кремовая бумага, тушь, розовый и жёлтый маркер, заголовки Kalam.",
+  "style": "liquid",
+  "theme": "vitreus-doodle",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-doodle/backgrounds/1-liquid.png",
+  "fonts": "vitreus-doodle"
+}

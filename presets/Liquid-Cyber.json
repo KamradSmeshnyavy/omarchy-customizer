@@ -1,0 +1,10 @@
+{
+  "name": "Liquid Cyber",
+  "name_ru": "Жидкое стекло · Cyber",
+  "note": "After the Vitreus Cyber theme (MIT): the Liquid Glass style on vitreus-cyber. Neon HUD: near-black with cyan and magenta, Orbitron titles.",
+  "note_ru": "По мотивам темы Vitreus Cyber (MIT): стиль «Жидкое стекло» на vitreus-cyber. Неоновый HUD: почти чёрный с голубым и маджентой, заголовки Orbitron.",
+  "style": "liquid",
+  "theme": "vitreus-cyber",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-cyber/backgrounds/1-liquid.png",
+  "fonts": "vitreus-cyber"
+}

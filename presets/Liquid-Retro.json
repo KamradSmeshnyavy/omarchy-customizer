@@ -1,0 +1,10 @@
+{
+  "name": "Liquid Retro",
+  "name_ru": "Жидкое стекло · Retro",
+  "note": "After the Vitreus Retro theme (MIT): the Liquid Glass style on vitreus-retro. Plastic: moulded putty with a Famicom-red accent, Audiowide titles.",
+  "note_ru": "По мотивам темы Vitreus Retro (MIT): стиль «Жидкое стекло» на vitreus-retro. Пластик: литая замазка с красным акцентом Famicom, заголовки Audiowide.",
+  "style": "liquid",
+  "theme": "vitreus-retro",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-retro/backgrounds/1-liquid.png",
+  "fonts": "vitreus-retro"
+}

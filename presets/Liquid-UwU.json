@@ -1,0 +1,10 @@
+{
+  "name": "Liquid UwU",
+  "name_ru": "Жидкое стекло · UwU",
+  "note": "After the Vitreus UwU theme (MIT): the Liquid Glass style on vitreus-uwu. Kawaii: lilac glass with hot-pink, Mochiy Pop One titles.",
+  "note_ru": "По мотивам темы Vitreus UwU (MIT): стиль «Жидкое стекло» на vitreus-uwu. Каваи: сиреневое стекло с ярко-розовым, заголовки Mochiy Pop One.",
+  "style": "liquid",
+  "theme": "vitreus-uwu",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-uwu/backgrounds/1-liquid.png",
+  "fonts": "vitreus-uwu"
+}

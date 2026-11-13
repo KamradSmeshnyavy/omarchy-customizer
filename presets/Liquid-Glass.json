@@ -1,0 +1,9 @@
+{
+  "name": "Liquid Glass",
+  "name_ru": "Жидкое стекло · Glass",
+  "note": "After Vitreus Glass: the Liquid Glass style on the dynamic theme — colours taken from the wallpaper, Space Grotesk titles.",
+  "note_ru": "По мотивам Vitreus Glass: стиль «Жидкое стекло» на теме dynamic — цвета берутся с обоев, заголовки Space Grotesk.",
+  "style": "liquid",
+  "theme": "dynamic",
+  "fonts": "vitreus-glass"
+}

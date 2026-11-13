@@ -357,6 +357,9 @@ def apply_preset(path):
         if section_on(state.PRESET_CFG, "presetFonts", is_backup):
             apply_style_fonts(style_file)
     apply_form_sections(path, state.PRESET_CFG, "preset", is_backup, "replace", keep_look=bool(style_ref))
+    # свой профиль шрифтов у пресета (пресеты тем Vitreus) — поверх профиля стиля
+    if d.get("fonts") and section_on(state.PRESET_CFG, "presetFonts", is_backup):
+        apply_style_fonts(path)
     wp = jq_str(alt(d.get("wallpaper"), "")) if section_on(state.PRESET_CFG, "presetWallpaper", is_backup) else ""
     if wp.startswith("~/"):
         wp = str(paths.HOME) + "/" + wp[2:]

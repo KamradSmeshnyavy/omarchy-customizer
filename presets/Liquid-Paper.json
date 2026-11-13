@@ -1,0 +1,10 @@
+{
+  "name": "Liquid Paper",
+  "name_ru": "Жидкое стекло · Paper",
+  "note": "After the Vitreus Paper theme (MIT): the Liquid Glass style on vitreus-paper. Scrapbook: warm paper with a faded blue, Fuzzy Bubbles titles.",
+  "note_ru": "По мотивам темы Vitreus Paper (MIT): стиль «Жидкое стекло» на vitreus-paper. Скрапбук: тёплая бумага с выцветшим синим, заголовки Fuzzy Bubbles.",
+  "style": "liquid",
+  "theme": "vitreus-paper",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-paper/backgrounds/1-liquid.png",
+  "fonts": "vitreus-paper"
+}

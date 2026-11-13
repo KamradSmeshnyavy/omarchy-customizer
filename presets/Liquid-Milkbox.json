@@ -1,0 +1,10 @@
+{
+  "name": "Liquid Milkbox",
+  "name_ru": "Жидкое стекло · Milkbox",
+  "note": "After the Vitreus Milkbox theme (MIT): the Liquid Glass style on vitreus-milk. Soft: milky blue-grey with periwinkle, Zen Kurenaido titles.",
+  "note_ru": "По мотивам темы Vitreus Milkbox (MIT): стиль «Жидкое стекло» на vitreus-milk. Мягкий: молочный серо-голубой с барвинком, заголовки Zen Kurenaido.",
+  "style": "liquid",
+  "theme": "vitreus-milk",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-milk/backgrounds/1-liquid.png",
+  "fonts": "vitreus-milk"
+}

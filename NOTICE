@@ -38,3 +38,9 @@ This project includes or is based on:
 - Monaspace Radon — https://github.com/githubnext/monaspace
   SIL Open Font License 1.1, Copyright (c) 2023 GitHub, Reserved Font Name "Monaspace" (fonts/OFL-Monaspace.txt).
   Handwritten monospaced code font of the Paper style (fonts/MonaspaceRadonVar.ttf), unmodified.
+
+- Vitreus — https://github.com/natepayn3/Vitreus
+  MIT License, Copyright (c) 2026 natepayn3.
+  The Liquid Glass presets (presets/Liquid-*.json) follow its themes (themes/*.toml); the theme fonts in fonts/vitreus
+  come from Google Fonts under the SIL Open Font License 1.1 (fonts/vitreus/OFL.txt): Audiowide, Mochiy Pop One, Orbitron,
+  Zen Kurenaido, Kalam, Fuzzy Bubbles, Titan One — Mochiy Pop One and Zen Kurenaido subset to Latin and Cyrillic.
