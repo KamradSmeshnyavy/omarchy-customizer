@@ -27,6 +27,8 @@ GLYPH_CFG = P / "glyph.json"
 SOUND_CFG = P / "sounds.json"
 FX_CFG = P / "wallpaper-transition.json"
 PICKER_CFG = P / "image-picker.json"
+# вид обоев (точки / серое / цвет) — пишет picker в стиле glyph, читает kamradsmeshnyavy.background
+WALL_LOOK_CFG = P / "wallpaper-look.json"
 ACTIVE_PRESET = paths.STATE / "active-preset"
 ACTIVE_STYLE = paths.STATE / "active-style"
 LAST_PRESET = paths.STATE / "last-preset.json"

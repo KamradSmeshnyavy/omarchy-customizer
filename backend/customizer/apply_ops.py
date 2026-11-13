@@ -202,6 +202,7 @@ def snapshot(out, title="", note=""):
     doc.update({
         "barTransparent": bar_tr, "lock": read_or_empty(state.LOCK_CFG), "launcher": read_or_empty(state.MENU_CFG),
         "wallpaperFx": read_or_empty(state.FX_CFG), "imagePicker": read_or_empty(state.PICKER_CFG),
+        "wallpaperLook": read_or_empty(state.WALL_LOOK_CFG),
         "widgets": read_or_empty(WIDGET_CFG), "osd": read_or_empty(OSD_CFG), "notifications": read_or_empty(NOTIFY_CFG),
         "sounds": read_or_empty(state.SOUND_CFG), "glyph": read_or_empty(state.GLYPH_CFG), "look": read_or_empty(LOOK_CFG),
     })
@@ -212,6 +213,7 @@ def snapshot(out, title="", note=""):
 
 FORM_TARGETS = [("lock", "Lock", state.LOCK_CFG), ("launcher", "Launcher", state.MENU_CFG),
                 ("wallpaperFx", "WallpaperFx", state.FX_CFG), ("imagePicker", "WallpaperFx", state.PICKER_CFG),
+                ("wallpaperLook", "WallpaperFx", state.WALL_LOOK_CFG),
                 ("widgets", "Widgets", WIDGET_CFG), ("osd", "Osd", OSD_CFG), ("notifications", "Notifications", NOTIFY_CFG),
                 ("sounds", "Sounds", state.SOUND_CFG), ("glyph", "Glyph", state.GLYPH_CFG)]
 

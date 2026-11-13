@@ -771,7 +771,8 @@ def theme_switcher():
                      ("strip", "A strip of equal cards, the selected one bigger"),
                      ("wide", "A huge preview and thin slices"), ("polaroid", "Cards in a white frame with a caption"),
                      ("honeycomb", "Honeycomb: a big hexagon in the middle, neighbours in rings of hexagons around it (after Vitreus)"),
-                     ("dots", "Round thumbnails; the preview assembles from dots in a wave (after glyph-rice)")):
+                     ("dots", "Round thumbnails; the preview assembles from dots in a wave (after glyph-rice)"),
+                     ("glyph", "glyph-rice's wallpaper switcher: the whole screen is the preview, assembling from dots in a wave; a strip of dotted circles below. Tab — dots / grey / colour, ↑↓ — dot size, Shift ↑↓ — light; the desktop wallpaper is drawn the same way")):
         out.append(f"{st}\tstyle:{st}\t\t{_cur(st == cur)}\t{t(desc)}{NL}{NL}{t('⏎ — select · p — open the theme switcher')}")
     return out
 

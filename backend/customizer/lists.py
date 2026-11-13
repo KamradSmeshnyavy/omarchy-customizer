@@ -20,6 +20,7 @@ _FX_EFFECTS = [
     ("burn", "Burns through in spots with a glowing edge"), ("waterdrop", "A drop: waves from a point, fading out"),
     ("hexagon", "Honeycomb opening from the centre"),
     ("hexreveal", "Honeycomb cells each opening from their own middle in a wave, with a lit rim (after Vitreus)"),
+    ("dotwave", "A wave from a point: the picture scatters into LED dots on the crest and reassembles as the new one (from glyph-rice)"),
     ("contagion", "Pixel colonies eat through the old wallpaper, the front flashes in the new theme's brightest colour"),
     ("outline", "Draws the picture's own lines, then the world grows out of them. Light: no model, no background work"),
     ("outline-cut", "Outline with cut-out: draws the character's outline, fills it in, then the world grows out of it. The character is found by BiRefNet in the background (NPU / GPU); until a wallpaper is cut out, its own lines are drawn"),
