@@ -57,7 +57,10 @@ glyph.pop("barSkinData", None)
 glyph.pop("barLayoutData", None)
 glyph.update({"barSkin": "glyph-pill", "barLayout": "glyph-left"})
 glyph["hyprGeometry"] = {"gapsIn": 6, "gapsOut": 12, "borderSize": 1, "rounding": 18, "shadow": False, "noGaps": False}
-glyph["imagePicker"] = dict(glyph["imagePicker"], style="dots", cardRadius=24)
+glyph["imagePicker"] = dict(glyph["imagePicker"], style="glyph", cardRadius=24)
+# переключатель обоев, лок и переход — из glyph-rice
+glyph["lock"] = dict(glyph["lock"], design="glyph", wallpaperBlur=0, wallpaperDim=0.35)
+glyph["wallpaperFx"] = dict(glyph["wallpaperFx"], type="dotwave", duration=1500, easing="InOutSine")
 glyph["widgets"].update(home=True, homeLayout="glyph", homeCards="glyph", homeHideWidgets=True,
                         deck=True, deckLayout="panel", deckCards="glyph", deckTrigger="dwell",
                         dashAttach="floating", dashAnimation="grow")

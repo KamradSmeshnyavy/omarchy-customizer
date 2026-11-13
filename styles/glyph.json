@@ -17,21 +17,21 @@
   },
   "barTransparent": false,
   "lock": {
-    "design": "dotmatrix",
+    "design": "glyph",
     "wallpaperBlur": 0,
-    "wallpaperDim": 0.45
+    "wallpaperDim": 0.35
   },
   "launcher": {
     "skin": "dotmatrix",
     "backdrop": 0.82
   },
   "wallpaperFx": {
-    "type": "fade",
-    "duration": 500,
-    "easing": "OutCubic"
+    "type": "dotwave",
+    "duration": 1500,
+    "easing": "InOutSine"
   },
   "imagePicker": {
-    "style": "dots",
+    "style": "glyph",
     "cardRadius": 24,
     "selectedBorder": 1,
     "dim": 0.55

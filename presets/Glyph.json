@@ -6,7 +6,5 @@
   "style": "glyph",
   "theme": "nothing-glyph-dark",
   "wallpaper": "~/.config/omarchy/themes/nothing-glyph-dark/backgrounds/1-01-night.png",
-  "imagePicker": { "style": "glyph" },
-  "wallpaperFx": { "type": "dotwave", "duration": 1500, "easing": "InOutSine", "origin": "center", "cell": 6 },
   "wallpaperLook": { "look": "color", "pitch": 10, "bright": 100 }
 }
