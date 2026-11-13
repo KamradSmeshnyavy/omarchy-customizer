@@ -674,7 +674,8 @@ def sddm_lock_ids():
 
 def _skin_desc(sk: str) -> str:
     fixed = {"dotmatrix": "DOT-MATRIX hardware bump with concave fillets, monochrome app grid, > actions and = LED calculator",
-             "sketchbook": "Sketchbook page: polaroid cards on a ruled sheet, pencil circle, tape and a sticky note"}
+             "sketchbook": "Sketchbook page: polaroid cards on a ruled sheet, pencil circle, tape and a sticky note",
+             "glyph": "glyph-rice's launcher: a panel in the middle, a search pill with a red caret and mode chips, a grid of circles with dotted icons; charms and the calculator in the same look"}
     if sk in fixed:
         return t(fixed[sk])
     if sk.startswith("drawer-"):

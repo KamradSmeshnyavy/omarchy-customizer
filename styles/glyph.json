@@ -22,8 +22,8 @@
     "wallpaperDim": 0.35
   },
   "launcher": {
-    "skin": "dotmatrix",
-    "backdrop": 0.82
+    "skin": "glyph",
+    "backdrop": 0.74
   },
   "wallpaperFx": {
     "type": "dotwave",

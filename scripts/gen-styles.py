@@ -61,6 +61,7 @@ glyph["hyprGeometry"] = {"gapsIn": 6, "gapsOut": 12, "borderSize": 1, "rounding"
 glyph["imagePicker"] = dict(glyph["imagePicker"], style="glyph", cardRadius=24)
 # переключатель обоев, лок и переход — из glyph-rice
 glyph["lock"] = dict(glyph["lock"], design="glyph", wallpaperBlur=0, wallpaperDim=0.35)
+glyph["launcher"] = dict(glyph["launcher"], skin="glyph", backdrop=0.74)
 glyph["wallpaperFx"] = dict(glyph["wallpaperFx"], type="dotwave", duration=1500, easing="InOutSine")
 glyph["widgets"].update(settingsPanel="quick", home=True, homeLayout="glyph", homeCards="glyph", homeHideWidgets=True,
                         deck=True, deckLayout="panel", deckCards="glyph", deckTrigger="dwell",
