@@ -742,6 +742,12 @@
           "label": "Deck: open — dwell (rest at the edge) · bump (touch the edge, back off a little, hit it again)"
         },
         {
+          "key": "settingsPanel",
+          "type": "enum",
+          "values": ["drawer", "quick"],
+          "label": "Super+M panel — drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)"
+        },
+        {
           "key": "deckDim",
           "type": "num",
           "min": 0,

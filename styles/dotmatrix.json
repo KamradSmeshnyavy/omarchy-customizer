@@ -133,6 +133,7 @@
     "dashBorder": true,
     "dashAnimation": "slide",
     "dashDuration": 240,
+    "settingsPanel": "drawer",
     "network": true,
     "networkAnchor": "top-left",
     "mediaAnchor": "top-left",

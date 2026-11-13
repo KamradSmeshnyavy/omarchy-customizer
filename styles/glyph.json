@@ -49,6 +49,7 @@
     "dashBorder": true,
     "dashAnimation": "grow",
     "dashDuration": 240,
+    "settingsPanel": "quick",
     "network": true,
     "networkAnchor": "top-left",
     "mediaAnchor": "top-left",

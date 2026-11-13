@@ -61,7 +61,8 @@
     "homeHideWidgets": true,
     "deckLayout": "panel",
     "deckCards": "style",
-    "deckTrigger": "dwell"
+    "deckTrigger": "dwell",
+    "settingsPanel": "drawer"
   },
   "osd": {
     "osdStyle": "edge",

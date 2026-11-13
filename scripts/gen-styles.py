@@ -29,6 +29,7 @@ dotmatrix["hyprGeometry"]["noGaps"] = True
 dotmatrix["notifications"].setdefault("notifyAttach", "auto")
 dotmatrix["fonts"] = "pixel"
 # Как рабочий стол NIHIL: часы, сеть и плеер одной колонкой карточек в левом верхнем углу.
+dotmatrix["widgets"].update(settingsPanel="drawer")
 dotmatrix["widgets"].update(network=True, networkAnchor="top-left", media=True, mediaAnchor="top-left", home=False, deck=False,
                            homeLayout="glyph", homeCards="glyph", homeHideWidgets=True, deckLayout="panel", deckCards="glyph",
                            deckTrigger="dwell")
@@ -61,7 +62,7 @@ glyph["imagePicker"] = dict(glyph["imagePicker"], style="glyph", cardRadius=24)
 # переключатель обоев, лок и переход — из glyph-rice
 glyph["lock"] = dict(glyph["lock"], design="glyph", wallpaperBlur=0, wallpaperDim=0.35)
 glyph["wallpaperFx"] = dict(glyph["wallpaperFx"], type="dotwave", duration=1500, easing="InOutSine")
-glyph["widgets"].update(home=True, homeLayout="glyph", homeCards="glyph", homeHideWidgets=True,
+glyph["widgets"].update(settingsPanel="quick", home=True, homeLayout="glyph", homeCards="glyph", homeHideWidgets=True,
                         deck=True, deckLayout="panel", deckCards="glyph", deckTrigger="dwell",
                         dashAttach="floating", dashAnimation="grow")
 glyph["osd"].update(osdStyle="edge", osdAttach="floating")
@@ -87,7 +88,7 @@ def plain(name, name_ru, note, note_ru, *, geom, bar, opacity, blur, anims, lock
             "dashAnimation": dash_anim, "dashDuration": fx["duration"] // 2 + 100,
             # Домашний экран и Deck — свои у стиля Glyph; остальные их выключают, чтобы не оставались после него.
             "home": False, "deck": False, "homeLayout": "glyph", "homeCards": "style", "homeHideWidgets": True,
-            "deckLayout": "panel", "deckCards": "style", "deckTrigger": "dwell",
+            "deckLayout": "panel", "deckCards": "style", "deckTrigger": "dwell", "settingsPanel": "drawer",
         },
         "osd": {
             "osdStyle": "edge", "osdFollowBar": True, "osdAttach": attach, "osdBackground": "background",
