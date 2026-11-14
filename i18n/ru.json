@@ -223,6 +223,7 @@
   "Clock (vitreus): layout — rule (hours over minutes) · pipe (12 | 34) · digital (12:34)": "Часы (vitreus): раскладка — rule (часы над минутами) · pipe (12 | 34) · digital (12:34)",
   "Clock (vitreus): size": "Часы (vitreus): размер",
   "Clock: style": "Часы: стиль",
+  "System: style — rings · vitreus (monitor card: rings and network graph)": "Система: стиль — rings (кольца) · vitreus (карточка-монитор: кольца и график сети)",
   "Clock: position": "Часы: положение",
   "Now playing": "Сейчас играет",
   "Now playing: position": "Сейчас играет: положение",

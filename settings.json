@@ -954,6 +954,12 @@
           "label": "System rings"
         },
         {
+          "key": "sysinfoStyle",
+          "type": "enum",
+          "values": ["rings", "vitreus"],
+          "label": "System: style — rings · vitreus (monitor card: rings and network graph)"
+        },
+        {
           "key": "sysinfoAnchor",
           "type": "enum",
           "values": ["top-right", "left", "center", "right", "bottom-left", "bottom", "bottom-right", "top-left", "top", "free"],
