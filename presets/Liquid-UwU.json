@@ -6,5 +6,8 @@
   "style": "liquid",
   "theme": "vitreus-uwu",
   "wallpaper": "~/.config/omarchy/themes/vitreus-uwu/backgrounds/1-liquid.png",
-  "fonts": "vitreus-uwu"
+  "fonts": "vitreus-uwu",
+  "base": "uwu",
+  "barSkin": "vitreus-frame",
+  "barLayout": "vitreus-frame-left"
 }

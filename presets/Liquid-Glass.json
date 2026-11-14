@@ -5,5 +5,8 @@
   "note_ru": "По мотивам Vitreus Glass: стиль «Жидкое стекло» на теме dynamic — цвета берутся с обоев, заголовки Space Grotesk.",
   "style": "liquid",
   "theme": "dynamic",
-  "fonts": "vitreus-glass"
+  "fonts": "vitreus-glass",
+  "base": "glass",
+  "barSkin": "vitreus-frame",
+  "barLayout": "vitreus-frame-left"
 }

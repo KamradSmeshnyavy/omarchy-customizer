@@ -6,5 +6,8 @@
   "style": "liquid",
   "theme": "vitreus-retro",
   "wallpaper": "~/.config/omarchy/themes/vitreus-retro/backgrounds/1-liquid.png",
-  "fonts": "vitreus-retro"
+  "fonts": "vitreus-retro",
+  "base": "retro",
+  "barSkin": "vitreus-frame-plastic",
+  "barLayout": "vitreus-frame-left"
 }

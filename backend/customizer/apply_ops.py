@@ -353,6 +353,8 @@ def apply_preset(path):
             if isinstance(look, dict):
                 look = dict(look)
                 look["id"] = style_ref
+                # основа темы (пресеты Vitreus: retro — пластик, glass — стекло, …); нет в пресете — стекло
+                look["base"] = jq_str(alt(d.get("base"), "glass"))
                 write(LOOK_CFG, look)
         if section_on(state.PRESET_CFG, "presetFonts", is_backup):
             apply_style_fonts(style_file)

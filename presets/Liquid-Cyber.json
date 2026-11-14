@@ -6,5 +6,8 @@
   "style": "liquid",
   "theme": "vitreus-cyber",
   "wallpaper": "~/.config/omarchy/themes/vitreus-cyber/backgrounds/1-liquid.png",
-  "fonts": "vitreus-cyber"
+  "fonts": "vitreus-cyber",
+  "base": "cyber",
+  "barSkin": "vitreus-frame",
+  "barLayout": "vitreus-frame-left"
 }

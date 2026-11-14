@@ -6,5 +6,8 @@
   "style": "liquid",
   "theme": "vitreus-doodle",
   "wallpaper": "~/.config/omarchy/themes/vitreus-doodle/backgrounds/1-liquid.png",
-  "fonts": "vitreus-doodle"
+  "fonts": "vitreus-doodle",
+  "base": "doodle",
+  "barSkin": "vitreus-frame-plastic",
+  "barLayout": "vitreus-frame-left"
 }
