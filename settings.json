@@ -822,6 +822,12 @@
           "label": "Margin from the bar / frame to the cards"
         },
         {
+          "key": "edgeMerge",
+          "type": "bool",
+          "default": true,
+          "label": "Merge cards with the bar / frame: a card at its edge sits flush and joins it (Vitreus)"
+        },
+        {
           "key": "tint",
           "type": "color",
           "default": "accent",
