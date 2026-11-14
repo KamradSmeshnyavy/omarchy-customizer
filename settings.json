@@ -845,8 +845,23 @@
         {
           "key": "clockStyle",
           "type": "enum",
-          "values": ["big", "stacked", "terminal", "minimal"],
+          "values": ["big", "stacked", "terminal", "minimal", "vitreus"],
           "label": "Clock: style"
+        },
+        {
+          "key": "clockVitreusLayout",
+          "type": "enum",
+          "values": ["rule", "pipe", "digital"],
+          "label": "Clock (vitreus): layout — rule (hours over minutes) · pipe (12 | 34) · digital (12:34)"
+        },
+        {
+          "key": "clockVitreusSize",
+          "type": "num",
+          "min": 0.6,
+          "max": 3,
+          "step": 0.1,
+          "default": 1.4,
+          "label": "Clock (vitreus): size"
         },
         {
           "key": "clockAnchor",

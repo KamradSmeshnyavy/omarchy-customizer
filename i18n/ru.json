@@ -220,6 +220,8 @@
   "Widgets": "Виджеты",
   "Desktop widgets · h l change": "Виджеты рабочего стола · h l — изменить",
   "Clock": "Часы",
+  "Clock (vitreus): layout — rule (hours over minutes) · pipe (12 | 34) · digital (12:34)": "Часы (vitreus): раскладка — rule (часы над минутами) · pipe (12 | 34) · digital (12:34)",
+  "Clock (vitreus): size": "Часы (vitreus): размер",
   "Clock: style": "Часы: стиль",
   "Clock: position": "Часы: положение",
   "Now playing": "Сейчас играет",
