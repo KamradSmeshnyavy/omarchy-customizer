@@ -378,6 +378,16 @@ def apply_preset(path):
     if section_on(state.PRESET_CFG, "presetLook", is_backup):
         refresh_app_looks()
     state.ACTIVE_PRESET.write_text("" if is_backup else os.path.basename(path)[:-5] + "\n")
+    # активный райс (вкладка «Райсы»): по нему части (дом, Deck, …) подстраиваются под облик
+    if not is_backup and section_on(state.PRESET_CFG, "presetLook", is_backup):
+        look = jsonio.read(LOOK_CFG)
+        look = dict(look) if isinstance(look, dict) else {}
+        rice = state.rice_of(os.path.basename(path)[:-5])
+        if rice:
+            look["rice"] = rice
+        else:
+            look.pop("rice", None)
+        write(LOOK_CFG, look)
     state.ACTIVE_STYLE.write_text(style_ref + "\n" if style_ref else "")
     notify("-t", "3000", "Presets", t("Applied preset: %s", label))
 
@@ -858,7 +868,10 @@ def dock_apply(value):
 
 def apply(category, value):
     out = ""
-    if category == "presets":
+    if category == "rices":
+        if not value.startswith("section:"):
+            apply_preset(value)
+    elif category == "presets":
         if value == "save":
             save_user_preset()
         elif value.startswith("tweak:window"):

@@ -243,6 +243,34 @@ def meta(path):
     return name.rstrip("\n"), note.rstrip("\n")
 
 
+RICES_FILE = paths.PLUGIN / "rices.json"
+
+
+def rices() -> list:
+    """Райсы из rices.json: [{id, name, note, after, variants: [{preset, name}]}] (имена и заметки — на языке интерфейса)."""
+    d = jsonio.read(RICES_FILE)
+    out = []
+    lang = i18n.lang()
+    for r in (d.get("rices") if isinstance(d, dict) else None) or []:
+        if not isinstance(r, dict) or not r.get("id"):
+            continue
+        vs = []
+        for v in r.get("variants") or []:
+            if isinstance(v, dict) and v.get("preset"):
+                vs.append({"preset": str(v["preset"]), "name": str(alt(v.get("name_" + lang), v.get("name"), v["preset"]))})
+        out.append({"id": str(r["id"]), "name": str(alt(r.get("name_" + lang), r.get("name"), r["id"])),
+                    "note": str(alt(r.get("note_" + lang), r.get("note"), "")), "after": str(r.get("after") or ""), "variants": vs})
+    return out
+
+
+def rice_of(stem: str) -> str:
+    """id райса, вариантом которого служит пресет stem; не райс — пусто."""
+    for r in rices():
+        if any(v["preset"] == stem for v in r["variants"]):
+            return r["id"]
+    return ""
+
+
 def preset_name(path) -> str:
     return meta(path)[0]
 

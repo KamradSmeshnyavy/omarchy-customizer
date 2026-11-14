@@ -17,6 +17,7 @@ use right now and quick actions. It follows the theme, the glass / solid materia
 
 | Group | What's inside |
 |---|---|
+| **Rices** | Whole looks with their variants (`rices.json`): **Vitreus** (Glass, Retro, Cyber, Paper, Doodle, Milkbox, Proxy, UwU), **Glyph**, **DOT-MATRIX**. A variant is a bundled preset; applying it also records the rice id in `~/.config/omarchy/style.json` (`"rice"`) |
 | **Presets** | Global desktop snapshots (bundled **DOT-MATRIX** preset + your own presets in `~/.config/omarchy/customizer/presets/*.json` with ★, `D` to delete, and automatic rollback to the previous setup) and **Style** — the form of the desktop on any theme: Flat, Glass, Liquid Glass, Fluent, DOT-MATRIX, Glyph or your own (window geometry, bar, lock, launcher, widgets, OSD, notifications, animations, opacity, blur, sounds, Glyph, fonts; you choose which parts a style applies) |
 | **Desktop** | Theme (palette + preview), Wallpaper (categories as in the background switcher), Recolor (any image into the current theme with lutgen), Dotify (LED dot-matrix wallpapers & Arch glyph generator), Wallpaper FX*, Widgets*, Dashboard* |
 | **Bar*** | Bar Skin (plus “💾 Save the current skin” into `~/.config/omarchy/bar-skins/`, listed with ★; `D` deletes one after a confirmation), Bar Layout (own layouts the same way, in `~/.config/omarchy/bar-layouts/`), Bar Tweaks — 41 settings, each with its default and a live preview |

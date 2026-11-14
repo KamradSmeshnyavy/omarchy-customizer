@@ -33,6 +33,7 @@ Item {
   // live: hovering a row previews it, Esc / leaving the category reverts;
   // bar: preview pane draws a bar mock (BarMock.qml); tweak: h/l step the row's value.
   readonly property var allCategories: [
+    { group: "rices",   key: "rices",     icon: "󰉼", title: "Rices",        hint: "Whole looks and their variants",         image: false, live: false, presetStage: true },
     { group: "presets", key: "presets",   icon: "󰆓", title: "Presets",      hint: "Full desktop snapshots · D — delete",   image: false, live: false, presetStage: true },
     { group: "presets", key: "styles",    icon: "󰉦", title: "Style",        hint: "Form on any theme · D — delete",         image: false, live: false, presetStage: true },
     { group: "presets", key: "fonts",     icon: "󰛖", title: "Fonts",        hint: "System font profiles, by style",          image: false, live: false },
@@ -66,6 +67,7 @@ Item {
   // Вкладки сверху: группы категорий (1–6, Tab / Shift+Tab); chips — какие чипы
   // статуса показывать в шапке, пока группа открыта.
   readonly property var allGroups: [
+    { id: "rices",   icon: "󰉼", title: "Rices",   chips: ["preset", "style", "theme", "bar-skin"] },
     { id: "presets", icon: "󰆓", title: "Presets", chips: ["preset", "style", "fonts", "sound", "theme", "bar-skin"] },
     { id: "desk", icon: "󰧨", title: "Desktop",  chips: ["theme", "wallpaper", "fx"] },
     { id: "bar",  icon: "󰕮", title: "Bar",      chips: ["bar-skin", "bar-layout"] },
@@ -1113,7 +1115,7 @@ Item {
     if (k === "widgets") return (widgetsStage.clash ? root.tr("Widgets overlap — move one of the red ones to another position.")
       : root.tr("Layout of the enabled widgets; the one you are editing is highlighted.")) + "\n\n" + row.note
     if (root.isTweakRow(row)) return row.note
-    if (k === "bar-skins" || k === "presets" || k === "styles") return row.note + (root.previewText ? "\n\n" + root.previewText : "")
+    if (k === "bar-skins" || k === "presets" || k === "rices" || k === "styles") return row.note + (root.previewText ? "\n\n" + root.previewText : "")
     if (root.category.fx) return row.note + "\n\n" + root.tr("The preview plays the transition at half speed.")
     if (k === "fonts") return row.note + "\n\n" + root.tr("Interface") + ": " + fontStage.sans
       + "\n" + root.tr("Code") + ": " + fontStage.mono + "\n" + root.tr("Titles") + ": " + fontStage.title
@@ -1331,7 +1333,7 @@ Item {
   }
 
   function randomPick() {
-    if (root.category.key === "walls" || root.category.key === "dotify" || root.category.key === "presets" || root.category.key === "styles" || root.category.key === "fonts" || root.category.key === "sounds" || root.category.key === "glyph") return
+    if (root.category.key === "walls" || root.category.key === "dotify" || root.category.key === "presets" || root.category.key === "rices" || root.category.key === "styles" || root.category.key === "fonts" || root.category.key === "sounds" || root.category.key === "glyph") return
     if (root.category.tweak) return
     if (root.pane === 0) { root.pane = 1 }
     var c = root.randomCandidates()
@@ -1475,7 +1477,7 @@ Item {
   // The old fzf preview for shaders showed just the header comments and consts.
   function formatPreview(text) {
     // Описание пресета уже есть в заметке над JSON — переводы note_* в нём только мешают.
-    if (root.category.key === "bar-skins" || root.category.key === "bar-layouts" || root.category.key === "presets" || root.category.key === "styles")
+    if (root.category.key === "bar-skins" || root.category.key === "bar-layouts" || root.category.key === "presets" || root.category.key === "rices" || root.category.key === "styles")
       return text.split("\n").filter(function(l) { return !/^\s*"(note|name)(_[a-z]+)?":/.test(l) }).join("\n")
     if (root.category.key !== "shaders") return text
     return text.split("\n").filter(function(l) { return /^(\/\/|const)/.test(l) }).join("\n")

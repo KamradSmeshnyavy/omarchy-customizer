@@ -1,0 +1,43 @@
+{
+  "note": "Rices for the Rices tab: a rice is a whole look (style + theme + bar + parts), its variants are presets from presets/. Applying a variant applies that preset and records the rice id in ~/.config/omarchy/style.json (\"rice\").",
+  "note_ru": "Райсы для вкладки «Райсы»: райс — целый облик (стиль + тема + бар + части), его варианты — пресеты из presets/. Вариант применяется как пресет, а id райса пишется в ~/.config/omarchy/style.json (\"rice\").",
+  "rices": [
+    {
+      "id": "vitreus",
+      "name": "Vitreus",
+      "after": "natepayn3/Vitreus (MIT)",
+      "note": "Liquid glass and moulded plastic: a frame with a side strip, panels that flow out of the bar and merge with it, tabs on the frame, glass clock and system monitor on the desktop. Each variant is a theme base with its own material.",
+      "note_ru": "Жидкое стекло и литой пластик: рамка с полосой сбоку, панели вытекают из бара и сливаются с ним, язычки на рамке, стеклянные часы и монитор системы на столе. Каждый вариант — основа темы со своим материалом.",
+      "variants": [
+        { "preset": "Liquid-Glass", "name": "Glass", "name_ru": "Стекло" },
+        { "preset": "Liquid-Retro", "name": "Retro", "name_ru": "Retro" },
+        { "preset": "Liquid-Cyber", "name": "Cyber", "name_ru": "Cyber" },
+        { "preset": "Liquid-Paper", "name": "Paper", "name_ru": "Бумага" },
+        { "preset": "Liquid-Doodle", "name": "Doodle", "name_ru": "Doodle" },
+        { "preset": "Liquid-Milkbox", "name": "Milkbox", "name_ru": "Milkbox" },
+        { "preset": "Liquid-Proxy", "name": "Proxy", "name_ru": "Proxy" },
+        { "preset": "Liquid-UwU", "name": "UwU", "name_ru": "UwU" }
+      ]
+    },
+    {
+      "id": "glyph",
+      "name": "Glyph",
+      "after": "nebelung-cloud/glyph-rice (GPL-3.0)",
+      "note": "Nothing Glyph look: left pill bar, home screen bento, deck from the bottom edge, edge-light OSD, dot-matrix night wallpaper.",
+      "note_ru": "Облик Nothing Glyph: пилюля слева, бенто домашнего экрана, Deck снизу, OSD подсветкой по краю, точечные ночные обои.",
+      "variants": [
+        { "preset": "Glyph", "name": "Glyph dark", "name_ru": "Glyph тёмный" }
+      ]
+    },
+    {
+      "id": "dotmatrix",
+      "name": "DOT-MATRIX",
+      "after": "own",
+      "note": "Hardware shell in the spirit of Nothing: frame bezel, LED dot-matrix type, perimeter Glyph lighting, tactile sounds.",
+      "note_ru": "Аппаратная оболочка в духе Nothing: рамка-бортик, матричный LED-шрифт, контурная подсветка Glyph, тактильные звуки.",
+      "variants": [
+        { "preset": "DOT-MATRIX", "name": "DOT-MATRIX", "name_ru": "DOT-MATRIX" }
+      ]
+    }
+  ]
+}

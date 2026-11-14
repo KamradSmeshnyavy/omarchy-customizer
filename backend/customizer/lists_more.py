@@ -54,6 +54,23 @@ def presets():
     return out + tweaks.prefixed(tweaks.list_tweaks("PRESET_TWEAKS"))
 
 
+def rices():
+    """Вкладка «Райсы»: заголовок на райс, под ним варианты — пресеты из presets/ (⏎ применяет пресет)."""
+    cur = state.current_preset_stem()
+    out = []
+    for r in state.rices():
+        out.append(f"{r['name']}\tsection:{r['name']}\t\t0\t\theader")
+        after = t("After %s", r["after"]) if r["after"] and r["after"] != "own" else t("Own rice")
+        for v in r["variants"]:
+            f = state.PRESET_DIR / f"{v['preset']}.json"
+            if not f.is_file():
+                continue
+            _name, note = state.meta(f)
+            s = state.preset_summary(f)
+            out.append(f"{r['name']} · {v['name']}\t{f}\t{f}\t{_cur(v['preset'] == cur)}\t{r['note']}{NL}{NL}{note}{NL}{NL}{after}{NL}{NL}{s}\t{s}")
+    return out
+
+
 def styles():
     cur = state.current_style_stem()
     out = [f"{t('💾 Save current look as a style…')}\tsave\t\t0\t"
@@ -858,7 +875,7 @@ def _dotify_python() -> bool:
 
 def available():
     plugins = paths.CONFIG / "plugins"
-    out = ["presets", "styles", "windows"]
+    out = ["rices", "presets", "styles", "windows"]
     if fsutil.which("omarchy-font-profile"):
         out.append("fonts")
     if fsutil.which("pw-play"):
