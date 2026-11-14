@@ -1311,7 +1311,7 @@
         {
           "key": "dashStyle",
           "type": "enum",
-          "values": ["default", "dotmatrix"],
+          "values": ["default", "dotmatrix", "vitreus"],
           "label": "Dashboard: style"
         },
         {
