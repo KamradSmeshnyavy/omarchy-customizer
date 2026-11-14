@@ -224,6 +224,11 @@ THEMES = {"dotmatrix": ("nothing-steel", "nothing-ashlight"), "glyph": ("nothing
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}
+# Части райса (дом, Deck, Super+M, меню выключения, буфер) — auto: вид выбирает сам виджет по райсу из style.json
+# ("rice", пишет вкладка «Райсы»), а без райса — по стилю (Widgets.qml → partFor). Сменил райс — части подстроились.
+PARTS = ("homeLayout", "homeCards", "deckLayout", "deckCards", "settingsPanel", "powerStyle", "clipboardPanel")
+for name, st in styles.items():
+    st["widgets"].update({k: "auto" for k in PARTS})
 for name, st in styles.items():
     with open(os.path.join(out, name + ".json"), "w") as f:
         json.dump(st, f, ensure_ascii=False, indent=2)

@@ -56,15 +56,15 @@
     "dashDuration": 325,
     "home": false,
     "deck": false,
-    "homeLayout": "glyph",
-    "homeCards": "style",
+    "homeLayout": "auto",
+    "homeCards": "auto",
     "homeHideWidgets": true,
-    "deckLayout": "panel",
-    "deckCards": "style",
+    "deckLayout": "auto",
+    "deckCards": "auto",
     "deckTrigger": "dwell",
-    "settingsPanel": "drawer",
-    "powerStyle": "edge",
-    "clipboardPanel": "stock"
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto"
   },
   "osd": {
     "osdStyle": "edge",

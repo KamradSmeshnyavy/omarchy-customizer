@@ -656,8 +656,8 @@
         {
           "key": "homeLayout",
           "type": "enum",
-          "values": ["glyph", "classic", "minimal"],
-          "label": "Home: layout — glyph (as in glyph-rice) · classic (tiles in the centre) · minimal"
+          "values": ["auto", "glyph", "classic", "minimal"],
+          "label": "Home: layout — auto (by the rice) · glyph (as in glyph-rice) · classic (tiles in the centre) · minimal"
         },
         {
           "key": "homeScale",
@@ -676,8 +676,8 @@
         {
           "key": "homeCards",
           "type": "enum",
-          "values": ["glyph", "style"],
-          "label": "Home (glyph): cards — flat as in glyph-rice · in the style material"
+          "values": ["auto", "glyph", "style"],
+          "label": "Home (glyph): cards — auto (by the rice) · flat as in glyph-rice · in the style material"
         },
         {
           "key": "homeGreeting",
@@ -732,8 +732,8 @@
         {
           "key": "deckLayout",
           "type": "enum",
-          "values": ["panel", "compact", "full"],
-          "label": "Deck: layout — panel (as in glyph-rice) · compact strip · full screen"
+          "values": ["auto", "panel", "compact", "full"],
+          "label": "Deck: layout — auto (by the rice) · panel (as in glyph-rice) · compact strip · full screen"
         },
         {
           "key": "deckTrigger",
@@ -744,20 +744,20 @@
         {
           "key": "powerStyle",
           "type": "enum",
-          "values": ["edge", "glyph"],
-          "label": "Power menu — edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)"
+          "values": ["auto", "edge", "glyph"],
+          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)"
         },
         {
           "key": "clipboardPanel",
           "type": "enum",
-          "values": ["stock", "glyph"],
-          "label": "Super+Ctrl+V clipboard — stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)"
+          "values": ["auto", "stock", "glyph"],
+          "label": "Super+Ctrl+V clipboard — auto (by the rice) · stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)"
         },
         {
           "key": "settingsPanel",
           "type": "enum",
-          "values": ["drawer", "quick"],
-          "label": "Super+M panel — drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)"
+          "values": ["auto", "drawer", "quick"],
+          "label": "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)"
         },
         {
           "key": "deckDim",
@@ -776,8 +776,8 @@
         {
           "key": "deckCards",
           "type": "enum",
-          "values": ["glyph", "style"],
-          "label": "Deck: card — flat as in glyph-rice · in the style material"
+          "values": ["auto", "glyph", "style"],
+          "label": "Deck: card — auto (by the rice) · flat as in glyph-rice · in the style material"
         },
         {
           "key": "deckScale",

@@ -843,5 +843,12 @@
   "Rices": "Райсы",
   "Whole looks and their variants": "Целые облики и их варианты",
   "After %s": "По мотивам %s",
-  "Own rice": "Свой райс"
+  "Own rice": "Свой райс",
+  "Home: layout — auto (by the rice) · glyph (as in glyph-rice) · classic (tiles in the centre) · minimal": "Дом: раскладка — auto (по райсу) · glyph (как в glyph-rice) · classic (плитки по центру) · minimal",
+  "Home (glyph): cards — auto (by the rice) · flat as in glyph-rice · in the style material": "Дом (glyph): карточки — auto (по райсу) · плоские как в glyph-rice · в материале стиля",
+  "Deck: layout — auto (by the rice) · panel (as in glyph-rice) · compact strip · full screen": "Deck: раскладка — auto (по райсу) · panel (как в glyph-rice) · compact (полоска) · full (весь экран)",
+  "Deck: card — auto (by the rice) · flat as in glyph-rice · in the style material": "Deck: карточка — auto (по райсу) · плоская как в glyph-rice · в материале стиля",
+  "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)": "Панель Super+M — auto (по райсу) · drawer (выдвижные настройки DOT-MATRIX) · quick (Quick из glyph-rice: списки Wi-Fi / Bluetooth, плитки, запись экрана)",
+  "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)": "Меню выключения — auto (по райсу) · edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice)",
+  "Super+Ctrl+V clipboard — auto (by the rice) · stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)": "Буфер обмена Super+Ctrl+V — auto (по райсу) · stock (Omarchy) · glyph (Clip из glyph-rice: фильтры, закрепление, карточка превью)"
 }
