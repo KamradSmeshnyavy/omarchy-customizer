@@ -111,7 +111,7 @@
   "barSkin": "glyph-pill",
   "barLayout": "glyph-rice",
   "theme": {
-    "dark": "nothing-glyph-dark",
-    "light": "nothing-glyph-light"
+    "dark": "nothing-glyph-dark-mono",
+    "light": "nothing-glyph-light-mono"
   }
 }

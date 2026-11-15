@@ -233,7 +233,8 @@ for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
     st["widgets"].setdefault("mediaStyle", "default")
 # Тема стиля (переключатель styleTheme): пара тёмная / светлая.
-THEMES = {"dotmatrix": ("nothing-steel", "nothing-ashlight"), "glyph": ("nothing-glyph-dark", "nothing-glyph-light"), "flat": ("matte-black", "white"),
+# у DOT-MATRIX и Glyph — одноцветные двойники тем (-mono); разноцветные остаются в списке тем
+THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph": ("nothing-glyph-dark-mono", "nothing-glyph-light-mono"), "flat": ("matte-black", "white"),
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),

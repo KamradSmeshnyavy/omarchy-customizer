@@ -193,7 +193,7 @@
     "texture": ""
   },
   "theme": {
-    "dark": "nothing-steel",
-    "light": "nothing-ashlight"
+    "dark": "nothing-steel-mono",
+    "light": "nothing-ashlight-mono"
   }
 }
