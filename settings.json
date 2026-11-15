@@ -756,8 +756,8 @@
         {
           "key": "settingsPanel",
           "type": "enum",
-          "values": ["auto", "drawer", "quick"],
-          "label": "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)"
+          "values": ["auto", "drawer", "quick", "surface"],
+          "label": "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording) · surface (the Hub of surface-dots: toggles, sliders, Wi-Fi / Bluetooth / sound lists, player, calendar, notifications)"
         },
         {
           "key": "deckDim",

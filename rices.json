@@ -132,8 +132,8 @@
       "id": "surface",
       "name": "surface",
       "after": "snes19xx/surface-dots (reuse with credit)",
-      "note": "Everforest graphite or warm paper: a transparent top bar of pills with window icons, the Hub column dropping from the clock (toggles, sliders, player, calendar, notifications), the serif Cassini power menu with a photo of Saturn, the stellarium lock screen, windows popping in on springs, e-ink and CRT screen shaders.",
-      "note_ru": "Графит или тёплая бумага Everforest: прозрачный бар сверху из пилюль со значками окон, колонка Hub из-под часов (переключатели, ползунки, плеер, календарь, уведомления), меню выключения Cassini с засечками и снимком Сатурна, экран блокировки stellarium, окна появляются на пружинах, шейдеры экрана e-ink и CRT.",
+      "note": "Everforest graphite or warm paper: a transparent top bar of pills with window icons, the Hub column dropping from the clock (toggles, sliders, player, calendar, notifications), the serif Cassini power menu with a photo of Saturn, the stellarium lock screen, windows popping in on springs, a bottom taskbar variant that turns into a dock on an empty workspace, e-ink and CRT screen shaders.",
+      "note_ru": "Графит или тёплая бумага Everforest: прозрачный бар сверху из пилюль со значками окон, колонка Hub из-под часов (переключатели, ползунки, плеер, календарь, уведомления), меню выключения Cassini с засечками и снимком Сатурна, экран блокировки stellarium, окна появляются на пружинах, вариант с таскбаром снизу, который на пустом столе становится доком, шейдеры экрана e-ink и CRT.",
       "variants": [
         {
           "preset": "Surface-Dark",
@@ -144,6 +144,16 @@
           "preset": "Surface-Light",
           "name": "Light",
           "name_ru": "Светлая"
+        },
+        {
+          "preset": "Surface-Taskbar-Dark",
+          "name": "Taskbar dark",
+          "name_ru": "Таскбар тёмный"
+        },
+        {
+          "preset": "Surface-Taskbar-Light",
+          "name": "Taskbar light",
+          "name_ru": "Таскбар светлый"
         }
       ]
     },

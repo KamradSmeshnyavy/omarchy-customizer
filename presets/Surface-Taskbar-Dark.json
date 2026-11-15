@@ -1,0 +1,12 @@
+{
+  "name": "surface Taskbar Dark",
+  "name_ru": "surface · Таскбар · Тёмная",
+  "note": "After the taskbar mode of surface-dots by snes19xx (its README allows reuse with credit): the surface style on the surface-dark theme with the bar at the bottom — on an empty workspace a dock (launcher, pinned apps, time) inside a thin screen frame, with windows a full strip with workspaces, the song and status pills; the Programs grid as the launcher of the strip, the two-column Hub as the dashboard.",
+  "note_ru": "По мотивам режима таскбара surface-dots (snes19xx; README разрешает брать со ссылкой): стиль surface на теме surface-dark с баром снизу — на пустом столе док (лаунчер, закреплённые приложения, время) в тонкой рамке экрана, с окнами — полоса со столами, песней и пилюлями статуса; сетка Programs — лаунчер полосы, двухколоночный Hub — дашборд.",
+  "style": "surface",
+  "theme": "surface-dark",
+  "wallpaper": "~/.config/omarchy/themes/surface-dark/backgrounds/1-ridges.jpg",
+  "fonts": "surface",
+  "barSkin": "surface-task",
+  "barLayout": "surface-task"
+}
