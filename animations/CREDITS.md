@@ -12,6 +12,7 @@ projects licensed under GPL-3.0:
 | `ML4W - classic`, `ML4W - dynamic`, `ML4W - fast`, `ML4W - high`, `ML4W - moving`, `ML4W - standard` | [ML4W dotfiles](https://github.com/mylinuxforwork/dotfiles) |
 | `DOT-MATRIX` | [Nihil-Shell](https://github.com/poligle/Nihil-Shell) (MIT, by Pol Iglesias) |
 | `yami` | after [yami](https://github.com/Trendorin/yami) (MIT): the durations and curves of its niri animations; its pixel dissolve shaders have no Hyprland equivalent |
+| `rumda` | after [Rumda](https://github.com/hexonide/rumda): the durations and curves of its hyprland.conf animations |
 
 Add your own presets to `~/.config/omarchy/customizer/animations/*.lua`: they show up in the list, and a
 file with the same name overrides the bundled one.
