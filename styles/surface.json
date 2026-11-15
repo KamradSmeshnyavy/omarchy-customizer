@@ -1,0 +1,117 @@
+{
+  "name": "surface",
+  "name_ru": "surface",
+  "note": "After surface-dots by snes19xx (its README allows reuse with credit): Everforest graphite or warm paper, a transparent top bar of pills with window icons, the Hub column under the clock, 1 px green window borders with corners of 7, windows popping in on springs, the serif Cassini power menu and the stellarium lock screen, Manrope in the shell.",
+  "note_ru": "По мотивам surface-dots (snes19xx; README разрешает брать со ссылкой): графит или тёплая бумага Everforest, прозрачный бар сверху из пилюль со значками окон, колонка Hub под часами, рамки окон 1 px зеленью с углами 7, окна появляются на пружинах, меню выключения Cassini с засечками и экран блокировки stellarium, Manrope в оболочке.",
+  "anims": "surface",
+  "opacity": "soft",
+  "blur": "medium",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 1,
+    "gapsOut": 3,
+    "borderSize": 1,
+    "rounding": 7,
+    "shadow": true,
+    "noGaps": false
+  },
+  "barSkin": "surface",
+  "barLayout": "surface",
+  "barTransparent": false,
+  "lock": {
+    "design": "surface",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "surface",
+    "backdrop": 0.75
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 400,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "cards",
+    "cardRadius": 16,
+    "selectedBorder": 2,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "minimal",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "surface",
+    "dashFollowBar": true,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 1,
+    "dashRadius": 16,
+    "dashBorder": false,
+    "dashAnimation": "fade",
+    "dashDuration": 300,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default"
+  },
+  "osd": {
+    "osdStyle": "edge",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 1,
+    "osdRadius": 16,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "drawer",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 1,
+    "notifyRadius": 16,
+    "notifyCards": "flat",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "fluent",
+    "windowSounds": true
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "surface",
+  "look": {
+    "texture": "",
+    "elevation": 1,
+    "motion": 1.0,
+    "material": "solid",
+    "cornerScale": 0.8,
+    "typeface": "shell"
+  },
+  "theme": {
+    "dark": "surface-dark",
+    "light": "surface-light"
+  }
+}

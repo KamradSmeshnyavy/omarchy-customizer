@@ -217,6 +217,16 @@ styles = {
         picker="cards", dash_anim="fade", sound_pack="paper", window_sounds=True, fonts="rumda",
         attach="floating",
         look={"elevation": 1, "motion": 1.0, "material": "solid", "cornerScale": 0.4, "typeface": "hand"}),
+    "surface": plain(
+        "surface", "surface",
+        "After surface-dots by snes19xx (its README allows reuse with credit): Everforest graphite or warm paper, a transparent top bar of pills with window icons, the Hub column under the clock, 1 px green window borders with corners of 7, windows popping in on springs, the serif Cassini power menu and the stellarium lock screen, Manrope in the shell.",
+        "По мотивам surface-dots (snes19xx; README разрешает брать со ссылкой): графит или тёплая бумага Everforest, прозрачный бар сверху из пилюль со значками окон, колонка Hub под часами, рамки окон 1 px зеленью с углами 7, окна появляются на пружинах, меню выключения Cassini с засечками и экран блокировки stellarium, Manrope в оболочке.",
+        geom={"gapsIn": 1, "gapsOut": 3, "borderSize": 1, "rounding": 7, "shadow": True},
+        bar="surface", opacity="soft", blur="medium", anims="surface", lock="surface", launcher="surface",
+        radius=16, alpha=1, cards="flat", fx={"type": "fade", "duration": 400, "easing": "OutCubic"},
+        picker="cards", dash_anim="fade", sound_pack="fluent", window_sounds=True, fonts="surface",
+        attach="floating",
+        look={"elevation": 1, "motion": 1.0, "material": "solid", "cornerScale": 0.8, "typeface": "shell"}),
 
 }
 
@@ -242,6 +252,8 @@ styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami", mediaSt
 styles["rumda"]["barLayout"] = "rumda"
 styles["rumda"]["widgets"].update(dashStyle="rumda")
 styles["rumda"]["notifications"].update(notifyStyle="stock", notifyCards="rumda", notifyRadius=2, notifyWidth=300)
+styles["surface"]["barLayout"] = "surface"
+styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
     st["widgets"].setdefault("mediaStyle", "default")
@@ -251,7 +263,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

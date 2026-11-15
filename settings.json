@@ -744,8 +744,8 @@
         {
           "key": "powerStyle",
           "type": "enum",
-          "values": ["auto", "edge", "glyph"],
-          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)"
+          "values": ["auto", "edge", "glyph", "cassini"],
+          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots)"
         },
         {
           "key": "clipboardPanel",
@@ -1332,7 +1332,7 @@
         {
           "key": "dashStyle",
           "type": "enum",
-          "values": ["default", "dotmatrix", "vitreus", "pencils", "rumda"],
+          "values": ["default", "dotmatrix", "vitreus", "pencils", "rumda", "surface"],
           "label": "Dashboard: style"
         },
         {
