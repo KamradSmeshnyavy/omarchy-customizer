@@ -1,10 +1,10 @@
 {
   "name": "Cozytile Everforest",
   "name_ru": "Cozytile · Everforest",
-  "note": "After Cozytile by Darkkal44 (look only): the Cozytile style on the cozytile-everforest theme (misty pine forest) — one-colour terminal and apps, its own drawn wallpaper, the floating pill bar with dark tabs.",
-  "note_ru": "По мотивам Cozytile (Darkkal44, только облик): стиль Cozytile на теме cozytile-everforest (туманный ельник) — одноцветные терминал и приложения, свои нарисованные обои, плавающий бар-пилюля с тёмными язычками.",
+  "note": "After Cozytile by Darkkal44 (look only): the Cozytile style on the cozytile-everforest theme (misty pine forest) — one-colour terminal and apps, its own wallpaper for this theme, the floating pill bar with dark tabs.",
+  "note_ru": "По мотивам Cozytile (Darkkal44, только облик): стиль Cozytile на теме cozytile-everforest (туманный ельник) — одноцветные терминал и приложения, его обои этой темы, плавающий бар-пилюля с тёмными язычками.",
   "style": "cozytile",
   "theme": "cozytile-everforest",
-  "wallpaper": "~/.config/omarchy/themes/cozytile-everforest/backgrounds/1-cozytile.jpg",
+  "wallpaper": "~/.config/omarchy/themes/cozytile-everforest/backgrounds/0-original.png",
   "fonts": "cozytile"
 }

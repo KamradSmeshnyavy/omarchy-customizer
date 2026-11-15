@@ -46,7 +46,7 @@
     "media": true,
     "mediaAnchor": "bottom-left",
     "dashStyle": "default",
-    "dashFollowBar": true,
+    "dashFollowBar": false,
     "dashAttach": "floating",
     "dashBackground": "background",
     "dashAlpha": 1,
@@ -70,7 +70,7 @@
   },
   "osd": {
     "osdStyle": "edge",
-    "osdFollowBar": true,
+    "osdFollowBar": false,
     "osdAttach": "floating",
     "osdBackground": "background",
     "osdAlpha": 1,
@@ -80,7 +80,7 @@
   },
   "notifications": {
     "notifyStyle": "drawer",
-    "notifyFollowBar": true,
+    "notifyFollowBar": false,
     "notifyAttach": "floating",
     "notifyBackground": "background",
     "notifyAlpha": 1,

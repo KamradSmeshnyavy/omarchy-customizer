@@ -1,10 +1,10 @@
 {
   "name": "Cozytile Cozy",
   "name_ru": "Cozytile · Cozy",
-  "note": "After Cozytile by Darkkal44 (look only): the Cozytile style on the cozytile-cozy theme (lavender dusk) — one-colour terminal and apps, its own drawn wallpaper, the floating pill bar with dark tabs.",
-  "note_ru": "По мотивам Cozytile (Darkkal44, только облик): стиль Cozytile на теме cozytile-cozy (сиреневые сумерки) — одноцветные терминал и приложения, свои нарисованные обои, плавающий бар-пилюля с тёмными язычками.",
+  "note": "After Cozytile by Darkkal44 (look only): the Cozytile style on the cozytile-cozy theme (lavender dusk) — one-colour terminal and apps, its own wallpaper for this theme, the floating pill bar with dark tabs.",
+  "note_ru": "По мотивам Cozytile (Darkkal44, только облик): стиль Cozytile на теме cozytile-cozy (сиреневые сумерки) — одноцветные терминал и приложения, его обои этой темы, плавающий бар-пилюля с тёмными язычками.",
   "style": "cozytile",
   "theme": "cozytile-cozy",
-  "wallpaper": "~/.config/omarchy/themes/cozytile-cozy/backgrounds/1-cozytile.jpg",
+  "wallpaper": "~/.config/omarchy/themes/cozytile-cozy/backgrounds/0-original.png",
   "fonts": "cozytile"
 }

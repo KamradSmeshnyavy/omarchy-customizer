@@ -263,6 +263,10 @@ styles["rumda"]["barLayout"] = "rumda"
 styles["rumda"]["widgets"].update(dashStyle="rumda")
 styles["rumda"]["notifications"].update(notifyStyle="stock", notifyCards="rumda", notifyRadius=2, notifyWidth=300)
 styles["cozytile"]["barLayout"] = "cozytile"
+# дашборд, Super+M, OSD и уведомления — фоном темы (его тёмная заливка), а не светлой заливкой бара
+styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="background")
+styles["cozytile"]["osd"].update(osdFollowBar=False, osdBackground="background")
+styles["cozytile"]["notifications"].update(notifyFollowBar=False, notifyBackground="background")
 styles["surface"]["barLayout"] = "surface"
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
