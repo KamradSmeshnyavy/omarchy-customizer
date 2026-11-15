@@ -1,10 +1,10 @@
 {
   "name": "Rumda Dark",
   "name_ru": "Rumda · Тёмная",
-  "note": "After Rumda (hexonide/rumda, look only): the Rumda style on the rumda-dark theme — one-colour terminal and apps, the plain wallpaper with a pixel cat, a narrow card bar on the left, the dense dashboard.",
-  "note_ru": "По мотивам Rumda (hexonide/rumda, только облик): стиль Rumda на теме rumda-dark — одноцветные терминал и приложения, сплошные обои с пиксельным котом, узкий бар из карточек слева, плотный дашборд.",
+  "note": "After Rumda (hexonide/rumda, look only): the Rumda style on the rumda-dark theme — one-colour terminal and apps, its own wallpaper, a narrow card bar on the left, the dense dashboard.",
+  "note_ru": "По мотивам Rumda (hexonide/rumda, только облик): стиль Rumda на теме rumda-dark — одноцветные терминал и приложения, его обои, узкий бар из карточек слева, плотный дашборд.",
   "style": "rumda",
   "theme": "rumda-dark",
-  "wallpaper": "~/.config/omarchy/themes/rumda-dark/backgrounds/1-plain.png",
+  "wallpaper": "~/.config/omarchy/themes/rumda-dark/backgrounds/0-original.png",
   "fonts": "rumda"
 }

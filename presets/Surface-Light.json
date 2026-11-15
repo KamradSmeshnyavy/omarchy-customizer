@@ -1,10 +1,10 @@
 {
   "name": "surface Light",
   "name_ru": "surface · Светлая",
-  "note": "After surface-dots by snes19xx (its README allows reuse with credit): the surface style on the surface-light theme — one-colour terminal and apps, generated paper-grain wallpaper with mountain ridges, the transparent pill bar, the Hub, the Cassini power menu, the stellarium lock screen.",
-  "note_ru": "По мотивам surface-dots (snes19xx; README разрешает брать со ссылкой): стиль surface на теме surface-light — одноцветные терминал и приложения, сгенерированные обои с зерном бумаги и хребтами гор, прозрачный бар из пилюль, Hub, меню выключения Cassini, экран блокировки stellarium.",
+  "note": "After surface-dots by snes19xx (its README allows reuse with credit): the surface style on the surface-light theme — one-colour terminal and apps, its own wallpaper, the transparent pill bar, the Hub, the Cassini power menu, the stellarium lock screen.",
+  "note_ru": "По мотивам surface-dots (snes19xx; README разрешает брать со ссылкой): стиль surface на теме surface-light — одноцветные терминал и приложения, его обои, прозрачный бар из пилюль, Hub, меню выключения Cassini, экран блокировки stellarium.",
   "style": "surface",
   "theme": "surface-light",
-  "wallpaper": "~/.config/omarchy/themes/surface-light/backgrounds/1-ridges.jpg",
+  "wallpaper": "~/.config/omarchy/themes/surface-light/backgrounds/0-original.jpg",
   "fonts": "surface"
 }

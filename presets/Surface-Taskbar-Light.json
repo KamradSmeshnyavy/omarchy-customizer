@@ -5,7 +5,7 @@
   "note_ru": "По мотивам режима таскбара surface-dots (snes19xx; README разрешает брать со ссылкой): стиль surface на теме surface-light с баром снизу — на пустом столе док (лаунчер, закреплённые приложения, время) в тонкой рамке экрана, с окнами — полоса со столами, песней и пилюлями статуса; сетка Programs — лаунчер полосы, двухколоночный Hub — дашборд.",
   "style": "surface",
   "theme": "surface-light",
-  "wallpaper": "~/.config/omarchy/themes/surface-light/backgrounds/1-ridges.jpg",
+  "wallpaper": "~/.config/omarchy/themes/surface-light/backgrounds/0-original.jpg",
   "fonts": "surface",
   "barSkin": "surface-task",
   "barLayout": "surface-task"
