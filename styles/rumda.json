@@ -79,15 +79,15 @@
     "osdAlign": "center"
   },
   "notifications": {
-    "notifyStyle": "drawer",
+    "notifyStyle": "stock",
     "notifyFollowBar": true,
     "notifyAttach": "floating",
     "notifyBackground": "background",
     "notifyAlpha": 1,
-    "notifyRadius": 7,
-    "notifyCards": "bordered",
+    "notifyRadius": 2,
+    "notifyCards": "rumda",
     "notifyCorner": "top-right",
-    "notifyWidth": 380
+    "notifyWidth": 300
   },
   "sounds": {
     "soundPack": "paper",

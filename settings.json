@@ -1248,7 +1248,7 @@
         {
           "key": "notifyCards",
           "type": "enum",
-          "values": ["flat", "bordered", "dotmatrix"],
+          "values": ["flat", "bordered", "dotmatrix", "rumda"],
           "label": "Cards"
         },
         {

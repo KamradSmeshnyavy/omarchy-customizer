@@ -241,6 +241,7 @@ styles["yami"]["barLayout"] = "yami"
 styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami", mediaStyle="yami")
 styles["rumda"]["barLayout"] = "rumda"
 styles["rumda"]["widgets"].update(dashStyle="rumda")
+styles["rumda"]["notifications"].update(notifyStyle="stock", notifyCards="rumda", notifyRadius=2, notifyWidth=300)
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
     st["widgets"].setdefault("mediaStyle", "default")
