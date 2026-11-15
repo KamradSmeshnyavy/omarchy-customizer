@@ -19,7 +19,7 @@
   "barLayout": "yami",
   "barTransparent": false,
   "lock": {
-    "design": "style-flat",
+    "design": "yami",
     "wallpaperBlur": 0,
     "wallpaperDim": 0.35
   },

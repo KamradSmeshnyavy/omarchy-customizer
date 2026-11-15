@@ -202,7 +202,7 @@ styles = {
         "After yami (Trendorin/yami, MIT): a pixel-art desktop in dark graphite with one accent — square windows with a one-pixel border, a thin top bar with square workspace cells and cpu / ram scales, flat panels with a hard pixel shadow, the pixel Tiny5 font in the whole shell, quick motion.",
         "По мотивам yami (Trendorin/yami, MIT): пиксельный рабочий стол в тёмном графите с одним акцентом — квадратные окна с рамкой в пиксель, тонкий бар сверху с квадратными ячейками столов и шкалами cpu / ram, плоские панели с жёсткой пиксельной тенью, пиксельный Tiny5 во всей оболочке, быстрые анимации.",
         geom={"gapsIn": 4, "gapsOut": 8, "borderSize": 2, "rounding": 0, "shadow": False},
-        bar="yami", opacity="solid", blur="off", anims="yami", lock="style-flat", launcher="yami",
+        bar="yami", opacity="solid", blur="off", anims="yami", lock="yami", launcher="yami",
         radius=0, alpha=1, cards="bordered", fx={"type": "fade", "duration": 260, "easing": "OutCubic"},
         picker="slices", dash_anim="fade", sound_pack="flat", window_sounds=True, fonts="yami",
         attach="floating",
