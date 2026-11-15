@@ -8,5 +8,13 @@
   "fonts": "vitreus-glass",
   "base": "glass",
   "barSkin": "vitreus-frame",
-  "barLayout": "vitreus-frame-left"
+  "barLayout": "vitreus-frame-left",
+  "hyprGeometry": {
+    "gapsIn": 8,
+    "gapsOut": 16,
+    "borderSize": 1,
+    "rounding": 22,
+    "shadow": true,
+    "noGaps": false
+  }
 }

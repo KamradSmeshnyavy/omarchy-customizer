@@ -9,5 +9,13 @@
   "fonts": "vitreus-milk",
   "base": "milk",
   "barSkin": "vitreus-frame-plastic",
-  "barLayout": "vitreus-frame-left"
+  "barLayout": "vitreus-frame-left",
+  "hyprGeometry": {
+    "gapsIn": 8,
+    "gapsOut": 16,
+    "borderSize": 1,
+    "rounding": 24,
+    "shadow": true,
+    "noGaps": false
+  }
 }
