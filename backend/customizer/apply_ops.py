@@ -34,7 +34,7 @@ RECOLOR = paths.PLUGIN / "scripts/recolor-wallpapers"
 DOTIFY = paths.PLUGIN / "scripts/dotify.py"
 THUMB_DIR = paths.CACHE / "omarchy-customizer/thumbs"
 LOCK_THUMBS = paths.CACHE / "omarchy-customizer/lock"
-WINDOW_GEOM_KEYS = ["windowGapsIn", "windowGapsOut", "windowBorder", "windowDecoRounding", "windowShadow", "windowNoGaps"]
+WINDOW_GEOM_KEYS = ["windowGapsIn", "windowGapsOut", "windowBorder", "windowDecoRounding", "windowShadow", "windowNoGaps", "windowRadius"]
 OMARCHY_PATH = os.environ.get("OMARCHY_PATH", "")
 sh = preview_ops.sh
 write = tweak_ops.write_inplace
@@ -264,6 +264,18 @@ def apply_form_sections(path, cfg, prefix, is_backup, mode, keep_look=False):
             win.update({"windowGapsIn": vals[0], "windowGapsOut": vals[1], "windowBorder": vals[2],
                         "windowDecoRounding": vals[3], "windowShadow": g.get("shadow") is True,
                         "windowNoGaps": g.get("noGaps") is True})
+            # углы окон — отдельное правило окна (hypr/customizer.lua, сильнее decoration.rounding): у стиля с прямыми
+            # углами (rounding 0: yami, flat, brutal, retro) оно выключается, иначе его радиус — скругление стиля
+            try:
+                rnd = float(vals[3])
+            except (TypeError, ValueError):
+                rnd = 12
+            if rnd <= 0:
+                win["windowRounding"] = "off"
+            else:
+                win["windowRadius"] = vals[3]
+                if win.get("windowRounding") == "off":
+                    win["windowRounding"] = "float"
             write(WINDOW_CFG, win)
             set_no_gaps(jq_str(alt(g.get("noGaps"), False)))
         elif mode == "replace" and "hyprGeometry" in d:
