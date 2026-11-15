@@ -1,0 +1,10 @@
+{
+  "name": "yami Ice",
+  "name_ru": "yami · Лёд",
+  "note": "After yami (Trendorin/yami, MIT): the yami style on the yami-ice theme — dark graphite with the ice accent, a dot-grid wallpaper, the pixel Tiny5 shell, square cells on a thin top bar.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): стиль yami на теме yami-ice — тёмный графит с акцентом «лёд», обои с точечной сеткой, пиксельный Tiny5 в оболочке, квадратные ячейки на тонком баре сверху.",
+  "style": "yami",
+  "theme": "yami-ice",
+  "wallpaper": "~/.config/omarchy/themes/yami-ice/backgrounds/1-grid.png",
+  "fonts": "yami"
+}

@@ -851,7 +851,7 @@
         {
           "key": "clockStyle",
           "type": "enum",
-          "values": ["big", "stacked", "terminal", "minimal", "vitreus"],
+          "values": ["big", "stacked", "terminal", "minimal", "vitreus", "yami"],
           "label": "Clock: style"
         },
         {
@@ -962,7 +962,7 @@
         {
           "key": "sysinfoStyle",
           "type": "enum",
-          "values": ["rings", "vitreus"],
+          "values": ["rings", "vitreus", "yami"],
           "label": "System: style — rings · vitreus (monitor card: rings and network graph)"
         },
         {

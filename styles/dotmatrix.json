@@ -146,7 +146,8 @@
     "homeHideWidgets": true,
     "deckLayout": "auto",
     "deckCards": "auto",
-    "deckTrigger": "dwell"
+    "deckTrigger": "dwell",
+    "sysinfoStyle": "rings"
   },
   "osd": {
     "osdStyle": "dotmatrix",

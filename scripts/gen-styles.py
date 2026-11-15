@@ -197,6 +197,16 @@ styles = {
         attach="floating", shader="paper",
         look={"elevation": 2, "motion": 1.1, "material": "paper", "cornerScale": 0.5, "typeface": "hand",
               "texture": "~/.config/omarchy/plugins/kamradsmeshnyavy.customizer/textures/paper.png"}),
+    "yami": plain(
+        "yami", "yami",
+        "After yami (Trendorin/yami, MIT): a pixel-art desktop in dark graphite with one accent — square windows with a one-pixel border, a thin top bar with square workspace cells and cpu / ram scales, flat panels with a hard pixel shadow, the pixel Tiny5 font in the whole shell, quick motion.",
+        "По мотивам yami (Trendorin/yami, MIT): пиксельный рабочий стол в тёмном графите с одним акцентом — квадратные окна с рамкой в пиксель, тонкий бар сверху с квадратными ячейками столов и шкалами cpu / ram, плоские панели с жёсткой пиксельной тенью, пиксельный Tiny5 во всей оболочке, быстрые анимации.",
+        geom={"gapsIn": 4, "gapsOut": 10, "borderSize": 1, "rounding": 0, "shadow": False},
+        bar="yami", opacity="solid", blur="off", anims="ML4W - fast", lock="style-flat", launcher="yami",
+        radius=0, alpha=1, cards="bordered", fx={"type": "fade", "duration": 260, "easing": "OutCubic"},
+        picker="slices", dash_anim="fade", sound_pack="flat", window_sounds=True, fonts="yami",
+        attach="floating",
+        look={"elevation": 0, "motion": 0.7, "material": "pixel", "cornerScale": 0, "typeface": "hand"}),
 
 }
 
@@ -216,11 +226,17 @@ for name, st in styles.items():
             print(f"{name}.{k}: missing {sorted(set(ref[k]) - set(sh[k] or []))}"); bad = True
 if bad:
     sys.exit(1)
+# yami: своя раскладка бара (ячейки столов, шкалы), пиксельные часы и монитор из трёх карточек
+styles["yami"]["barLayout"] = "yami"
+styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami")
+for st in styles.values():
+    st["widgets"].setdefault("sysinfoStyle", "rings")
 # Тема стиля (переключатель styleTheme): пара тёмная / светлая.
 THEMES = {"dotmatrix": ("nothing-steel", "nothing-ashlight"), "glyph": ("nothing-glyph-dark", "nothing-glyph-light"), "flat": ("matte-black", "white"),
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
-          "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", "")}
+          "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
+          "yami": ("yami-ash", "")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

@@ -9,14 +9,46 @@
       "note": "Liquid glass and moulded plastic: a frame with a side strip, panels that flow out of the bar and merge with it, tabs on the frame, glass clock and system monitor on the desktop. Each variant is a theme base with its own material.",
       "note_ru": "Жидкое стекло и литой пластик: рамка с полосой сбоку, панели вытекают из бара и сливаются с ним, язычки на рамке, стеклянные часы и монитор системы на столе. Каждый вариант — основа темы со своим материалом.",
       "variants": [
-        { "preset": "Liquid-Glass", "name": "Glass", "name_ru": "Стекло" },
-        { "preset": "Liquid-Retro", "name": "Retro", "name_ru": "Retro" },
-        { "preset": "Liquid-Cyber", "name": "Cyber", "name_ru": "Cyber" },
-        { "preset": "Liquid-Paper", "name": "Paper", "name_ru": "Бумага" },
-        { "preset": "Liquid-Doodle", "name": "Doodle", "name_ru": "Doodle" },
-        { "preset": "Liquid-Milkbox", "name": "Milkbox", "name_ru": "Milkbox" },
-        { "preset": "Liquid-Proxy", "name": "Proxy", "name_ru": "Proxy" },
-        { "preset": "Liquid-UwU", "name": "UwU", "name_ru": "UwU" }
+        {
+          "preset": "Liquid-Glass",
+          "name": "Glass",
+          "name_ru": "Стекло"
+        },
+        {
+          "preset": "Liquid-Retro",
+          "name": "Retro",
+          "name_ru": "Retro"
+        },
+        {
+          "preset": "Liquid-Cyber",
+          "name": "Cyber",
+          "name_ru": "Cyber"
+        },
+        {
+          "preset": "Liquid-Paper",
+          "name": "Paper",
+          "name_ru": "Бумага"
+        },
+        {
+          "preset": "Liquid-Doodle",
+          "name": "Doodle",
+          "name_ru": "Doodle"
+        },
+        {
+          "preset": "Liquid-Milkbox",
+          "name": "Milkbox",
+          "name_ru": "Milkbox"
+        },
+        {
+          "preset": "Liquid-Proxy",
+          "name": "Proxy",
+          "name_ru": "Proxy"
+        },
+        {
+          "preset": "Liquid-UwU",
+          "name": "UwU",
+          "name_ru": "UwU"
+        }
       ]
     },
     {
@@ -26,7 +58,55 @@
       "note": "Nothing Glyph look: left pill bar, home screen bento, deck from the bottom edge, edge-light OSD, dot-matrix night wallpaper.",
       "note_ru": "Облик Nothing Glyph: пилюля слева, бенто домашнего экрана, Deck снизу, OSD подсветкой по краю, точечные ночные обои.",
       "variants": [
-        { "preset": "Glyph", "name": "Glyph dark", "name_ru": "Glyph тёмный" }
+        {
+          "preset": "Glyph",
+          "name": "Glyph dark",
+          "name_ru": "Glyph тёмный"
+        }
+      ]
+    },
+    {
+      "id": "yami",
+      "name": "yami",
+      "after": "Trendorin/yami (MIT)",
+      "note": "A pixel-art desktop in dark graphite with one accent: a thin top bar with square workspace cells and cpu / ram scales, a launcher window with APPS / CLIPBOARD tabs, a pixel clock and monitor cards on a dot-grid wallpaper, the Tiny5 font everywhere in the shell.",
+      "note_ru": "Пиксельный рабочий стол в тёмном графите с одним акцентом: тонкий бар сверху с квадратными ячейками столов и шкалами cpu / ram, окно лаунчера с вкладками APPS / CLIPBOARD, пиксельные часы и карточки монитора на обоях с точечной сеткой, шрифт Tiny5 во всей оболочке.",
+      "variants": [
+        {
+          "preset": "Yami-Blood",
+          "name": "Blood",
+          "name_ru": "Кровь"
+        },
+        {
+          "preset": "Yami-Ash",
+          "name": "Ash",
+          "name_ru": "Пепел"
+        },
+        {
+          "preset": "Yami-Sakura",
+          "name": "Sakura",
+          "name_ru": "Сакура"
+        },
+        {
+          "preset": "Yami-Amber",
+          "name": "Amber",
+          "name_ru": "Янтарь"
+        },
+        {
+          "preset": "Yami-Venom",
+          "name": "Venom",
+          "name_ru": "Яд"
+        },
+        {
+          "preset": "Yami-Ice",
+          "name": "Ice",
+          "name_ru": "Лёд"
+        },
+        {
+          "preset": "Yami-Dusk",
+          "name": "Dusk",
+          "name_ru": "Сумрак"
+        }
       ]
     },
     {
@@ -36,7 +116,11 @@
       "note": "Hardware shell in the spirit of Nothing: frame bezel, LED dot-matrix type, perimeter Glyph lighting, tactile sounds.",
       "note_ru": "Аппаратная оболочка в духе Nothing: рамка-бортик, матричный LED-шрифт, контурная подсветка Glyph, тактильные звуки.",
       "variants": [
-        { "preset": "DOT-MATRIX", "name": "DOT-MATRIX", "name_ru": "DOT-MATRIX" }
+        {
+          "preset": "DOT-MATRIX",
+          "name": "DOT-MATRIX",
+          "name_ru": "DOT-MATRIX"
+        }
       ]
     }
   ]

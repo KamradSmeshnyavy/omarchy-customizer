@@ -1,0 +1,10 @@
+{
+  "name": "yami Sakura",
+  "name_ru": "yami · Сакура",
+  "note": "After yami (Trendorin/yami, MIT): the yami style on the yami-sakura theme — dark graphite with the sakura accent, a dot-grid wallpaper, the pixel Tiny5 shell, square cells on a thin top bar.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): стиль yami на теме yami-sakura — тёмный графит с акцентом «сакура», обои с точечной сеткой, пиксельный Tiny5 в оболочке, квадратные ячейки на тонком баре сверху.",
+  "style": "yami",
+  "theme": "yami-sakura",
+  "wallpaper": "~/.config/omarchy/themes/yami-sakura/backgrounds/1-grid.png",
+  "fonts": "yami"
+}

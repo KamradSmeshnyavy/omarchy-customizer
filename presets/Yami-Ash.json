@@ -1,0 +1,10 @@
+{
+  "name": "yami Ash",
+  "name_ru": "yami · Пепел",
+  "note": "After yami (Trendorin/yami, MIT): the yami style on the yami-ash theme — dark graphite with the ash accent, a dot-grid wallpaper, the pixel Tiny5 shell, square cells on a thin top bar.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): стиль yami на теме yami-ash — тёмный графит с акцентом «пепел», обои с точечной сеткой, пиксельный Tiny5 в оболочке, квадратные ячейки на тонком баре сверху.",
+  "style": "yami",
+  "theme": "yami-ash",
+  "wallpaper": "~/.config/omarchy/themes/yami-ash/backgrounds/1-grid.png",
+  "fonts": "yami"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "yami Amber",
+  "name_ru": "yami · Янтарь",
+  "note": "After yami (Trendorin/yami, MIT): the yami style on the yami-amber theme — dark graphite with the amber accent, a dot-grid wallpaper, the pixel Tiny5 shell, square cells on a thin top bar.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): стиль yami на теме yami-amber — тёмный графит с акцентом «янтарь», обои с точечной сеткой, пиксельный Tiny5 в оболочке, квадратные ячейки на тонком баре сверху.",
+  "style": "yami",
+  "theme": "yami-amber",
+  "wallpaper": "~/.config/omarchy/themes/yami-amber/backgrounds/1-grid.png",
+  "fonts": "yami"
+}

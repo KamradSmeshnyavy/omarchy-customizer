@@ -1,0 +1,116 @@
+{
+  "name": "yami",
+  "name_ru": "yami",
+  "note": "After yami (Trendorin/yami, MIT): a pixel-art desktop in dark graphite with one accent — square windows with a one-pixel border, a thin top bar with square workspace cells and cpu / ram scales, flat panels with a hard pixel shadow, the pixel Tiny5 font in the whole shell, quick motion.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): пиксельный рабочий стол в тёмном графите с одним акцентом — квадратные окна с рамкой в пиксель, тонкий бар сверху с квадратными ячейками столов и шкалами cpu / ram, плоские панели с жёсткой пиксельной тенью, пиксельный Tiny5 во всей оболочке, быстрые анимации.",
+  "anims": "ML4W - fast",
+  "opacity": "solid",
+  "blur": "off",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 4,
+    "gapsOut": 10,
+    "borderSize": 1,
+    "rounding": 0,
+    "shadow": false,
+    "noGaps": false
+  },
+  "barSkin": "yami",
+  "barLayout": "yami",
+  "barTransparent": false,
+  "lock": {
+    "design": "style-flat",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "yami",
+    "backdrop": 0.75
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 260,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "slices",
+    "cardRadius": 0,
+    "selectedBorder": 1,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "yami",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "default",
+    "dashFollowBar": true,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 1,
+    "dashRadius": 0,
+    "dashBorder": true,
+    "dashAnimation": "fade",
+    "dashDuration": 230,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "yami"
+  },
+  "osd": {
+    "osdStyle": "edge",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 1,
+    "osdRadius": 0,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "drawer",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 1,
+    "notifyRadius": 0,
+    "notifyCards": "bordered",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "flat",
+    "windowSounds": true
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "yami",
+  "look": {
+    "texture": "",
+    "elevation": 0,
+    "motion": 0.7,
+    "material": "pixel",
+    "cornerScale": 0,
+    "typeface": "hand"
+  },
+  "theme": {
+    "dark": "yami-ash",
+    "light": "yami-ash"
+  }
+}

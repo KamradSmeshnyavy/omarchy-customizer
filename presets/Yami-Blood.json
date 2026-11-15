@@ -1,0 +1,10 @@
+{
+  "name": "yami Blood",
+  "name_ru": "yami · Кровь",
+  "note": "After yami (Trendorin/yami, MIT): the yami style on the yami-blood theme — dark graphite with the blood accent, a dot-grid wallpaper, the pixel Tiny5 shell, square cells on a thin top bar.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): стиль yami на теме yami-blood — тёмный графит с акцентом «кровь», обои с точечной сеткой, пиксельный Tiny5 в оболочке, квадратные ячейки на тонком баре сверху.",
+  "style": "yami",
+  "theme": "yami-blood",
+  "wallpaper": "~/.config/omarchy/themes/yami-blood/backgrounds/1-grid.png",
+  "fonts": "yami"
+}

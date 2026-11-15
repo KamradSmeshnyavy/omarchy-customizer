@@ -64,7 +64,8 @@
     "deckTrigger": "dwell",
     "settingsPanel": "auto",
     "powerStyle": "auto",
-    "clipboardPanel": "auto"
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings"
   },
   "osd": {
     "osdStyle": "edge",

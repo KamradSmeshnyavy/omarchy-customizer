@@ -1,0 +1,10 @@
+{
+  "name": "yami Venom",
+  "name_ru": "yami · Яд",
+  "note": "After yami (Trendorin/yami, MIT): the yami style on the yami-venom theme — dark graphite with the venom accent, a dot-grid wallpaper, the pixel Tiny5 shell, square cells on a thin top bar.",
+  "note_ru": "По мотивам yami (Trendorin/yami, MIT): стиль yami на теме yami-venom — тёмный графит с акцентом «яд», обои с точечной сеткой, пиксельный Tiny5 в оболочке, квадратные ячейки на тонком баре сверху.",
+  "style": "yami",
+  "theme": "yami-venom",
+  "wallpaper": "~/.config/omarchy/themes/yami-venom/backgrounds/1-grid.png",
+  "fonts": "yami"
+}
