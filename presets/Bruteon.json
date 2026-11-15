@@ -1,0 +1,10 @@
+{
+  "name": "Bruteon",
+  "name_ru": "Bruteon",
+  "note": "After Bruteon by Darkkal44 (neo-brutalism, look from its screenshots): the Bruteon style on the bruteon-light theme — one-colour terminal and apps, a soft sunset wallpaper, three islands of a bar, the dashboard of cards.",
+  "note_ru": "По мотивам Bruteon (Darkkal44, необрутализм, облик с его скриншотов): стиль Bruteon на теме bruteon-light — одноцветные терминал и приложения, обои-закат, три острова бара, дашборд из карточек.",
+  "style": "bruteon",
+  "theme": "bruteon-light",
+  "wallpaper": "~/.config/omarchy/themes/bruteon-light/backgrounds/1-sunset.jpg",
+  "fonts": "cozytile"
+}

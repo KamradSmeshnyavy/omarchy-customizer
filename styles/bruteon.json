@@ -1,0 +1,117 @@
+{
+  "name": "Bruteon",
+  "name_ru": "Bruteon",
+  "note": "After Bruteon by Darkkal44 (neo-brutalism, look from its screenshots): warm cream paper, everything outlined in thick dark ink with a hard shadow without blur, pastel tiles — three islands of a bar, a dashboard of cards, windows with a 3 px border and a 6 × 6 hard shadow, springy pop-ins, JetBrains Mono.",
+  "note_ru": "По мотивам Bruteon (Darkkal44, необрутализм, облик с его скриншотов): тёплая кремовая бумага, всё обведено толстым тёмным контуром с жёсткой тенью без размытия, пастельные плитки — три острова бара, дашборд из карточек, окна с рамкой 3 px и жёсткой тенью 6 × 6, упругие появления, JetBrains Mono.",
+  "anims": "bruteon",
+  "opacity": "solid",
+  "blur": "off",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 8,
+    "gapsOut": 18,
+    "borderSize": 3,
+    "rounding": 10,
+    "shadow": true,
+    "noGaps": false
+  },
+  "barSkin": "bruteon",
+  "barLayout": "bruteon",
+  "barTransparent": false,
+  "lock": {
+    "design": "style-brutal",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "drawer-brutal",
+    "backdrop": 0.75
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 300,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "cards",
+    "cardRadius": 10,
+    "selectedBorder": 1,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "big",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "bruteon",
+    "dashFollowBar": false,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 1,
+    "dashRadius": 10,
+    "dashBorder": true,
+    "dashAnimation": "fade",
+    "dashDuration": 250,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default"
+  },
+  "osd": {
+    "osdStyle": "edge",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 1,
+    "osdRadius": 10,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "drawer",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 1,
+    "notifyRadius": 10,
+    "notifyCards": "bordered",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "brutal",
+    "windowSounds": true
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "cozytile",
+  "look": {
+    "texture": "",
+    "elevation": 1,
+    "motion": 0.8,
+    "material": "brutal",
+    "cornerScale": 0.8,
+    "typeface": "shell"
+  },
+  "theme": {
+    "dark": "bruteon-light",
+    "light": "bruteon-light"
+  }
+}

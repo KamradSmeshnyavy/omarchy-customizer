@@ -217,6 +217,16 @@ styles = {
         picker="cards", dash_anim="fade", sound_pack="paper", window_sounds=True, fonts="rumda",
         attach="floating",
         look={"elevation": 1, "motion": 1.0, "material": "solid", "cornerScale": 0.4, "typeface": "hand"}),
+    "bruteon": plain(
+        "Bruteon", "Bruteon",
+        "After Bruteon by Darkkal44 (neo-brutalism, look from its screenshots): warm cream paper, everything outlined in thick dark ink with a hard shadow without blur, pastel tiles — three islands of a bar, a dashboard of cards, windows with a 3 px border and a 6 × 6 hard shadow, springy pop-ins, JetBrains Mono.",
+        "По мотивам Bruteon (Darkkal44, необрутализм, облик с его скриншотов): тёплая кремовая бумага, всё обведено толстым тёмным контуром с жёсткой тенью без размытия, пастельные плитки — три острова бара, дашборд из карточек, окна с рамкой 3 px и жёсткой тенью 6 × 6, упругие появления, JetBrains Mono.",
+        geom={"gapsIn": 8, "gapsOut": 18, "borderSize": 3, "rounding": 10, "shadow": True},
+        bar="bruteon", opacity="solid", blur="off", anims="bruteon", lock="style-brutal", launcher="drawer-brutal",
+        radius=10, alpha=1, cards="bordered", fx={"type": "fade", "duration": 300, "easing": "OutCubic"},
+        picker="cards", dash_anim="fade", sound_pack="brutal", window_sounds=True, fonts="cozytile",
+        attach="floating",
+        look={"elevation": 1, "motion": 0.8, "material": "brutal", "cornerScale": 0.8, "typeface": "shell"}),
     "cozytile": plain(
         "Cozytile", "Cozytile",
         "After Cozytile by Darkkal44 (look only): a floating 30 px pill bar with dark tabs that have S-shaped slanted sides, workspace dots, borderless windows with 9 px gaps, corners of 10 and a soft shadow, plain fades instead of animations, a 400 px launcher with a picture header, a power menu of five big icons, the Orbitron lock with falling petals, JetBrains Mono everywhere.",
@@ -262,6 +272,8 @@ styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami", mediaSt
 styles["rumda"]["barLayout"] = "rumda"
 styles["rumda"]["widgets"].update(dashStyle="rumda")
 styles["rumda"]["notifications"].update(notifyStyle="stock", notifyCards="rumda", notifyRadius=2, notifyWidth=300)
+styles["bruteon"]["barLayout"] = "bruteon"
+styles["bruteon"]["widgets"].update(dashStyle="bruteon", dashFollowBar=False, dashBackground="background")
 styles["cozytile"]["barLayout"] = "cozytile"
 # дашборд, Super+M, OSD и уведомления — фоном темы (его тёмная заливка), а не светлой заливкой бара
 styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="background")
@@ -278,7 +290,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-light", "")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

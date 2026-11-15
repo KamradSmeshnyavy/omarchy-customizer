@@ -192,6 +192,20 @@
       ]
     },
     {
+      "id": "bruteon",
+      "name": "Bruteon",
+      "after": "Darkkal44/Bruteon (GPL-3.0, from its screenshots)",
+      "note": "Neo-brutalism on warm cream paper: everything outlined in thick dark ink with a hard shadow, pastel tiles — a bar of three islands with app glyphs and a Tasks button, a dense dashboard of cards (profile, apps, clock, weather, sliders, system specs, player, links), windows with a hard shadow and springy pop-ins.",
+      "note_ru": "Необрутализм на тёплой кремовой бумаге: всё обведено толстым тёмным контуром с жёсткой тенью, пастельные плитки — бар из трёх островов со значками приложений и кнопкой Tasks, плотный дашборд из карточек (профиль, приложения, часы, погода, ползунки, характеристики, плеер, ссылки), окна с жёсткой тенью и упругими появлениями.",
+      "variants": [
+        {
+          "preset": "Bruteon",
+          "name": "Light",
+          "name_ru": "Светлая"
+        }
+      ]
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",
