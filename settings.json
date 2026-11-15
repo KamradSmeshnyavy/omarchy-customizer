@@ -1315,6 +1315,11 @@
           "label": "Dashboard: style"
         },
         {
+          "key": "dashAvatar",
+          "type": "file",
+          "label": "Dashboard (vitreus): avatar on the user card — empty uses ~/.face"
+        },
+        {
           "key": "dashFollowBar",
           "type": "bool",
           "default": true,

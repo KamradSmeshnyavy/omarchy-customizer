@@ -850,5 +850,6 @@
   "Deck: card — auto (by the rice) · flat as in glyph-rice · in the style material": "Deck: карточка — auto (по райсу) · плоская как в glyph-rice · в материале стиля",
   "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording)": "Панель Super+M — auto (по райсу) · drawer (выдвижные настройки DOT-MATRIX) · quick (Quick из glyph-rice: списки Wi-Fi / Bluetooth, плитки, запись экрана)",
   "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice)": "Меню выключения — auto (по райсу) · edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice)",
-  "Super+Ctrl+V clipboard — auto (by the rice) · stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)": "Буфер обмена Super+Ctrl+V — auto (по райсу) · stock (Omarchy) · glyph (Clip из glyph-rice: фильтры, закрепление, карточка превью)"
+  "Super+Ctrl+V clipboard — auto (by the rice) · stock (Omarchy) · glyph (Clip from glyph-rice: filters, pins, preview card)": "Буфер обмена Super+Ctrl+V — auto (по райсу) · stock (Omarchy) · glyph (Clip из glyph-rice: фильтры, закрепление, карточка превью)",
+  "Dashboard (vitreus): avatar on the user card — empty uses ~/.face": "Дашборд (vitreus): аватар в карточке пользователя — пусто: ~/.face"
 }
