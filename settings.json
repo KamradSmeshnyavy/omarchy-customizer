@@ -897,6 +897,12 @@
           "label": "Now playing"
         },
         {
+          "key": "mediaStyle",
+          "type": "enum",
+          "values": ["default", "yami"],
+          "label": "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too)"
+        },
+        {
           "key": "mediaAnchor",
           "type": "enum",
           "values": ["bottom-left", "bottom", "bottom-right", "top-left", "top", "top-right", "left", "center", "right", "free"],
@@ -1021,6 +1027,21 @@
           "type": "enum",
           "values": ["bottom-right", "bottom", "bottom-left", "right", "left", "center", "top-right", "top", "top-left", "free"],
           "label": "Quote: position"
+        },
+        {
+          "section": "Calendar"
+        },
+        {
+          "key": "calendar",
+          "type": "bool",
+          "default": false,
+          "label": "Month calendar (wheel — another month, click the title — back to today)"
+        },
+        {
+          "key": "calendarAnchor",
+          "type": "enum",
+          "values": ["top-left", "left", "bottom-left", "top", "center", "bottom", "top-right", "right", "bottom-right", "free"],
+          "label": "Calendar: position"
         },
         {
           "section": "Photo frame"

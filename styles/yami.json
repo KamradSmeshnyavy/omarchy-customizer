@@ -65,7 +65,8 @@
     "settingsPanel": "auto",
     "powerStyle": "auto",
     "clipboardPanel": "auto",
-    "sysinfoStyle": "yami"
+    "sysinfoStyle": "yami",
+    "mediaStyle": "yami"
   },
   "osd": {
     "osdStyle": "edge",

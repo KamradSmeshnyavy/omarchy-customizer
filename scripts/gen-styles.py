@@ -228,9 +228,10 @@ if bad:
     sys.exit(1)
 # yami: своя раскладка бара (ячейки столов, шкалы), пиксельные часы и монитор из трёх карточек
 styles["yami"]["barLayout"] = "yami"
-styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami")
+styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami", mediaStyle="yami")
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
+    st["widgets"].setdefault("mediaStyle", "default")
 # Тема стиля (переключатель styleTheme): пара тёмная / светлая.
 THEMES = {"dotmatrix": ("nothing-steel", "nothing-ashlight"), "glyph": ("nothing-glyph-dark", "nothing-glyph-light"), "flat": ("matte-black", "white"),
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),

@@ -65,7 +65,8 @@
     "settingsPanel": "auto",
     "powerStyle": "auto",
     "clipboardPanel": "auto",
-    "sysinfoStyle": "rings"
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default"
   },
   "osd": {
     "osdStyle": "edge",
