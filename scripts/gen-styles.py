@@ -207,6 +207,16 @@ styles = {
         picker="slices", dash_anim="fade", sound_pack="flat", window_sounds=True, fonts="yami",
         attach="floating",
         look={"elevation": 0, "motion": 0.7, "material": "pixel", "cornerScale": 0, "typeface": "hand"}),
+    "rumda": plain(
+        "Rumda", "Rumda",
+        "After Rumda (hexonide/rumda): a warm coffee or sand desktop with a caramel accent — a narrow pill bar on the left with every module in its own card, windows with a 3 px border and corners of 7, a dense dashboard with a GitHub graph, the pixel Dogica Pixel font in the shell, windows sliding in from below.",
+        "По мотивам Rumda (hexonide/rumda): тёплый кофейный или песочный стол с карамельным акцентом — узкая пилюля-бар слева, каждый модуль в своей карточке, окна с рамкой 3 px и углами 7, плотный дашборд с графиком GitHub, пиксельный Dogica Pixel в оболочке, окна въезжают снизу.",
+        geom={"gapsIn": 9, "gapsOut": 40, "borderSize": 3, "rounding": 7, "shadow": True},
+        bar="rumda", opacity="solid", blur="off", anims="rumda", lock="rumda", launcher="rumda",
+        radius=7, alpha=1, cards="bordered", fx={"type": "fade", "duration": 400, "easing": "OutCubic"},
+        picker="cards", dash_anim="fade", sound_pack="paper", window_sounds=True, fonts="rumda",
+        attach="floating",
+        look={"elevation": 1, "motion": 1.0, "material": "solid", "cornerScale": 0.4, "typeface": "hand"}),
 
 }
 
@@ -229,6 +239,8 @@ if bad:
 # yami: своя раскладка бара (ячейки столов, шкалы), пиксельные часы и монитор из трёх карточек
 styles["yami"]["barLayout"] = "yami"
 styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami", mediaStyle="yami")
+styles["rumda"]["barLayout"] = "rumda"
+styles["rumda"]["widgets"].update(dashStyle="rumda")
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
     st["widgets"].setdefault("mediaStyle", "default")
@@ -238,7 +250,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", "")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

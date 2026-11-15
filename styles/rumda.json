@@ -1,0 +1,117 @@
+{
+  "name": "Rumda",
+  "name_ru": "Rumda",
+  "note": "After Rumda (hexonide/rumda): a warm coffee or sand desktop with a caramel accent — a narrow pill bar on the left with every module in its own card, windows with a 3 px border and corners of 7, a dense dashboard with a GitHub graph, the pixel Dogica Pixel font in the shell, windows sliding in from below.",
+  "note_ru": "По мотивам Rumda (hexonide/rumda): тёплый кофейный или песочный стол с карамельным акцентом — узкая пилюля-бар слева, каждый модуль в своей карточке, окна с рамкой 3 px и углами 7, плотный дашборд с графиком GitHub, пиксельный Dogica Pixel в оболочке, окна въезжают снизу.",
+  "anims": "rumda",
+  "opacity": "solid",
+  "blur": "off",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 9,
+    "gapsOut": 40,
+    "borderSize": 3,
+    "rounding": 7,
+    "shadow": true,
+    "noGaps": false
+  },
+  "barSkin": "rumda",
+  "barLayout": "rumda",
+  "barTransparent": false,
+  "lock": {
+    "design": "rumda",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "rumda",
+    "backdrop": 0.75
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 400,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "cards",
+    "cardRadius": 7,
+    "selectedBorder": 1,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "big",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "rumda",
+    "dashFollowBar": true,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 1,
+    "dashRadius": 7,
+    "dashBorder": true,
+    "dashAnimation": "fade",
+    "dashDuration": 300,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default"
+  },
+  "osd": {
+    "osdStyle": "edge",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 1,
+    "osdRadius": 7,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "drawer",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 1,
+    "notifyRadius": 7,
+    "notifyCards": "bordered",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "paper",
+    "windowSounds": true
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "rumda",
+  "look": {
+    "texture": "",
+    "elevation": 1,
+    "motion": 1.0,
+    "material": "solid",
+    "cornerScale": 0.4,
+    "typeface": "hand"
+  },
+  "theme": {
+    "dark": "rumda-dark",
+    "light": "rumda-light"
+  }
+}

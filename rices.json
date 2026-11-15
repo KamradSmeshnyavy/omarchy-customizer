@@ -110,6 +110,25 @@
       ]
     },
     {
+      "id": "rumda",
+      "name": "Rumda",
+      "after": "hexonide/rumda (look only)",
+      "note": "A warm cat-themed desktop: coffee or sand with a caramel accent, a narrow pill bar on the left made of cards, windows with a thick border sliding in from below, a dense dashboard with an avatar, buttons and a GitHub graph.",
+      "note_ru": "Тёплый «кошачий» стол: кофе или песок с карамельным акцентом, узкий бар из карточек слева, окна с толстой рамкой въезжают снизу, плотный дашборд с аватаром, кнопками и графиком GitHub.",
+      "variants": [
+        {
+          "preset": "Rumda-Dark",
+          "name": "Dark",
+          "name_ru": "Тёмная"
+        },
+        {
+          "preset": "Rumda-Light",
+          "name": "Light",
+          "name_ru": "Светлая"
+        }
+      ]
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",

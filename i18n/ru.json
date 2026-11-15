@@ -855,5 +855,6 @@
   "yami's launcher: a graphite window with a one-pixel border and a hard shadow, APPS / CLIPBOARD tabs, a field with a block cursor and rows of name and description in the pixel Tiny5": "Лаунчер yami: графитовое окно с рамкой в пиксель и жёсткой тенью, вкладки APPS / CLIPBOARD, поле с блочным курсором и строки «название · описание» пиксельным Tiny5",
   "Month calendar (wheel — another month, click the title — back to today)": "Календарь месяца (колесо — другой месяц, клик по заголовку — к сегодняшнему)",
   "Calendar: position": "Календарь: место",
-  "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too)": "Плеер: вид — default (обложка и кнопки) · yami (широкая карточка с визуализатором, видна и без плеера)"
+  "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too)": "Плеер: вид — default (обложка и кнопки) · yami (широкая карточка с визуализатором, видна и без плеера)",
+  "Rumda's launcher: a small window in the middle with square corners and a 2 px light accent border, «Search...», names only, the selected row filled with the accent, the pixel Dogica Pixel": "Лаунчер Rumda: маленькое окно по центру с квадратными углами и рамкой 2 px светлым акцентом, «Search...», одни названия, выбор залит акцентом, пиксельный Dogica Pixel"
 }
