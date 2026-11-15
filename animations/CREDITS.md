@@ -14,6 +14,7 @@ projects licensed under GPL-3.0:
 | `yami` | after [yami](https://github.com/Trendorin/yami) (MIT): the durations and curves of its niri animations; its pixel dissolve shaders have no Hyprland equivalent |
 | `rumda` | after [Rumda](https://github.com/hexonide/rumda): the durations and curves of its hyprland.conf animations |
 | `surface` | from [surface-dots](https://github.com/snes19xx/surface-dots) by snes19xx (its README allows reuse with credit): the Material 3 curves and the window springs of its hyprland.lua |
+| `cozytile` | after [Cozytile](https://github.com/Darkkal44/Cozytile) (no licence — the feel only): its picom fades, ≈ 165 ms, windows appear and vanish in place |
 
 Add your own presets to `~/.config/omarchy/customizer/animations/*.lua`: they show up in the list, and a
 file with the same name overrides the bundled one.

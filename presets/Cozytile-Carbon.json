@@ -1,0 +1,10 @@
+{
+  "name": "Cozytile Carbon",
+  "name_ru": "Cozytile · Carbon",
+  "note": "After Cozytile by Darkkal44 (look only): the Cozytile style on the cozytile-carbon theme (light grey e-paper) — one-colour terminal and apps, its own drawn wallpaper, the floating pill bar with dark tabs.",
+  "note_ru": "По мотивам Cozytile (Darkkal44, только облик): стиль Cozytile на теме cozytile-carbon (светлая серая «электронная бумага») — одноцветные терминал и приложения, свои нарисованные обои, плавающий бар-пилюля с тёмными язычками.",
+  "style": "cozytile",
+  "theme": "cozytile-carbon",
+  "wallpaper": "~/.config/omarchy/themes/cozytile-carbon/backgrounds/1-cozytile.jpg",
+  "fonts": "cozytile"
+}

@@ -217,6 +217,16 @@ styles = {
         picker="cards", dash_anim="fade", sound_pack="paper", window_sounds=True, fonts="rumda",
         attach="floating",
         look={"elevation": 1, "motion": 1.0, "material": "solid", "cornerScale": 0.4, "typeface": "hand"}),
+    "cozytile": plain(
+        "Cozytile", "Cozytile",
+        "After Cozytile by Darkkal44 (look only): a floating 30 px pill bar with dark tabs that have S-shaped slanted sides, workspace dots, borderless windows with 9 px gaps, corners of 10 and a soft shadow, plain fades instead of animations, a 400 px launcher with a picture header, a power menu of five big icons, the Orbitron lock with falling petals, JetBrains Mono everywhere.",
+        "По мотивам Cozytile (Darkkal44, только облик): плавающий бар-пилюля 30 px с тёмными язычками с S-образными косыми боками, точки столов, окна без рамки с зазорами 9 px, углами 10 и мягкой тенью, вместо анимаций — затухания, лаунчер 400 px с картинкой-шапкой, меню выключения из пяти крупных значков, блокировка Orbitron с падающими лепестками, JetBrains Mono везде.",
+        geom={"gapsIn": 5, "gapsOut": 9, "borderSize": 0, "rounding": 10, "shadow": True},
+        bar="cozytile", opacity="solid", blur="medium", anims="cozytile", lock="cozytile", launcher="cozytile",
+        radius=8, alpha=1, cards="flat", fx={"type": "fade", "duration": 400, "easing": "OutCubic"},
+        picker="cards", dash_anim="fade", sound_pack="paper", window_sounds=True, fonts="cozytile",
+        attach="floating",
+        look={"elevation": 1, "motion": 0.8, "material": "solid", "cornerScale": 0.6, "typeface": "shell"}),
     "surface": plain(
         "surface", "surface",
         "After surface-dots by snes19xx (its README allows reuse with credit): Everforest graphite or warm paper, a transparent top bar of pills with window icons, the Hub column under the clock, 1 px green window borders with corners of 7, windows popping in on springs, the serif Cassini power menu and the stellarium lock screen, Manrope in the shell.",
@@ -252,6 +262,7 @@ styles["yami"]["widgets"].update(clockStyle="yami", sysinfoStyle="yami", mediaSt
 styles["rumda"]["barLayout"] = "rumda"
 styles["rumda"]["widgets"].update(dashStyle="rumda")
 styles["rumda"]["notifications"].update(notifyStyle="stock", notifyCards="rumda", notifyRadius=2, notifyWidth=300)
+styles["cozytile"]["barLayout"] = "cozytile"
 styles["surface"]["barLayout"] = "surface"
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
@@ -263,7 +274,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

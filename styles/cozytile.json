@@ -1,0 +1,117 @@
+{
+  "name": "Cozytile",
+  "name_ru": "Cozytile",
+  "note": "After Cozytile by Darkkal44 (look only): a floating 30 px pill bar with dark tabs that have S-shaped slanted sides, workspace dots, borderless windows with 9 px gaps, corners of 10 and a soft shadow, plain fades instead of animations, a 400 px launcher with a picture header, a power menu of five big icons, the Orbitron lock with falling petals, JetBrains Mono everywhere.",
+  "note_ru": "По мотивам Cozytile (Darkkal44, только облик): плавающий бар-пилюля 30 px с тёмными язычками с S-образными косыми боками, точки столов, окна без рамки с зазорами 9 px, углами 10 и мягкой тенью, вместо анимаций — затухания, лаунчер 400 px с картинкой-шапкой, меню выключения из пяти крупных значков, блокировка Orbitron с падающими лепестками, JetBrains Mono везде.",
+  "anims": "cozytile",
+  "opacity": "solid",
+  "blur": "medium",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 5,
+    "gapsOut": 9,
+    "borderSize": 0,
+    "rounding": 10,
+    "shadow": true,
+    "noGaps": false
+  },
+  "barSkin": "cozytile",
+  "barLayout": "cozytile",
+  "barTransparent": false,
+  "lock": {
+    "design": "cozytile",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "cozytile",
+    "backdrop": 0.75
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 400,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "cards",
+    "cardRadius": 8,
+    "selectedBorder": 2,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "minimal",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "default",
+    "dashFollowBar": true,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 1,
+    "dashRadius": 8,
+    "dashBorder": false,
+    "dashAnimation": "fade",
+    "dashDuration": 300,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default"
+  },
+  "osd": {
+    "osdStyle": "edge",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 1,
+    "osdRadius": 8,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "drawer",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 1,
+    "notifyRadius": 8,
+    "notifyCards": "flat",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "paper",
+    "windowSounds": true
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "cozytile",
+  "look": {
+    "texture": "",
+    "elevation": 1,
+    "motion": 0.8,
+    "material": "solid",
+    "cornerScale": 0.6,
+    "typeface": "shell"
+  },
+  "theme": {
+    "dark": "cozytile-cozy",
+    "light": "cozytile-carbon"
+  }
+}

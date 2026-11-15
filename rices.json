@@ -158,6 +158,40 @@
       ]
     },
     {
+      "id": "cozytile",
+      "name": "Cozytile",
+      "after": "Darkkal44/Cozytile (look only)",
+      "note": "A cozy Qtile look: a floating pill bar with dark tabs and workspace dots, borderless rounded windows with soft shadows and plain fades, a launcher with a picture header, a power menu of five big icons, the Orbitron lock with falling petals. Five themes: lavender Cozy, pink Sakura, grassy Natura, misty Everforest and light Carbon.",
+      "note_ru": "Уютный облик Qtile: плавающий бар-пилюля с тёмными язычками и точками столов, скруглённые окна без рамки с мягкой тенью и затуханиями, лаунчер с картинкой-шапкой, меню выключения из пяти крупных значков, блокировка Orbitron с падающими лепестками. Пять тем: сиреневая Cozy, розовая Sakura, травяная Natura, туманная Everforest и светлая Carbon.",
+      "variants": [
+        {
+          "preset": "Cozytile-Cozy",
+          "name": "Cozy",
+          "name_ru": "Cozy"
+        },
+        {
+          "preset": "Cozytile-Sakura",
+          "name": "Sakura",
+          "name_ru": "Сакура"
+        },
+        {
+          "preset": "Cozytile-Natura",
+          "name": "Natura",
+          "name_ru": "Natura"
+        },
+        {
+          "preset": "Cozytile-Everforest",
+          "name": "Everforest",
+          "name_ru": "Everforest"
+        },
+        {
+          "preset": "Cozytile-Carbon",
+          "name": "Carbon",
+          "name_ru": "Carbon"
+        }
+      ]
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",

@@ -744,8 +744,8 @@
         {
           "key": "powerStyle",
           "type": "enum",
-          "values": ["auto", "edge", "glyph", "cassini"],
-          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots)"
+          "values": ["auto", "edge", "glyph", "cassini", "cozytile"],
+          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile)"
         },
         {
           "key": "clipboardPanel",
