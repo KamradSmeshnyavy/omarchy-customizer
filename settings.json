@@ -1347,7 +1347,7 @@
         {
           "key": "dashStyle",
           "type": "enum",
-          "values": ["default", "dotmatrix", "vitreus", "pencils", "rumda", "surface", "bruteon", "unit3"],
+          "values": ["default", "dotmatrix", "vitreus", "pencils", "rumda", "surface", "bruteon", "unit3", "yami", "cozytile", "glyph"],
           "label": "Dashboard: style"
         },
         {

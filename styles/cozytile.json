@@ -45,7 +45,7 @@
     "networkAnchor": "top-left",
     "media": true,
     "mediaAnchor": "bottom-left",
-    "dashStyle": "default",
+    "dashStyle": "cozytile",
     "dashFollowBar": false,
     "dashAttach": "floating",
     "dashBackground": "background",

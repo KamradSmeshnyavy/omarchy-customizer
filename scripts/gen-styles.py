@@ -293,6 +293,10 @@ styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="backgr
 styles["cozytile"]["osd"].update(osdFollowBar=False, osdBackground="background")
 styles["cozytile"]["notifications"].update(notifyFollowBar=False, notifyBackground="background")
 styles["unit3"]["barLayout"] = "unit3"
+# свои доски у yami, Cozytile и Glyph
+styles["yami"]["widgets"].update(dashStyle="yami", dashFollowBar=False, dashBackground="background")
+styles["cozytile"]["widgets"].update(dashStyle="cozytile")
+styles["glyph"]["widgets"].update(dashStyle="glyph", dashFollowBar=False, dashBackground="background")
 styles["unit3"]["widgets"].update(dashStyle="unit3", dashFollowBar=False, dashBackground="background", mediaStyle="default")
 styles["unit3"]["notifications"].update(notifyStyle="stock", notifyCards="nier", notifyRadius=0, notifyWidth=360)
 styles["surface"]["barLayout"] = "surface"
