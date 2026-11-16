@@ -45,8 +45,8 @@
     "networkAnchor": "top-left",
     "media": true,
     "mediaAnchor": "bottom-left",
-    "dashStyle": "default",
-    "dashFollowBar": true,
+    "dashStyle": "unit3",
+    "dashFollowBar": false,
     "dashAttach": "floating",
     "dashBackground": "background",
     "dashAlpha": 0.96,
@@ -65,8 +65,8 @@
     "settingsPanel": "auto",
     "powerStyle": "auto",
     "clipboardPanel": "auto",
-    "sysinfoStyle": "rings",
     "mediaStyle": "default",
+    "sysinfoStyle": "rings",
     "weather": false
   },
   "osd": {

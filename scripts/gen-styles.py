@@ -293,6 +293,7 @@ styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="backgr
 styles["cozytile"]["osd"].update(osdFollowBar=False, osdBackground="background")
 styles["cozytile"]["notifications"].update(notifyFollowBar=False, notifyBackground="background")
 styles["unit3"]["barLayout"] = "unit3"
+styles["unit3"]["widgets"].update(dashStyle="unit3", dashFollowBar=False, dashBackground="background", mediaStyle="default")
 styles["unit3"]["notifications"].update(notifyStyle="stock", notifyCards="nier", notifyRadius=0, notifyWidth=360)
 styles["surface"]["barLayout"] = "surface"
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
