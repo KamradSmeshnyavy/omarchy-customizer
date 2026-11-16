@@ -851,7 +851,7 @@
         {
           "key": "clockStyle",
           "type": "enum",
-          "values": ["big", "stacked", "terminal", "minimal", "vitreus", "yami"],
+          "values": ["big", "stacked", "terminal", "minimal", "vitreus", "yami", "bruteon"],
           "label": "Clock: style"
         },
         {
@@ -899,7 +899,7 @@
         {
           "key": "mediaStyle",
           "type": "enum",
-          "values": ["default", "yami"],
+          "values": ["default", "yami", "bruteon"],
           "label": "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too)"
         },
         {
@@ -1027,6 +1027,21 @@
           "type": "enum",
           "values": ["bottom-right", "bottom", "bottom-left", "right", "left", "center", "top-right", "top", "top-left", "free"],
           "label": "Quote: position"
+        },
+        {
+          "section": "Weather"
+        },
+        {
+          "key": "weather",
+          "type": "bool",
+          "default": false,
+          "label": "Weather card (city — Dashboard: weather city)"
+        },
+        {
+          "key": "weatherAnchor",
+          "type": "enum",
+          "values": ["right", "top-right", "top", "top-left", "left", "center", "bottom-right", "bottom", "bottom-left", "free"],
+          "label": "Weather: position"
         },
         {
           "section": "Calendar"

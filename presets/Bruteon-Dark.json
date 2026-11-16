@@ -1,0 +1,10 @@
+{
+  "name": "Bruteon Dark",
+  "name_ru": "Bruteon тёмный",
+  "note": "Our own dark take in its spirit: warm charcoal paper, cards a shade lighter, outline and hard shadow in light ink, the same pastel tiles with dark text, a dusk wallpaper.",
+  "note_ru": "Своя тёмная версия в его духе: тёплая угольная бумага, карточки чуть светлее, контур и жёсткая тень — светлыми чернилами, те же пастельные плитки с тёмным текстом, обои-сумерки.",
+  "style": "bruteon",
+  "theme": "bruteon-dark",
+  "wallpaper": "~/.config/omarchy/themes/bruteon-dark/backgrounds/1-sunset.jpg",
+  "fonts": "cozytile"
+}

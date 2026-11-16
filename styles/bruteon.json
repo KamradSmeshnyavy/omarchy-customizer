@@ -40,11 +40,11 @@
   },
   "widgets": {
     "widgetStyle": "style",
-    "clockStyle": "big",
+    "clockStyle": "bruteon",
     "network": false,
     "networkAnchor": "top-left",
     "media": true,
-    "mediaAnchor": "bottom-left",
+    "mediaAnchor": "top",
     "dashStyle": "bruteon",
     "dashFollowBar": false,
     "dashAttach": "floating",
@@ -65,8 +65,9 @@
     "settingsPanel": "auto",
     "powerStyle": "auto",
     "clipboardPanel": "auto",
-    "sysinfoStyle": "rings",
-    "mediaStyle": "default"
+    "mediaStyle": "bruteon",
+    "weather": true,
+    "sysinfoStyle": "rings"
   },
   "osd": {
     "osdStyle": "edge",
@@ -111,7 +112,7 @@
     "typeface": "shell"
   },
   "theme": {
-    "dark": "bruteon-light",
+    "dark": "bruteon-dark",
     "light": "bruteon-light"
   }
 }

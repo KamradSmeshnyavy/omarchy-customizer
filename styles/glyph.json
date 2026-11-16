@@ -64,7 +64,8 @@
     "deckCards": "auto",
     "deckTrigger": "dwell",
     "sysinfoStyle": "rings",
-    "mediaStyle": "default"
+    "mediaStyle": "default",
+    "weather": false
   },
   "osd": {
     "osdStyle": "edge",

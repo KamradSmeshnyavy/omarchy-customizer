@@ -273,7 +273,10 @@ styles["rumda"]["barLayout"] = "rumda"
 styles["rumda"]["widgets"].update(dashStyle="rumda")
 styles["rumda"]["notifications"].update(notifyStyle="stock", notifyCards="rumda", notifyRadius=2, notifyWidth=300)
 styles["bruteon"]["barLayout"] = "bruteon"
-styles["bruteon"]["widgets"].update(dashStyle="bruteon", dashFollowBar=False, dashBackground="background")
+# стол как на его третьем скриншоте: часы с циферблатом и приветствием, плеер сверху по центру, карточка погоды
+styles["bruteon"]["widgets"].update(dashStyle="bruteon", dashFollowBar=False, dashBackground="background",
+                                    clockStyle="bruteon", mediaStyle="bruteon", mediaAnchor="top",
+                                    weather=True)
 styles["cozytile"]["barLayout"] = "cozytile"
 # дашборд, Super+M, OSD и уведомления — фоном темы (его тёмная заливка), а не светлой заливкой бара
 styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="background")
@@ -284,13 +287,14 @@ styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", cloc
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
     st["widgets"].setdefault("mediaStyle", "default")
+    st["widgets"].setdefault("weather", False)
 # Тема стиля (переключатель styleTheme): пара тёмная / светлая.
 # у DOT-MATRIX и Glyph — одноцветные двойники тем (-mono); разноцветные остаются в списке тем
 THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph": ("nothing-glyph-dark-mono", "nothing-glyph-light-mono"), "flat": ("matte-black", "white"),
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-light", "")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

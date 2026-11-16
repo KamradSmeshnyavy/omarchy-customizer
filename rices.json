@@ -202,6 +202,11 @@
           "preset": "Bruteon",
           "name": "Light",
           "name_ru": "Светлая"
+        },
+        {
+          "preset": "Bruteon-Dark",
+          "name": "Dark",
+          "name_ru": "Тёмная"
         }
       ]
     },
