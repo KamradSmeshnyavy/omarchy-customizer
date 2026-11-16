@@ -33,7 +33,7 @@
     "easing": "OutCubic"
   },
   "imagePicker": {
-    "style": "slices",
+    "style": "nier",
     "cardRadius": 0,
     "selectedBorder": 1,
     "dim": 0.5
@@ -80,15 +80,15 @@
     "osdAlign": "center"
   },
   "notifications": {
-    "notifyStyle": "drawer",
+    "notifyStyle": "stock",
     "notifyFollowBar": true,
     "notifyAttach": "floating",
     "notifyBackground": "background",
     "notifyAlpha": 0.96,
     "notifyRadius": 0,
-    "notifyCards": "bordered",
+    "notifyCards": "nier",
     "notifyCorner": "top-right",
-    "notifyWidth": 380
+    "notifyWidth": 360
   },
   "sounds": {
     "soundPack": "retro",

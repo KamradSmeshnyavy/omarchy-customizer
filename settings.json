@@ -1263,7 +1263,7 @@
         {
           "key": "notifyCards",
           "type": "enum",
-          "values": ["flat", "bordered", "dotmatrix", "rumda"],
+          "values": ["flat", "bordered", "dotmatrix", "rumda", "nier"],
           "label": "Cards"
         },
         {

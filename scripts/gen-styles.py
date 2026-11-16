@@ -254,7 +254,7 @@ styles = {
         geom={"gapsIn": 4, "gapsOut": 8, "borderSize": 1, "rounding": 0, "shadow": False},
         bar="unit3", opacity="solid", blur="off", anims="unit3", lock="unit3", launcher="unit3",
         radius=0, alpha=0.96, cards="bordered", fx={"type": "fade", "duration": 380, "easing": "OutCubic"},
-        picker="slices", dash_anim="fade", sound_pack="retro", window_sounds=True, fonts="unit3",
+        picker="nier", dash_anim="fade", sound_pack="retro", window_sounds=True, fonts="unit3",
         attach="floating",
         look={"elevation": 0, "motion": 0.9, "material": "solid", "cornerScale": 0, "typeface": "shell"}),
 
@@ -293,6 +293,7 @@ styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="backgr
 styles["cozytile"]["osd"].update(osdFollowBar=False, osdBackground="background")
 styles["cozytile"]["notifications"].update(notifyFollowBar=False, notifyBackground="background")
 styles["unit3"]["barLayout"] = "unit3"
+styles["unit3"]["notifications"].update(notifyStyle="stock", notifyCards="nier", notifyRadius=0, notifyWidth=360)
 styles["surface"]["barLayout"] = "surface"
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
