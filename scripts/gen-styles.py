@@ -247,6 +247,16 @@ styles = {
         picker="cards", dash_anim="fade", sound_pack="fluent", window_sounds=True, fonts="surface",
         attach="floating",
         look={"elevation": 1, "motion": 1.0, "material": "solid", "cornerScale": 0.8, "typeface": "shell"}),
+    "unit3": plain(
+        "Unit-3", "Unit-3",
+        "After Unit-3 by samyns (MIT, NieR:Automata): dark sepia with text in #c8b89a, a thin 28 px bar with workspace numbers, «// window title», a Japanese ticker and CPU / MEM / NET / VOL in muted colours, square windows with a 1 px border and no shadow or blur, its niercurve motion, Share Tech Mono everywhere.",
+        "По мотивам Unit-3 (samyns, MIT, NieR:Automata): тёмная сепия с текстом #c8b89a, тонкий бар 28 px с номерами столов, «// заголовком окна», японской бегущей строкой и приглушёнными CPU / MEM / NET / VOL, квадратные окна с рамкой 1 px без тени и размытия, его кривая niercurve, Share Tech Mono везде.",
+        geom={"gapsIn": 4, "gapsOut": 8, "borderSize": 1, "rounding": 0, "shadow": False},
+        bar="unit3", opacity="solid", blur="off", anims="unit3", lock="style-retro", launcher="drawer-retro",
+        radius=0, alpha=0.96, cards="bordered", fx={"type": "fade", "duration": 380, "easing": "OutCubic"},
+        picker="slices", dash_anim="fade", sound_pack="retro", window_sounds=True, fonts="unit3",
+        attach="floating",
+        look={"elevation": 0, "motion": 0.9, "material": "solid", "cornerScale": 0, "typeface": "shell"}),
 
 }
 
@@ -282,6 +292,7 @@ styles["cozytile"]["barLayout"] = "cozytile"
 styles["cozytile"]["widgets"].update(dashFollowBar=False, dashBackground="background")
 styles["cozytile"]["osd"].update(osdFollowBar=False, osdBackground="background")
 styles["cozytile"]["notifications"].update(notifyFollowBar=False, notifyBackground="background")
+styles["unit3"]["barLayout"] = "unit3"
 styles["surface"]["barLayout"] = "surface"
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
@@ -294,7 +305,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

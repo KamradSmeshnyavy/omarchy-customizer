@@ -1,0 +1,10 @@
+{
+  "name": "Unit-3 Paper",
+  "name_ru": "Unit-3 бумага",
+  "note": "The beige paper of the NieR menus from Unit-3 for the whole desktop: ink #463f2e, red #6e2a2a, the same thin bar and square windows.",
+  "note_ru": "Бежевая бумага меню NieR из Unit-3 на весь стол: чернила #463f2e, красный #6e2a2a, тот же тонкий бар и квадратные окна.",
+  "style": "unit3",
+  "theme": "unit3-paper",
+  "wallpaper": "~/.config/omarchy/themes/unit3-paper/backgrounds/0-original.jpg",
+  "fonts": "unit3"
+}

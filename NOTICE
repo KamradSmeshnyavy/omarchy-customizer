@@ -23,6 +23,15 @@ This project includes or is based on:
   (GlyphOverlay.qml), interface sound packs (sounds/dotmatrix, sounds/classic),
   and the NIHIL Hyprland animation preset (animations/DOT-MATRIX.lua).
 
+- Unit-3 — https://github.com/samyns/Unit-3
+  MIT License, Copyright (c) 2026 samyns.
+  The unit3 style: its niercurve animation preset (animations/unit3.lua) and the look of its
+  bar, menus and control center.
+
+- Share Tech Mono — https://fonts.google.com/specimen/Share+Tech+Mono
+  SIL Open Font License 1.1, Copyright 2012 Carrois Type Design (fonts/unit3/OFL-ShareTechMono.txt).
+  Typeface of the Unit-3 style (fonts/unit3/ShareTechMono-Regular.ttf), unmodified.
+
 - Caveat — https://github.com/googlefonts/caveat
   SIL Open Font License 1.1, Copyright 2014 The Caveat Project Authors (fonts/OFL.txt).
   Handwritten typeface of the Paper style (fonts/Caveat.ttf), unmodified.

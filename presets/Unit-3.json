@@ -1,0 +1,10 @@
+{
+  "name": "Unit-3",
+  "name_ru": "Unit-3",
+  "note": "After Unit-3 by samyns (MIT, NieR:Automata): the Unit-3 style on the dark sepia unit3-dark theme — its kitty palette, 2B in the forest as the wallpaper, a thin bar of numbers and muted labels.",
+  "note_ru": "По мотивам Unit-3 (samyns, MIT, NieR:Automata): стиль Unit-3 на тёмной сепии unit3-dark — палитра его kitty, 2B в лесу на обоях, тонкий бар из номеров и приглушённых подписей.",
+  "style": "unit3",
+  "theme": "unit3-dark",
+  "wallpaper": "~/.config/omarchy/themes/unit3-dark/backgrounds/0-original.jpg",
+  "fonts": "unit3"
+}

@@ -867,5 +867,6 @@
   "Shadows of panels and widgets": "Тени панелей и виджетов",
   "Shadow of the bar, dashboard, panels and widget cards: style (as the style sets it) · hard (offset, no blur) · off": "Тень бара, дашборда, панелей и карточек виджетов: style (как задаёт стиль) · hard (смещённая, без размытия) · off (без тени)",
   "Hard shadow colour (default — the text colour)": "Цвет жёсткой тени (default — цвет текста)",
-  "auto (from the theme)": "авто (из темы)"
+  "auto (from the theme)": "авто (из темы)",
+  "System as stock; Share Tech Mono in the shell, the terminal and code — the Unit-3 rice (NieR:Automata)": "Система как stock; Share Tech Mono в оболочке, терминале и коде — райс Unit-3 (NieR:Automata)"
 }

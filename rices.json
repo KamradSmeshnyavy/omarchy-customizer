@@ -211,6 +211,25 @@
       ]
     },
     {
+      "id": "unit3",
+      "name": "Unit-3",
+      "after": "samyns/Unit-3 (MIT)",
+      "note": "NieR:Automata on the desktop: dark sepia with text in #c8b89a, a thin bar of workspace numbers, «// window title», a Japanese ticker and muted CPU / MEM / NET / VOL, square windows with a 1 px border, its niercurve motion and Share Tech Mono; the paper variant takes the beige of the NieR menus.",
+      "note_ru": "NieR:Automata на столе: тёмная сепия с текстом #c8b89a, тонкий бар из номеров столов, «// заголовка окна», японской бегущей строки и приглушённых CPU / MEM / NET / VOL, квадратные окна с рамкой 1 px, его кривая niercurve и Share Tech Mono; вариант «бумага» — бежевый цвет меню NieR.",
+      "variants": [
+        {
+          "preset": "Unit-3",
+          "name": "Dark",
+          "name_ru": "Тёмная"
+        },
+        {
+          "preset": "Unit-3-Paper",
+          "name": "Paper",
+          "name_ru": "Бумага"
+        }
+      ]
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",

@@ -1,0 +1,118 @@
+{
+  "name": "Unit-3",
+  "name_ru": "Unit-3",
+  "note": "After Unit-3 by samyns (MIT, NieR:Automata): dark sepia with text in #c8b89a, a thin 28 px bar with workspace numbers, «// window title», a Japanese ticker and CPU / MEM / NET / VOL in muted colours, square windows with a 1 px border and no shadow or blur, its niercurve motion, Share Tech Mono everywhere.",
+  "note_ru": "По мотивам Unit-3 (samyns, MIT, NieR:Automata): тёмная сепия с текстом #c8b89a, тонкий бар 28 px с номерами столов, «// заголовком окна», японской бегущей строкой и приглушёнными CPU / MEM / NET / VOL, квадратные окна с рамкой 1 px без тени и размытия, его кривая niercurve, Share Tech Mono везде.",
+  "anims": "unit3",
+  "opacity": "solid",
+  "blur": "off",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 4,
+    "gapsOut": 8,
+    "borderSize": 1,
+    "rounding": 0,
+    "shadow": false,
+    "noGaps": false
+  },
+  "barSkin": "unit3",
+  "barLayout": "unit3",
+  "barTransparent": false,
+  "lock": {
+    "design": "style-retro",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "drawer-retro",
+    "backdrop": 0.75
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 380,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "slices",
+    "cardRadius": 0,
+    "selectedBorder": 1,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "big",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "default",
+    "dashFollowBar": true,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 0.96,
+    "dashRadius": 0,
+    "dashBorder": true,
+    "dashAnimation": "fade",
+    "dashDuration": 290,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default",
+    "weather": false
+  },
+  "osd": {
+    "osdStyle": "edge",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 0.96,
+    "osdRadius": 0,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "drawer",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 0.96,
+    "notifyRadius": 0,
+    "notifyCards": "bordered",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "retro",
+    "windowSounds": true
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "unit3",
+  "look": {
+    "texture": "",
+    "elevation": 0,
+    "motion": 0.9,
+    "material": "solid",
+    "cornerScale": 0,
+    "typeface": "shell"
+  },
+  "theme": {
+    "dark": "unit3-dark",
+    "light": "unit3-paper"
+  }
+}

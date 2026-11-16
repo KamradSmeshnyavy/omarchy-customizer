@@ -16,6 +16,7 @@ projects licensed under GPL-3.0:
 | `surface` | from [surface-dots](https://github.com/snes19xx/surface-dots) by snes19xx (its README allows reuse with credit): the Material 3 curves and the window springs of its hyprland.lua |
 | `cozytile` | after [Cozytile](https://github.com/Darkkal44/Cozytile) (no licence — the feel only): its picom fades, ≈ 165 ms, windows appear and vanish in place |
 | `bruteon` | after [Bruteon](https://github.com/Darkkal44/Bruteon) (screenshots only — own feel): quick springy pop-ins of windows and layers |
+| `unit3` | from [Unit-3](https://github.com/samyns/Unit-3) by samyns (MIT): its `niercurve` bezier — windows slide in / out, workspaces slide vertically |
 
 Add your own presets to `~/.config/omarchy/customizer/animations/*.lua`: they show up in the list, and a
 file with the same name overrides the bundled one.
