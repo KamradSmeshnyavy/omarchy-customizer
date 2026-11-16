@@ -252,7 +252,7 @@ styles = {
         "After Unit-3 by samyns (MIT, NieR:Automata): dark sepia with text in #c8b89a, a thin 28 px bar with workspace numbers, «// window title», a Japanese ticker and CPU / MEM / NET / VOL in muted colours, square windows with a 1 px border and no shadow or blur, its niercurve motion, Share Tech Mono everywhere.",
         "По мотивам Unit-3 (samyns, MIT, NieR:Automata): тёмная сепия с текстом #c8b89a, тонкий бар 28 px с номерами столов, «// заголовком окна», японской бегущей строкой и приглушёнными CPU / MEM / NET / VOL, квадратные окна с рамкой 1 px без тени и размытия, его кривая niercurve, Share Tech Mono везде.",
         geom={"gapsIn": 4, "gapsOut": 8, "borderSize": 1, "rounding": 0, "shadow": False},
-        bar="unit3", opacity="solid", blur="off", anims="unit3", lock="style-retro", launcher="unit3",
+        bar="unit3", opacity="solid", blur="off", anims="unit3", lock="unit3", launcher="unit3",
         radius=0, alpha=0.96, cards="bordered", fx={"type": "fade", "duration": 380, "easing": "OutCubic"},
         picker="slices", dash_anim="fade", sound_pack="retro", window_sounds=True, fonts="unit3",
         attach="floating",
