@@ -94,6 +94,14 @@ def cycle(cur, direction, items):
     return items[(i + direction + n) % n]
 
 
+# Цвета, у которых есть «default» — ключ не задан, цвет берётся из темы / стиля (удаляется из файла).
+UNSET_COLORS = ("wsActiveColor", "windowBorderActive", "windowBorderInactive", "windowShadowColor", "panelShadowColor")
+
+
+def color_unsettable(key):
+    return key in UNSET_COLORS or key.startswith("dotmatrix")
+
+
 def color_roles():
     out = ["bar", "background", "foreground", "accent", "muted", "urgent",
            "dotmatrix.bg", "dotmatrix.fg", "dotmatrix.dim", "dotmatrix.line", "dotmatrix.surface",
@@ -474,7 +482,7 @@ def tweak(key, how):
             m = re.match(r"rgba?\((\d+),(\d+),(\d+)", picked)
             nxt = "#%02x%02x%02x" % tuple(int(x) for x in m.groups()) if m else picked
         else:
-            items = (["none"] if key == "gradient" else []) + (["default"] if key == "wsActiveColor" or key.startswith("dotmatrix") else [])
+            items = (["none"] if key == "gradient" else []) + (["default"] if color_unsettable(key) else [])
             items += ([it.args] if it.args.startswith("#") else []) + color_roles()
             nxt = cycle(value_of(path, key, it.args), direction, items)
         if nxt in ("none", "default"):
@@ -513,7 +521,7 @@ def tweak_set(key, value):
             set_transparent(value)
         set_key(path, key, value == "true")
     elif kind == "color":
-        if (key == "gradient" and value == "none") or ((key == "wsActiveColor" or key.startswith("dotmatrix")) and value == "default"):
+        if (key == "gradient" and value == "none") or (color_unsettable(key) and value == "default"):
             del_key(path, key)
         elif re.match(r"^#[0-9A-Fa-f]{6}$", value) or value in color_roles():
             set_key(path, key, value)

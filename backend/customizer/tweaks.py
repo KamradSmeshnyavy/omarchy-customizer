@@ -37,6 +37,8 @@ def default_label(key: str, value: str) -> str:
         return t("Hello, %s", os.environ.get("USER", ""))
     if key.startswith("dotmatrix") and value == "default":
         return t("auto (theme or mono palette)")
+    if key in ("windowBorderActive", "windowBorderInactive", "windowShadowColor", "panelShadowColor") and value == "default":
+        return t("auto (from the theme)")
     if pair in special:
         return t(special[pair])
     if value == "bar":

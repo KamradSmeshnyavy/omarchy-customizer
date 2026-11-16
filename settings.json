@@ -1656,6 +1656,39 @@
       ]
     },
     {
+      "id": "PANEL_SHADOW_TWEAKS",
+      "category": "widgets",
+      "valuePrefix": "",
+      "file": "~/.config/omarchy/panel-shadow.json",
+      "comment": "Тень панелей поверх стиля: дашборд, Super+M, меню выключения, OSD, уведомления, карточки виджетов стола (BarStyle/StyleCard) и острова бара (BarSkin). style — как у стиля, hard — жёсткая смещённая тень у любого материала, off — без теней.",
+      "items": [
+        {
+          "section": "Shadows of panels and widgets"
+        },
+        {
+          "key": "panelShadow",
+          "type": "enum",
+          "values": ["style", "hard", "off"],
+          "label": "Shadow of the bar, dashboard, panels and widget cards: style (as the style sets it) · hard (offset, no blur) · off"
+        },
+        {
+          "key": "panelShadowOffset",
+          "type": "num",
+          "min": 1,
+          "max": 16,
+          "step": 1,
+          "default": 6,
+          "label": "Hard shadow: offset"
+        },
+        {
+          "key": "panelShadowColor",
+          "type": "color",
+          "default": "default",
+          "label": "Hard shadow colour (default — the text colour)"
+        }
+      ]
+    },
+    {
       "id": "DOTMATRIX_TWEAKS",
       "category": "widgets",
       "valuePrefix": "",
@@ -1990,6 +2023,18 @@
           "label": "Border width"
         },
         {
+          "key": "windowBorderActive",
+          "type": "color",
+          "default": "default",
+          "label": "Border colour of the active window (default — from the theme)"
+        },
+        {
+          "key": "windowBorderInactive",
+          "type": "color",
+          "default": "default",
+          "label": "Border colour of inactive windows (default — from the theme)"
+        },
+        {
           "key": "windowNoGaps",
           "type": "bool",
           "default": false,
@@ -2021,6 +2066,27 @@
           "step": 1,
           "default": 3,
           "label": "Shadow size"
+        },
+        {
+          "key": "windowShadowHard",
+          "type": "enum",
+          "values": ["theme", "hard", "soft"],
+          "label": "Shadow kind: theme (as the theme sets it) · hard (offset, no blur, like Bruteon) · soft"
+        },
+        {
+          "key": "windowShadowOffset",
+          "type": "num",
+          "min": 1,
+          "max": 16,
+          "step": 1,
+          "default": 6,
+          "label": "Hard shadow: offset"
+        },
+        {
+          "key": "windowShadowColor",
+          "type": "color",
+          "default": "default",
+          "label": "Shadow colour (default — from the theme)"
         },
         {
           "key": "windowDim",

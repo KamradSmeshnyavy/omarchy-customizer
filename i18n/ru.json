@@ -858,5 +858,14 @@
   "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording) · surface (the Hub of surface-dots: toggles, sliders, Wi-Fi / Bluetooth / sound lists, player, calendar, notifications)": "Панель Super+M — auto (по райсу) · drawer (выдвижные настройки DOT-MATRIX) · quick (Quick из glyph-rice: списки Wi-Fi / Bluetooth, плитки, запись экрана) · surface (Hub из surface-dots: переключатели, ползунки, списки Wi-Fi / Bluetooth / звука, плеер, календарь, уведомления)",
   "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile)": "Меню выключения — auto (по райсу) · edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice) · cassini (список шрифтом с засечками рядом со снимком Сатурна миссии Cassini, из surface-dots) · cozytile (пять крупных значков на фоне обоев, по мотивам Cozytile)",
   "Weather card (city — Dashboard: weather city)": "Карточка погоды (город — Дашборд: город для погоды)",
-  "Weather: position": "Погода: позиция"
+  "Weather: position": "Погода: позиция",
+  "Border colour of the active window (default — from the theme)": "Цвет рамки активного окна (default — из темы)",
+  "Border colour of inactive windows (default — from the theme)": "Цвет рамки неактивных окон (default — из темы)",
+  "Shadow kind: theme (as the theme sets it) · hard (offset, no blur, like Bruteon) · soft": "Вид тени: theme (как задаёт тема) · hard (смещённая, без размытия, как у Bruteon) · soft (мягкая)",
+  "Hard shadow: offset": "Жёсткая тень: смещение",
+  "Shadow colour (default — from the theme)": "Цвет тени (default — из темы)",
+  "Shadows of panels and widgets": "Тени панелей и виджетов",
+  "Shadow of the bar, dashboard, panels and widget cards: style (as the style sets it) · hard (offset, no blur) · off": "Тень бара, дашборда, панелей и карточек виджетов: style (как задаёт стиль) · hard (смещённая, без размытия) · off (без тени)",
+  "Hard shadow colour (default — the text colour)": "Цвет жёсткой тени (default — цвет текста)",
+  "auto (from the theme)": "авто (из темы)"
 }

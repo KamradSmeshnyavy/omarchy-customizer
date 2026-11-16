@@ -130,6 +130,59 @@ do
 	end
 	decoration.dim_inactive = bool("windowDim")
 	decoration.dim_strength = num("windowDimStrength")
+
+	-- Цвета рамки и тени: #rrggbb или роль темы (background, foreground, accent, muted, urgent, любой ключ colors.toml);
+	-- ключа нет («default») — как задала тема. Читаем палитру текущей темы.
+	local palette = {}
+	local pf = io.open(state .. "/omarchy/current/theme/colors.toml", "r")
+	if pf then
+		for k, v in pf:read("*a"):gmatch('([%w_]+)%s*=%s*["\'](#%x%x%x%x%x%x)["\']') do
+			palette[k] = v
+		end
+		pf:close()
+	end
+	local function color(key)
+		local v = json:match('"' .. key .. '"%s*:%s*"([^"]+)"')
+		if v == nil then
+			return nil
+		end
+		local alias = { bar = "background", urgent = "red" }
+		local hex = v:match("^#%x%x%x%x%x%x$") and v or palette[v] or palette[alias[v] or ""]
+		return hex and hex:sub(2) or nil
+	end
+	local active, inactive = color("windowBorderActive"), color("windowBorderInactive")
+	if active or inactive then
+		general.col = {}
+		if active then
+			general.col.active_border = "rgb(" .. active .. ")"
+		end
+		if inactive then
+			general.col.inactive_border = "rgb(" .. inactive .. ")"
+		end
+	end
+	-- Вид тени: hard — смещённая плашка без размытия (как у Bruteon), soft — обычная размытая; theme — не трогаем.
+	local kind = json:match('"windowShadowHard"%s*:%s*"(%a+)"')
+	local scol = color("windowShadowColor")
+	if kind == "hard" or kind == "soft" or scol then
+		decoration.shadow = decoration.shadow or {}
+		if kind == "hard" then
+			local off = num("windowShadowOffset") or 6
+			decoration.shadow.enabled = shadow ~= false
+			decoration.shadow.sharp = true
+			decoration.shadow.range = 1
+			decoration.shadow.render_power = 4
+			decoration.shadow.offset = off .. " " .. off
+			scol = scol or (palette.foreground or "#000000"):sub(2)
+		elseif kind == "soft" then
+			decoration.shadow.sharp = false
+			decoration.shadow.offset = "0 2"
+		end
+		if scol then
+			local a = kind == "hard" and "ff" or "99"
+			decoration.shadow.color = "rgba(" .. scol .. a .. ")"
+			decoration.shadow.color_inactive = "rgba(" .. scol .. a .. ")"
+		end
+	end
 	hl.config({ general = general, decoration = decoration })
 end
 
