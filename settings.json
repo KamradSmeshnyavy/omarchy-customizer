@@ -756,8 +756,8 @@
         {
           "key": "settingsPanel",
           "type": "enum",
-          "values": ["auto", "drawer", "quick", "surface", "unit3"],
-          "label": "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording) · surface (the Hub of surface-dots: toggles, sliders, Wi-Fi / Bluetooth / sound lists, player, calendar, notifications) · unit3 (the NieR radial control center of Unit-3: Wi-Fi / Bluetooth, sound, file sharing, notifications; WASD / arrows)"
+          "values": ["auto", "drawer", "quick", "surface", "unit3", "bruteon", "yami", "cozytile", "rumda", "glassring", "instrument"],
+          "label": "Super+M panel — auto (by the rice) · drawer (DOT-MATRIX settings drawer) · quick (Quick from glyph-rice: Wi-Fi / Bluetooth lists, tiles, recording) · surface (the Hub of surface-dots: toggles, sliders, Wi-Fi / Bluetooth / sound lists, player, calendar, notifications) · unit3 (the NieR radial control center of Unit-3: Wi-Fi / Bluetooth, sound, file sharing, notifications; WASD / arrows) · bruteon (sticker board) · yami (pixel terminal) · cozytile (shelf of tabs) · rumda (caramel capsule) · glassring (Vitreus glass ring) · instrument (DOT-MATRIX instrument panel)"
         },
         {
           "key": "deckDim",
