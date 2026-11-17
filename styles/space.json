@@ -49,7 +49,7 @@
     "dashFollowBar": false,
     "dashAttach": "floating",
     "dashBackground": "background",
-    "dashAlpha": 0.82,
+    "dashAlpha": 0.4,
     "dashRadius": 0,
     "dashBorder": true,
     "dashAnimation": "fade",

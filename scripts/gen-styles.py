@@ -312,7 +312,7 @@ styles["unit3"]["notifications"].update(notifyStyle="stock", notifyCards="nier",
 styles["surface"]["barLayout"] = "surface"
 # Space: бар-коробки с уголками и звёздами-столами, визор-дашборд, карточки уведомлений с уголками
 styles["space"]["barLayout"] = "space"
-styles["space"]["widgets"].update(dashStyle="space", dashFollowBar=False, dashBackground="background")
+styles["space"]["widgets"].update(dashStyle="space", dashFollowBar=False, dashBackground="background", dashAlpha=0.4)
 styles["space"]["notifications"].update(notifyStyle="stock", notifyCards="space", notifyRadius=0, notifyWidth=340,
                                          notifyCorner="bottom-left")
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
