@@ -27,6 +27,7 @@ PRESETS=(
     "strong  10  4 0.20 0.015"
     "frosted 14  4 0.30 0.030"
     "liquid  12  3 0.45 0.008"
+    "space    4  2 0.17 0.000"
 )
 DEFAULT=medium
 

@@ -257,6 +257,16 @@ styles = {
         picker="nier", dash_anim="fade", sound_pack="retro", window_sounds=True, fonts="unit3",
         attach="floating",
         look={"elevation": 0, "motion": 0.9, "material": "solid", "cornerScale": 0, "typeface": "shell"}),
+    "space": plain(
+        "Space", "Space",
+        "After the Space style of elifouts/Dotfiles (GPL-3.0): a No Man's Sky HUD — the wallpaper is a live landscape that pans when you switch workspaces, a thin bar of corner-bracketed boxes whose stars are the workspaces, uppercase spaced-out JetBrains Mono, windows without a border with an accent glow, see-through 0.8 / 0.7 over a light blur, its spring motion.",
+        "По мотивам стиля Space из elifouts/Dotfiles (GPL-3.0): HUD в духе No Man's Sky — обои это живой пейзаж, который панорамирует при смене стола, тонкий бар из коробок с уголками, где звёзды — это столы, JetBrains Mono капсом и вразрядку, окна без рамки со свечением акцентом, прозрачность 0.8 / 0.7 над лёгким размытием, его пружинные анимации.",
+        geom={"gapsIn": 4, "gapsOut": 12, "borderSize": 0, "rounding": 3, "shadow": False},
+        bar="space", opacity="space", blur="space", anims="space", lock="space", launcher="space",
+        radius=0, alpha=0.82, cards="bordered", fx={"type": "wipe", "duration": 900, "easing": "InOutSine"},
+        picker="cards", dash_anim="fade", sound_pack="neon", window_sounds=False, fonts="space",
+        attach="floating",
+        look={"elevation": 0, "motion": 1.0, "material": "glass", "cornerScale": 0, "typeface": "shell"}),
 
 }
 
@@ -300,6 +310,11 @@ styles["glyph"]["widgets"].update(dashStyle="glyph", dashFollowBar=False, dashBa
 styles["unit3"]["widgets"].update(dashStyle="unit3", dashFollowBar=False, dashBackground="background", mediaStyle="default")
 styles["unit3"]["notifications"].update(notifyStyle="stock", notifyCards="nier", notifyRadius=0, notifyWidth=360)
 styles["surface"]["barLayout"] = "surface"
+# Space: бар-коробки с уголками и звёздами-столами, визор-дашборд, карточки уведомлений с уголками
+styles["space"]["barLayout"] = "space"
+styles["space"]["widgets"].update(dashStyle="space", dashFollowBar=False, dashBackground="background")
+styles["space"]["notifications"].update(notifyStyle="stock", notifyCards="space", notifyRadius=0, notifyWidth=340,
+                                         notifyCorner="bottom-left")
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
@@ -311,7 +326,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper"), "space": ("space-dusk", "")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

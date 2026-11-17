@@ -17,6 +17,7 @@ projects licensed under GPL-3.0:
 | `cozytile` | after [Cozytile](https://github.com/Darkkal44/Cozytile) (no licence — the feel only): its picom fades, ≈ 165 ms, windows appear and vanish in place |
 | `bruteon` | after [Bruteon](https://github.com/Darkkal44/Bruteon) (screenshots only — own feel): quick springy pop-ins of windows and layers |
 | `unit3` | from [Unit-3](https://github.com/samyns/Unit-3) by samyns (MIT): its `niercurve` bezier — windows slide in / out, workspaces slide vertically |
+| `space` | from the Space style of [elifouts/Dotfiles](https://github.com/elifouts/Dotfiles) (GPL-3.0): its `style.lua` — windows pop in on the `easy` spring, quick fades, layers and workspaces on `easeOutQuint` |
 
 Add your own presets to `~/.config/omarchy/customizer/animations/*.lua`: they show up in the list, and a
 file with the same name overrides the bundled one.

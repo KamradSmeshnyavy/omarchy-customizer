@@ -25,6 +25,7 @@ PRESETS=(
     "soft    0.95 0.85"
     "glass   0.90 0.80"
     "frosted 0.85 0.70"
+    "space   0.80 0.70"
 )
 DEFAULT=subtle
 
