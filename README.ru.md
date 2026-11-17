@@ -87,6 +87,7 @@ bash ~/.config/omarchy/plugins/kamradsmeshnyavy.customizer/install.sh           
 - плагин `kamradsmeshnyavy.widgets` — категория **Виджеты** на Рабочем столе (часы, сейчас играет, визуализатор cava, кольца системы)
 - `lutgen` — Recolor (виден, только когда есть и lutgen, и zenity)
 - `omarchy-wallpaper-theme` в `PATH` + `matugen` — строки «🎨 Тема из обоев» в **Теме**: тема `dynamic` в стиле Material You из текущих обоев ([скрипт](https://github.com/KamradSmeshnyavy/dotfiles/blob/main/omarchy-themes/scripts/omarchy-wallpaper-theme))
+- `omarchy-rice-dynamic` в `PATH` добавляет вкладку **Dynamic** (рядом с Райсами): облик активного райса (форма варианта в цветах обоев — Retro остаётся Retro), режим цветов (в том числе «vitreus» — точная палитра Vitreus), движок, светлая / тёмная, Wallhaven, добавление обоев и сетка обоев райса с превью (⏎ — поставить, тема перекрасится). Ещё она добавляет каждому райсу в **Райсах** строку «· Dynamic»: облик райса на теме `dynamic-<райс>` в цветах обоев. У каждого райса есть и «найти обои на Wallhaven…» (поиск SFW, выбор в пикере обоев по одной). У активного райса ещё есть строки для режима цветов (как обои, тише, ярче, монохром в тоне обоев, серый, только акцент), движка (свой генератор райса или только `colors.toml`), светлой / тёмной, всех обоев райса и добавления своих (локально или в репо). При каждой смене обоев тема перекрашивается сама, через плагин обоев ([скрипт](https://github.com/KamradSmeshnyavy/dotfiles/blob/main/omarchy-themes/scripts/omarchy-rice-dynamic))
 
 ## Требования
 

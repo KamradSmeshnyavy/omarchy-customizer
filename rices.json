@@ -49,7 +49,10 @@
           "name": "UwU",
           "name_ru": "UwU"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "liquid abstract gradient"
+      }
     },
     {
       "id": "glyph",
@@ -63,7 +66,10 @@
           "name": "Glyph dark",
           "name_ru": "Glyph тёмный"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "minimal dark"
+      }
     },
     {
       "id": "yami",
@@ -107,7 +113,10 @@
           "name": "Dusk",
           "name_ru": "Сумрак"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "dark pixel art"
+      }
     },
     {
       "id": "rumda",
@@ -126,7 +135,10 @@
           "name": "Light",
           "name_ru": "Светлая"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "cozy illustration"
+      }
     },
     {
       "id": "surface",
@@ -155,7 +167,10 @@
           "name": "Taskbar light",
           "name_ru": "Таскбар светлый"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "minimalist landscape"
+      }
     },
     {
       "id": "cozytile",
@@ -189,7 +204,10 @@
           "name": "Carbon",
           "name_ru": "Carbon"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "cozy pixel art"
+      }
     },
     {
       "id": "bruteon",
@@ -208,7 +226,10 @@
           "name": "Dark",
           "name_ru": "Тёмная"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "brutalist poster"
+      }
     },
     {
       "id": "unit3",
@@ -227,7 +248,10 @@
           "name": "Paper",
           "name_ru": "Бумага"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "nier automata"
+      }
     },
     {
       "id": "dotmatrix",
@@ -241,7 +265,10 @@
           "name": "DOT-MATRIX",
           "name_ru": "DOT-MATRIX"
         }
-      ]
+      ],
+      "dynamic": {
+        "wallhaven": "minimal black"
+      }
     }
   ]
 }

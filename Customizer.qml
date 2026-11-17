@@ -34,6 +34,7 @@ Item {
   // bar: preview pane draws a bar mock (BarMock.qml); tweak: h/l step the row's value.
   readonly property var allCategories: [
     { group: "rices",   key: "rices",     icon: "󰉼", title: "Rices",        hint: "Whole looks and their variants",         image: false, live: false, presetStage: true },
+    { group: "rices",   key: "dynamic",   icon: "󰸉", title: "Dynamic",      hint: "Colours from the wallpaper · ⏎ set",     image: true,  live: false },
     { group: "presets", key: "presets",   icon: "󰆓", title: "Presets",      hint: "Full desktop snapshots · D — delete",   image: false, live: false, presetStage: true },
     { group: "presets", key: "styles",    icon: "󰉦", title: "Style",        hint: "Form on any theme · D — delete",         image: false, live: false, presetStage: true },
     { group: "presets", key: "fonts",     icon: "󰛖", title: "Fonts",        hint: "System font profiles, by style",          image: false, live: false },
@@ -1333,7 +1334,7 @@ Item {
   }
 
   function randomPick() {
-    if (root.category.key === "walls" || root.category.key === "dotify" || root.category.key === "presets" || root.category.key === "rices" || root.category.key === "styles" || root.category.key === "fonts" || root.category.key === "sounds" || root.category.key === "glyph") return
+    if (root.category.key === "walls" || root.category.key === "dotify" || root.category.key === "presets" || root.category.key === "rices" || root.category.key === "styles" || root.category.key === "fonts" || root.category.key === "sounds" || root.category.key === "glyph" || root.category.key === "dynamic") return
     if (root.category.tweak) return
     if (root.pane === 0) { root.pane = 1 }
     var c = root.randomCandidates()

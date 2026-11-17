@@ -259,8 +259,16 @@ def rices() -> list:
             if isinstance(v, dict) and v.get("preset"):
                 vs.append({"preset": str(v["preset"]), "name": str(alt(v.get("name_" + lang), v.get("name"), v["preset"]))})
         out.append({"id": str(r["id"]), "name": str(alt(r.get("name_" + lang), r.get("name"), r["id"])),
-                    "note": str(alt(r.get("note_" + lang), r.get("note"), "")), "after": str(r.get("after") or ""), "variants": vs})
+                    "note": str(alt(r.get("note_" + lang), r.get("note"), "")), "after": str(r.get("after") or ""), "variants": vs,
+                    "dynamic": str((r.get("dynamic") or {}).get("preset") or "") if isinstance(r.get("dynamic"), dict) else "",
+                    "wallhaven": str((r.get("dynamic") or {}).get("wallhaven") or "") if isinstance(r.get("dynamic"), dict) else ""})
     return out
+
+
+def current_rice() -> str:
+    """id райса на столе (style.json → rice, его пишет apply_preset); нет — пусто."""
+    d = jsonio.read(paths.CONFIG / "style.json")
+    return str(d.get("rice") or "") if isinstance(d, dict) else ""
 
 
 def rice_of(stem: str) -> str:

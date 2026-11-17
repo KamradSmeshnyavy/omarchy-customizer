@@ -5,6 +5,7 @@
 Файлы пишутся как jq (отступ 2, порядок ключей сохраняется) и на месте (inode тот же)."""
 import concurrent.futures
 import hashlib
+import json
 import os
 import re
 import shlex
@@ -337,7 +338,8 @@ def _now(fmt):
 
 # ── Пресеты ──
 
-def apply_preset(path):
+def apply_preset(path, theme=None, wallpaper=None):
+    """theme / wallpaper — вместо темы и обоев пресета (вариант Dynamic райса: облик пресета, тема dynamic-<райс>)."""
     path = str(path)
     if not os.path.isfile(path):
         notify("-u", "critical", "Presets", t("Preset not found: %s", path))
@@ -346,7 +348,14 @@ def apply_preset(path):
     is_backup = os.path.realpath(path) == os.path.realpath(state.LAST_PRESET)
     d = jsonio.read(path)
     d = d if isinstance(d, dict) else {}
-    theme = jq_str(alt(d.get("theme"), ""))
+    theme = theme or jq_str(alt(d.get("theme"), ""))
+    # тема райса из обоев (omarchy-rice-dynamic): собрать до применения — её может ещё не быть, а пул обоев мог вырасти
+    if theme.startswith("dynamic-") and not wallpaper and fsutil.which("omarchy-rice-dynamic"):
+        if sh(["omarchy-rice-dynamic", "build", theme[8:], "--no-apply"])[0] == 0:
+            try:
+                wallpaper = json.loads((P / "themes" / theme / ".omarchy-wallpaper-theme").read_text()).get("image")
+            except (OSError, ValueError):
+                pass
     if is_backup or state.section_on(state.PRESET_CFG, "presetTheme"):
         if theme and not theme_exists(theme):
             notify("-u", "critical", "Presets", t("Theme %s is not installed — preset not applied. Turn off \"Apply theme\" to use it without the theme.", theme))
@@ -374,10 +383,14 @@ def apply_preset(path):
     # свой профиль шрифтов у пресета (пресеты тем Vitreus) — поверх профиля стиля
     if d.get("fonts") and section_on(state.PRESET_CFG, "presetFonts", is_backup):
         apply_style_fonts(path)
-    wp = jq_str(alt(d.get("wallpaper"), "")) if section_on(state.PRESET_CFG, "presetWallpaper", is_backup) else ""
+    wp = jq_str(alt(wallpaper, d.get("wallpaper"), "")) if section_on(state.PRESET_CFG, "presetWallpaper", is_backup) or wallpaper else ""
     if wp.startswith("~/"):
         wp = str(paths.HOME) + "/" + wp[2:]
-    if theme and theme != state.theme_name():
+    if theme.startswith("dynamic-") and fsutil.which("omarchy-rice-dynamic"):
+        # тему из обоев только что пересобрали: применить её заново, даже если она уже текущая (иначе на столе остаётся
+        # прежняя сборка); скрипт сам держит обои (OMARCHY_THEME_SKIP_BACKGROUND) и ставит их, если нужно
+        sh(["omarchy-rice-dynamic", "build", theme[8:], *([wp] if wp and os.path.isfile(wp) else [])], quiet=False)
+    elif theme and theme != state.theme_name():
         if wp and os.path.isfile(wp):
             sh(["omarchy", "theme", "set", theme], env=dict(os.environ, OMARCHY_THEME_SKIP_BACKGROUND="1"))
             sh(["omarchy", "theme", "bg", "set", wp], quiet=False)
@@ -881,7 +894,10 @@ def dock_apply(value):
 def apply(category, value):
     out = ""
     if category == "rices":
-        if not value.startswith("section:"):
+        if value.startswith("dynamic"):
+            from . import rice_dynamic
+            rice_dynamic.apply(value)
+        elif not value.startswith("section:"):
             apply_preset(value)
     elif category == "presets":
         if value == "save":
@@ -1064,6 +1080,9 @@ def apply(category, value):
         notify("-t", "3000", "Theme", t("Applying %s…", value))
         out = sh(["omarchy", "theme", "set", value], quiet=False)[1]
         notify("-t", "3000", "Theme", t("Applied %s", value))
+    elif category == "dynamic":
+        from . import rice_dynamic
+        rice_dynamic.apply(value)
     elif category == "theme-walls":
         out = sh(["omarchy", "theme", "bg", "set", value], quiet=False)[1]
         notify("-t", "3000", "Wallpaper", t("Applied %s", os.path.basename(value)))

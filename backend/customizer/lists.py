@@ -113,6 +113,14 @@ LISTS.update({
 })
 
 
+def _dynamic():
+    from . import rice_dynamic
+    return rice_dynamic.tab()
+
+
+LISTS["dynamic"] = _dynamic
+
+
 def list_category(category: str, extra: str = ""):
     """Строки категории или None, если она ещё не перенесена."""
     if category == "theme-walls":

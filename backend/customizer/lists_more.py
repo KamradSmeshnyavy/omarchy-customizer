@@ -9,7 +9,7 @@ import re
 import shutil
 import subprocess
 
-from . import fsutil, jsonio, paths, state, tweaks
+from . import fsutil, jsonio, paths, rice_dynamic, state, tweaks
 from .i18n import t
 
 NL = "\\n"
@@ -58,6 +58,7 @@ def rices():
     """Вкладка «Райсы»: заголовок на райс, под ним варианты — пресеты из presets/ (⏎ применяет пресет)."""
     cur = state.current_preset_stem()
     out = []
+    dyn = rice_dynamic.info() if rice_dynamic.available() else {}
     for r in state.rices():
         out.append(f"{r['name']}\tsection:{r['name']}\t\t0\t\theader")
         after = t("After %s", r["after"]) if r["after"] and r["after"] != "own" else t("Own rice")
@@ -68,6 +69,8 @@ def rices():
             _name, note = state.meta(f)
             s = state.preset_summary(f)
             out.append(f"{r['name']} · {v['name']}\t{f}\t{f}\t{_cur(v['preset'] == cur)}\t{r['note']}{NL}{NL}{note}{NL}{NL}{after}{NL}{NL}{s}\t{s}")
+        if r["id"] in dyn:
+            out += rice_dynamic.rows(r, dyn[r["id"]])
     return out
 
 
@@ -879,6 +882,8 @@ def _dotify_python() -> bool:
 def available():
     plugins = paths.CONFIG / "plugins"
     out = ["rices", "presets", "styles", "windows"]
+    if rice_dynamic.available():
+        out.append("dynamic")
     if fsutil.which("omarchy-font-profile"):
         out.append("fonts")
     if fsutil.which("pw-play"):
