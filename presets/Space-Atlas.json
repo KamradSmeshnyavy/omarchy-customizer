@@ -1,0 +1,10 @@
+{
+  "name": "Space Atlas",
+  "name_ru": "Space Атлас",
+  "note": "After the Space style of elifouts/Dotfiles (GPL-3.0): the Space style on the space-atlas theme — its world Atlas: the Atlas hangs instead of the moon (nord, red); the wallpaper is its live landscape that pans with the workspaces.",
+  "note_ru": "По мотивам стиля Space из elifouts/Dotfiles (GPL-3.0): стиль Space на теме space-atlas — его мир Atlas: вместо луны висит Атлас (nord, красный); обои — его живой пейзаж, который панорамирует вместе со столами.",
+  "style": "space",
+  "theme": "space-atlas",
+  "wallpaper": "~/.config/omarchy/themes/space-atlas/backgrounds/1-land.jpg",
+  "fonts": "space"
+}

@@ -254,6 +254,38 @@
       }
     },
     {
+      "id": "space",
+      "name": "Space",
+      "after": "elifouts/Dotfiles (GPL-3.0)",
+      "note": "A No Man's Sky HUD: the wallpaper is a live landscape shader that pans when you switch workspaces, two thin corner-bracketed boxes where the workspaces are stars and their windows orbit as moons, uppercase spaced-out JetBrains Mono that decodes through noise, a visor dashboard, an onboard-computer Super+M menu with planets on an orbit, a tiny terminal launcher under the bar, windows without a border and with an accent glow, its spring motion.",
+      "note_ru": "HUD в духе No Man's Sky: обои — живой шейдер пейзажа, который панорамирует при смене стола, две тонкие коробки с уголками, где столы — звёзды, а их окна кружат лунами, JetBrains Mono капсом вразрядку, проступающий через шум, дашборд-визор, меню Super+M «бортовой компьютер» с планетами на орбите, маленький терминал-лаунчер под баром, окна без рамки со свечением акцентом, его пружинные анимации.",
+      "variants": [
+        {
+          "preset": "Space-Dusk",
+          "name": "Dusk",
+          "name_ru": "Сумерки"
+        },
+        {
+          "preset": "Space-Mars",
+          "name": "Mars",
+          "name_ru": "Марс"
+        },
+        {
+          "preset": "Space-Atlas",
+          "name": "Atlas",
+          "name_ru": "Атлас"
+        },
+        {
+          "preset": "Space-Frost",
+          "name": "Frost",
+          "name_ru": "Иней"
+        }
+      ],
+      "dynamic": {
+        "wallhaven": "no man's sky"
+      }
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",

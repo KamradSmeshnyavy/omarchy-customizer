@@ -1,0 +1,10 @@
+{
+  "name": "Space Mars",
+  "name_ru": "Space Марс",
+  "note": "After the Space style of elifouts/Dotfiles (GPL-3.0): the Space style on the space-mars theme — its saved world Mars: a bare red desert with bases and ships (gruvbox, red); the wallpaper is its live landscape that pans with the workspaces.",
+  "note_ru": "По мотивам стиля Space из elifouts/Dotfiles (GPL-3.0): стиль Space на теме space-mars — его сохранённый мир Mars: голая красная пустыня с базами и кораблями (gruvbox, красный); обои — его живой пейзаж, который панорамирует вместе со столами.",
+  "style": "space",
+  "theme": "space-mars",
+  "wallpaper": "~/.config/omarchy/themes/space-mars/backgrounds/1-land.jpg",
+  "fonts": "space"
+}

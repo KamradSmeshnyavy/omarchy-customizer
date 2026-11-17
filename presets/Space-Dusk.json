@@ -1,0 +1,10 @@
+{
+  "name": "Space Dusk",
+  "name_ru": "Space Сумерки",
+  "note": "After the Space style of elifouts/Dotfiles (GPL-3.0): the Space style on the space-dusk theme — the pink world of its screenshots (dracula, pink); the wallpaper is its live landscape that pans with the workspaces.",
+  "note_ru": "По мотивам стиля Space из elifouts/Dotfiles (GPL-3.0): стиль Space на теме space-dusk — розовый мир с его скриншотов (dracula, розовый); обои — его живой пейзаж, который панорамирует вместе со столами.",
+  "style": "space",
+  "theme": "space-dusk",
+  "wallpaper": "~/.config/omarchy/themes/space-dusk/backgrounds/1-land.jpg",
+  "fonts": "space"
+}
