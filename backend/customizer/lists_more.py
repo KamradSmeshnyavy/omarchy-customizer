@@ -59,6 +59,14 @@ def rices():
     cur = state.current_preset_stem()
     out = []
     dyn = rice_dynamic.info() if rice_dynamic.available() else {}
+    # темы райсов — в отдельном репо omarchy-rices; нет их — сказать, как поставить (иначе вариант падает «не установлена»)
+    from .apply_ops import theme_exists
+    themes_ = [jsonio.read(state.PRESET_DIR / f"{v['preset']}.json") for r in state.rices() for v in r["variants"]]
+    missing = [d.get("theme") for d in themes_ if isinstance(d, dict) and d.get("theme")
+               and not str(d["theme"]).startswith("dynamic") and not theme_exists(d["theme"])]
+    if missing:
+        out.append(f"{t('⬇ Install the themes of the rices…')}\trices-install\t\t0\t"
+                   + t("%s themes of the rices are not installed. They live in the omarchy-rices repo: bash install.sh --with rices (from the Customizer repo) or github.com/KamradSmeshnyavy/omarchy-rices.", len(missing)))
     for r in state.rices():
         out.append(f"{r['name']}\tsection:{r['name']}\t\t0\t\theader")
         after = t("After %s", r["after"]) if r["after"] and r["after"] != "own" else t("Own rice")

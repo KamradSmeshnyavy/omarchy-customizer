@@ -951,5 +951,9 @@
   "🎨 Dynamic › light / dark: %s": "🎨 Dynamic › светлая / тёмная: %s",
   "auto — by the wallpaper: a light picture gives a light theme; dark or light — always so.": "auto — по обоям: светлая картинка даёт светлую тему; dark или light — всегда так.",
   "In the accent mode the palette is the theme that was on before dynamic, the accent from the wallpaper.": "В режиме accent палитра — тема, что стояла до dynamic, а акцент — с обоев.",
-  "No rice": "Без райса"
+  "No rice": "Без райса",
+  "⬇ Install the themes of the rices…": "⬇ Установить темы райсов…",
+  "%s themes of the rices are not installed. They live in the omarchy-rices repo: bash install.sh --with rices (from the Customizer repo) or github.com/KamradSmeshnyavy/omarchy-rices.": "Не установлено тем райсов: %s. Они в репо omarchy-rices: bash install.sh --with rices (из репо Customizer) или github.com/KamradSmeshnyavy/omarchy-rices.",
+  "Add images or live wallpapers to the rice: locally (%s, not in git) or into the repo (omarchy-rices/<rice>/wallpapers).": "Добавить в райс картинки или живые обои: локально (%s, не в git) или в репо (omarchy-rices/<райс>/wallpapers).",
+  "omarchy-rices/%s/wallpapers — mind the licence of the pictures: the repo is public": "omarchy-rices/%s/wallpapers — следи за лицензией картинок: репо публичный"
 }

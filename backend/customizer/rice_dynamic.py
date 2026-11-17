@@ -295,7 +295,7 @@ def tab() -> list:
                + t("Search wallhaven.cc (safe for work only), pick pictures in the wallpaper picker one by one: each is downloaded into the rice's wallpapers (%s, not in git). Esc — done.",
                    paths.tilde(paths.CONFIG / "backgrounds" / theme)))
     out.append(f"{t('add wallpapers…')}\tdynamic-add:{rid}\t{tl.get('add', '')}\t0\t"
-               + t("Add images or live wallpapers to the rice: locally (%s, not in git) or into the repo (omarchy-themes/<rice>/wallpapers).",
+               + t("Add images or live wallpapers to the rice: locally (%s, not in git) or into the repo (omarchy-rices/<rice>/wallpapers).",
                    paths.tilde(paths.CONFIG / "backgrounds" / theme)))
     # сетка обоев райса: превью — сама картинка, ⏎ — поставить (и перекрасить)
     from .lists_more import _wall_row
@@ -429,7 +429,7 @@ def apply(value):
         where = _zenity(["--list", f"--title={t('Add wallpapers')}", "--width=640", "--height=260",
                          f"--text={t('Where to keep them?')}", f"--column={t('Where')}", f"--column={t('What it means')}",
                          "--print-column=1", "local", t("Only on this machine, not in git"),
-                         "repo", t("omarchy-themes/%s/wallpapers — mind the licence of the pictures: the repo is public", rid)])
+                         "repo", t("omarchy-rices/%s/wallpapers — mind the licence of the pictures: the repo is public", rid)])
         if not where:
             raise Exit(0)
         code, _ = sh([TOOL, "add", rid, *files, "--repo" if where.split("|")[0] == "repo" else "--local"], quiet=False)

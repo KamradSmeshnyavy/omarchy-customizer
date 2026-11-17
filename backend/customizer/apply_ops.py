@@ -894,7 +894,9 @@ def dock_apply(value):
 def apply(category, value):
     out = ""
     if category == "rices":
-        if value.startswith("dynamic"):
+        if value == "rices-install":
+            spawn(["xdg-open", "https://github.com/KamradSmeshnyavy/omarchy-rices#install"])
+        elif value.startswith("dynamic"):
             from . import rice_dynamic
             rice_dynamic.apply(value)
         elif not value.startswith("section:"):

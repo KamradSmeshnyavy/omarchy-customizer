@@ -3,7 +3,7 @@
 #
 #   bash install.sh                      # Customizer, then a question per companion
 #   bash install.sh --all                # Customizer + every companion
-#   bash install.sh --with bar,lock      # Customizer + the listed ones
+#   bash install.sh --with bar,lock      # Customizer + the listed ones (rices — themes of the rices + Dynamic)
 #   bash install.sh --none               # Customizer only
 #
 # Each plugin is a separate repo added with `omarchy plugin add`, so `omarchy plugin update`
@@ -21,7 +21,9 @@ COMPANIONS=(
   "fx|omarchy-wallpaper-fx|kamradsmeshnyavy.background|24 wallpaper transitions"
   "picker|omarchy-image-picker-styles|kamradsmeshnyavy.image-picker|six theme/wallpaper picker styles"
   "launcher|omarchy-launcher-skins|kamradsmeshnyavy.menu|full-screen launcher skins"
+  "rices|omarchy-rices|-|themes of the rices (Rices tab) and the dynamic theme from the wallpaper (Dynamic tab)"
 )
+RICES_DIR="$HOME/.local/share/omarchy-rices"
 
 mode=ask
 with=""
@@ -40,6 +42,17 @@ done
 command -v omarchy >/dev/null || { echo "Omarchy not found: this installs Omarchy shell plugins." >&2; exit 1; }
 
 add() { # repo id
+  if [[ $1 == omarchy-rices ]]; then # not a shell plugin: a clone with themes, linked by its own install.sh
+    if [[ -d $RICES_DIR/.git ]]; then
+      echo "• updating omarchy-rices …"
+      git -C "$RICES_DIR" pull --ff-only -q || echo "  could not update $RICES_DIR — keeping it as is" >&2
+    else
+      echo "• adding omarchy-rices …"
+      git clone -q "$BASE/omarchy-rices" "$RICES_DIR"
+    fi
+    bash "$RICES_DIR/install.sh" || echo "  omarchy-rices: install.sh failed (see above)" >&2
+    return
+  fi
   if [[ -e $PLUGINS/$2/manifest.json ]]; then
     echo "• $2 is already installed — skipping (update it with: omarchy plugin update $2)"
     return
