@@ -175,6 +175,12 @@
           "label": "Module background alpha"
         },
         {
+          "key": "riceModules",
+          "type": "bool",
+          "default": true,
+          "label": "Added modules wear the rice's look"
+        },
+        {
           "key": "spacing",
           "type": "num",
           "min": 0,
