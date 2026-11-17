@@ -35,6 +35,13 @@ ENGINE_NOTE = ("rice — the wallpaper colours go into the rice's own palette an
                "rice's character; colors — only colors.toml, the rest comes from Omarchy templates. ⏎ switches.")
 
 
+PLAIN = "plain"  # «райс без райса»: тема dynamic из любых обоев (omarchy-rice-dynamic build plain)
+
+
+def theme_of(rid) -> str:
+    return "dynamic" if rid == PLAIN else f"dynamic-{rid}"
+
+
 def available() -> bool:
     return fsutil.which(TOOL)
 
@@ -49,7 +56,7 @@ def info() -> dict:
 
 def marker(rice) -> dict:
     try:
-        return json.loads((paths.CONFIG / "themes" / f"dynamic-{rice}" / ".omarchy-wallpaper-theme").read_text())
+        return json.loads((paths.CONFIG / "themes" / theme_of(rice) / ".omarchy-wallpaper-theme").read_text())
     except (OSError, ValueError):
         return {}
 
@@ -209,6 +216,25 @@ def _tiles(rid, wall, walls) -> dict:
     return {n: str(p) for n, p in paths_.items()}
 
 
+# ── dynamic без райса: строки для вкладки «Тема» и раздела во вкладке Dynamic ──
+
+def plain_rows(cfg=None) -> list:
+    if not available():
+        return []
+    cfg = cfg if cfg is not None else info().get(PLAIN, {})
+    on = state.theme_name() == "dynamic"
+    scheme, mode = _scheme(cfg), cfg.get("mode") or "auto"
+    src = os.path.basename(marker(PLAIN).get("image", "")) or t("current wallpaper")
+    out = [f"{t('🎨 Dynamic — theme from the wallpaper')}\tdynamic:{PLAIN}\t\t{'1' if on else '0'}\t"
+           + t("The “dynamic” theme from any wallpaper (%s), no rice: colours by the chosen mode, and it recolours itself when the wallpaper changes.", src)]
+    out.append(f"{t('🎨 Dynamic › colours: %s', scheme)}\tdynamic-scheme:{PLAIN}\t\t0\t"
+               + t(dict(SCHEMES).get(scheme, scheme)) + NL + NL + t("Pick how the colours are read from the wallpaper."))
+    out.append(f"{t('🎨 Dynamic › light / dark: %s', mode)}\tdynamic-mode:{PLAIN}\t\t0\t"
+               + t("auto — by the wallpaper: a light picture gives a light theme; dark or light — always so.")
+               + NL + NL + t("In the accent mode the palette is the theme that was on before dynamic, the accent from the wallpaper."))
+    return out
+
+
 # ── вкладка «Райсы»: одна строка на райс ──
 
 def rows(r, cfg) -> list:
@@ -282,6 +308,10 @@ def tab() -> list:
         if len(parts) > 2 and parts[-2] == "backgrounds" and "omarchy-themes" in parts:
             row[0] = f"{parts[-3]} · {row[0]}"  # 1-liquid.png есть у каждого варианта — подписать вариантом
         out.append("\t".join(row))
+    plain = plain_rows(dyn.get(PLAIN, {}))
+    if plain:
+        out.append(f"{t('No rice')}\tsection:plain\t\t0\t\theader")
+        out += plain
     others = [x for x in rices if x["id"] != rid]
     if others:
         out.append(f"{t('Other rices')}\tsection:others\t\t0\t\theader")
@@ -295,7 +325,7 @@ def tab() -> list:
 def _set(rid, *opts):
     """Запомнить настройку; если тема райса сейчас текущая — пересобрать и применить."""
     from .apply_ops import notify, sh
-    applied = state.theme_name() == f"dynamic-{rid}"
+    applied = state.theme_name() == theme_of(rid)
     if applied:
         notify("-t", "3000", "Dynamic", t("Recolouring from the wallpaper…"))
     code, out = sh([TOOL, "set", rid, *opts, *([] if applied else ["--no-apply"])], quiet=False)
@@ -311,7 +341,18 @@ def apply(value):
     if kind == "section":
         return
     rid, _, arg = rest.partition(":")
-    r = _rice(rid)
+    if rid == PLAIN:
+        if kind == "dynamic":
+            notify("-t", "3000", "Dynamic", t("Building a theme from the wallpaper…"))
+            code, out = sh([TOOL, "build", PLAIN], quiet=False)
+            notify(*(["-t", "3000", "Dynamic", out.strip().split("\n")[-1]] if code == 0
+                     else ["-u", "critical", "Dynamic", t("Could not build the theme")]))
+            return
+        if kind not in ("dynamic-scheme", "dynamic-mode"):
+            raise Exit(1)
+        r = {"id": PLAIN, "name": "Dynamic", "variants": []}
+    else:
+        r = _rice(rid)
     if not r:
         raise Exit(1)
     cfg = info().get(rid, {})

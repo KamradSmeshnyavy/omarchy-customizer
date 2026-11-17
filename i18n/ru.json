@@ -944,5 +944,12 @@
   "Only the wallpaper's colours: like “wallpaper”, but terminal and code use only hues that are really on the picture; missing ones are lighter / darker steps of them. Red stays for errors": "Только цвета обоев: как «wallpaper», но в терминале и коде — только оттенки, которые реально есть на картинке; недостающие — их же ступени светлее / темнее. Красный остаётся для ошибок",
   "Only the wallpaper's colours, quieter": "Только цвета обоев, тише",
   "Only the wallpaper's colours, brighter": "Только цвета обоев, ярче",
-  "With the colors engine the palette is the look's colors.toml as is, the accent from the wallpaper; dark / light turns it over.": "На движке colors палитра — colors.toml облика как есть, акцент — с обоев; светлая / тёмная её переворачивает."
+  "With the colors engine the palette is the look's colors.toml as is, the accent from the wallpaper; dark / light turns it over.": "На движке colors палитра — colors.toml облика как есть, акцент — с обоев; светлая / тёмная её переворачивает.",
+  "🎨 Dynamic — theme from the wallpaper": "🎨 Dynamic — тема из обоев",
+  "The “dynamic” theme from any wallpaper (%s), no rice: colours by the chosen mode, and it recolours itself when the wallpaper changes.": "Тема «dynamic» из любых обоев (%s), без райса: цвета по выбранному режиму, при смене обоев тема перекрашивается сама.",
+  "🎨 Dynamic › colours: %s": "🎨 Dynamic › цвета: %s",
+  "🎨 Dynamic › light / dark: %s": "🎨 Dynamic › светлая / тёмная: %s",
+  "auto — by the wallpaper: a light picture gives a light theme; dark or light — always so.": "auto — по обоям: светлая картинка даёт светлую тему; dark или light — всегда так.",
+  "In the accent mode the palette is the theme that was on before dynamic, the accent from the wallpaper.": "В режиме accent палитра — тема, что стояла до dynamic, а акцент — с обоев.",
+  "No rice": "Без райса"
 }

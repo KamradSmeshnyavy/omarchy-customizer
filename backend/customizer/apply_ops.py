@@ -1069,13 +1069,9 @@ def apply(category, value):
         tweak_ops.set_key(state.LOCK_CFG, "design", value)
         notify("-t", "2000", "Lock", t("Design: %s", value))
     elif category == "themes":
-        if value.startswith("dynamic:"):
-            opts = ["--mode", "light"] if value == "dynamic:light" else ["--scheme", value[8:]]
-            notify("-t", "3000", "Theme", t("Building a theme from the wallpaper…"))
-            if sh(["omarchy-wallpaper-theme", *opts], quiet=False)[0] != 0:
-                notify("-u", "critical", "Theme", t("matugen failed"))
-                raise Exit(1)
-            notify("-t", "3000", "Theme", t("Applied %s", "dynamic"))
+        if value.startswith("dynamic"):  # тема dynamic из обоев без райса (rice_dynamic.plain_rows)
+            from . import rice_dynamic
+            rice_dynamic.apply(value)
             raise Exit(0)
         notify("-t", "3000", "Theme", t("Applying %s…", value))
         out = sh(["omarchy", "theme", "set", value], quiet=False)[1]

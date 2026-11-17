@@ -258,10 +258,7 @@ def _theme_label(slug: str) -> str:
 def themes():
     current = state.theme_name()
     out = []
-    if fsutil.which("omarchy-wallpaper-theme"):
-        for scheme in ("tonal-spot", "vibrant", "expressive", "fruit-salad", "monochrome", "light"):
-            out.append(f"{t('🎨 Theme from wallpaper: %s', scheme)}\tdynamic:{scheme}\t\t0\t"
-                       + t("Build the “dynamic” theme from the current wallpaper with matugen (Material You) and apply it."))
+    out += rice_dynamic.plain_rows()  # тема dynamic из обоев без райса (omarchy-rice-dynamic build plain)
     user_root = str(paths.CONFIG / "themes")
     sys_root = OMARCHY_PATH + "/themes"
     names = set()
