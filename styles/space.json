@@ -33,7 +33,7 @@
     "easing": "InOutSine"
   },
   "imagePicker": {
-    "style": "cards",
+    "style": "space",
     "cardRadius": 0,
     "selectedBorder": 1,
     "dim": 0.5

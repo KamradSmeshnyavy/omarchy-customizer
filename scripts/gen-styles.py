@@ -264,7 +264,7 @@ styles = {
         geom={"gapsIn": 4, "gapsOut": 12, "borderSize": 0, "rounding": 3, "shadow": False},
         bar="space", opacity="space", blur="space", anims="space", lock="space", launcher="space",
         radius=0, alpha=0.82, cards="bordered", fx={"type": "wipe", "duration": 900, "easing": "InOutSine"},
-        picker="cards", dash_anim="fade", sound_pack="neon", window_sounds=False, fonts="space",
+        picker="space", dash_anim="fade", sound_pack="neon", window_sounds=False, fonts="space",
         attach="floating",
         look={"elevation": 0, "motion": 1.0, "material": "glass", "cornerScale": 0, "typeface": "shell"}),
 
