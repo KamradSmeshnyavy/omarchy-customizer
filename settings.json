@@ -765,6 +765,12 @@
           "label": "Star map (Space): planets spin inside a system (30 steps a second; costs GPU while you look)"
         },
         {
+          "key": "settingsSkin",
+          "type": "enum",
+          "values": ["auto", "space", "crt"],
+          "label": "Settings sheet skin (Super+Alt+I): auto — by the rice"
+        },
+        {
           "key": "overviewStyle",
           "type": "enum",
           "values": ["auto", "grid", "starmap", "voyage", "table"],

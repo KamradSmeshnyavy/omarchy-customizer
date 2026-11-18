@@ -289,58 +289,29 @@
       "id": "crt",
       "name": "Retro CRT",
       "after": "elifouts/Dotfiles (GPL-3.0)",
-      "note": "An old green-screen terminal: the whole screen goes through its CRT shader (scanlines, bend, glow; Super+Alt+C turns it off for games), wallpapers traced or dithered into the tube colour, a thin text bar of readouts, a status-screen dashboard, every window as a table, a numbered program menu as the launcher, the «main menu» of a computer on Super+M, uppercase Terminess, its sharp snap motion.",
-      "note_ru": "Старый терминал с зелёным экраном: весь экран идёт через его ЭЛТ-шейдер (строки развёртки, выпуклость, свечение; Super+Alt+C выключает для игр), обои прорисованы или задизерены в цвет трубки, тонкий текстовый бар из показаний, дашборд — экран состояния, все окна таблицей, лаунчер — нумерованное меню программ, на Super+M — «Главное меню ЭВМ», Terminess капсом, его резкие анимации snap.",
+      "note": "An old green-screen terminal: the whole screen goes through its CRT shader (scanlines, bend, glow; Super+Alt+C turns it off for games), wallpapers traced or dithered into the tube colour, a thin text bar of readouts, a status-screen dashboard, every window as a table, a numbered program menu as the launcher, the «main menu» of a computer on Super+M, uppercase Terminess, its sharp snap motion. Profiles (his Car, Arcade, Wallpaper, Windows, Zen and the tubes), colours and wallpapers are chosen in the settings sheet (Super+Alt+I).",
+      "note_ru": "Старый терминал с зелёным экраном: весь экран идёт через его ЭЛТ-шейдер (строки развёртки, выпуклость, свечение; Super+Alt+C выключает для игр), обои прорисованы или задизерены в цвет трубки, тонкий текстовый бар из показаний, дашборд — экран состояния, все окна таблицей, лаунчер — нумерованное меню программ, на Super+M — «Главное меню ЭВМ», Terminess капсом, его резкие анимации snap. Профили (его Car, Arcade, Wallpaper, Windows, Zen и трубки), цвета и обои выбираются в панели настроек (Super+Alt+I).",
       "variants": [
         {
           "preset": "Retro-CRT-Phosphor",
-          "name": "Phosphor",
-          "name_ru": "Фосфор"
-        },
-        {
-          "preset": "Retro-CRT-Amber",
-          "name": "Amber",
-          "name_ru": "Янтарь"
-        },
-        {
-          "preset": "Retro-CRT-Cyan",
-          "name": "Cyan",
-          "name_ru": "Циан"
-        },
-        {
-          "preset": "Retro-CRT-Paper",
-          "name": "Paper",
-          "name_ru": "Бумага"
-        },
-        {
-          "preset": "Retro-CRT-Car",
-          "name": "Car",
-          "name_ru": "Машина"
-        },
-        {
-          "preset": "Retro-CRT-Arcade",
-          "name": "Arcade",
-          "name_ru": "Аркада"
-        },
-        {
-          "preset": "Retro-CRT-Wallpaper",
-          "name": "Wallpaper",
-          "name_ru": "Обои"
-        },
-        {
-          "preset": "Retro-CRT-Windows",
-          "name": "Windows",
-          "name_ru": "Окна"
-        },
-        {
-          "preset": "Retro-CRT-Zen",
-          "name": "Zen",
-          "name_ru": "Дзен"
+          "name": "Retro CRT",
+          "name_ru": "Retro CRT"
         }
       ],
       "dynamic": {
         "wallhaven": "retro computer"
-      }
+      },
+      "profiles": [
+        "Retro-CRT-Phosphor",
+        "Retro-CRT-Amber",
+        "Retro-CRT-Cyan",
+        "Retro-CRT-Paper",
+        "Retro-CRT-Car",
+        "Retro-CRT-Arcade",
+        "Retro-CRT-Wallpaper",
+        "Retro-CRT-Windows",
+        "Retro-CRT-Zen"
+      ]
     },
     {
       "id": "dotmatrix",

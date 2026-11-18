@@ -356,8 +356,11 @@ def apply_preset(path, theme=None, wallpaper=None):
                 wallpaper = json.loads((P / "themes" / theme / ".omarchy-wallpaper-theme").read_text()).get("image")
             except (OSError, ValueError):
                 pass
+    # build — команда, что сама собирает и ставит тему пресета (профили Retro CRT: omarchy-crt-colors --state …);
+    # тема тогда может ещё не существовать
+    build = d.get("build") if isinstance(d.get("build"), list) and fsutil.which(str(d["build"][0])) else None
     if is_backup or state.section_on(state.PRESET_CFG, "presetTheme"):
-        if theme and not theme_exists(theme):
+        if theme and not build and not theme_exists(theme):
             notify("-u", "critical", "Presets", t("Theme %s is not installed — preset not applied. Turn off \"Apply theme\" to use it without the theme.", theme))
             raise Exit(1)
     else:
@@ -386,7 +389,9 @@ def apply_preset(path, theme=None, wallpaper=None):
     wp = jq_str(alt(wallpaper, d.get("wallpaper"), "")) if section_on(state.PRESET_CFG, "presetWallpaper", is_backup) or wallpaper else ""
     if wp.startswith("~/"):
         wp = str(paths.HOME) + "/" + wp[2:]
-    if theme.startswith("dynamic-") and fsutil.which("omarchy-rice-dynamic"):
+    if build and theme:
+        sh([str(x).replace("{preset}", path) for x in build], quiet=False)
+    elif theme.startswith("dynamic-") and fsutil.which("omarchy-rice-dynamic"):
         # тему из обоев только что пересобрали: применить её заново, даже если она уже текущая (иначе на столе остаётся
         # прежняя сборка); скрипт сам держит обои (OMARCHY_THEME_SKIP_BACKGROUND) и ставит их, если нужно
         sh(["omarchy-rice-dynamic", "build", theme[8:], *([wp] if wp and os.path.isfile(wp) else [])], quiet=False)

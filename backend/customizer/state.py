@@ -260,6 +260,7 @@ def rices() -> list:
                 vs.append({"preset": str(v["preset"]), "name": str(alt(v.get("name_" + lang), v.get("name"), v["preset"]))})
         out.append({"id": str(r["id"]), "name": str(alt(r.get("name_" + lang), r.get("name"), r["id"])),
                     "note": str(alt(r.get("note_" + lang), r.get("note"), "")), "after": str(r.get("after") or ""), "variants": vs,
+                    "profiles": [str(x) for x in (r.get("profiles") or []) if x],
                     "dynamic": str((r.get("dynamic") or {}).get("preset") or "") if isinstance(r.get("dynamic"), dict) else "",
                     "wallhaven": str((r.get("dynamic") or {}).get("wallhaven") or "") if isinstance(r.get("dynamic"), dict) else ""})
     return out
@@ -274,8 +275,16 @@ def current_rice() -> str:
 def rice_of(stem: str) -> str:
     """id райса, вариантом которого служит пресет stem; не райс — пусто."""
     for r in rices():
-        if any(v["preset"] == stem for v in r["variants"]):
+        if any(v["preset"] == stem for v in r["variants"]) or stem in (r.get("profiles") or []):
             return r["id"]
+    # свой профиль райса (сохранён из панели настроек): поле "rice" в самом пресете
+    for d in (USER_PRESETS, PRESET_DIR):
+        try:
+            r = json.loads((d / f"{stem}.json").read_text()).get("rice")
+        except (OSError, ValueError, AttributeError):
+            continue
+        if r:
+            return str(r)
     return ""
 
 
