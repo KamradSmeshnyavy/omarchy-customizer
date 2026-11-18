@@ -754,6 +754,12 @@
           "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile)"
         },
         {
+          "key": "overviewStyle",
+          "type": "enum",
+          "values": ["auto", "grid", "starmap"],
+          "label": "Workspace overview — auto (by the rice) · grid (workspaces with live windows, drag to move) · starmap (Space: workspaces are stars, windows are planets; fly with hjkl / Tab, Enter lands)"
+        },
+        {
           "key": "clipboardPanel",
           "type": "enum",
           "values": ["auto", "stock", "glyph"],

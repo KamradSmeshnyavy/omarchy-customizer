@@ -149,7 +149,8 @@
     "deckTrigger": "dwell",
     "sysinfoStyle": "rings",
     "mediaStyle": "default",
-    "weather": false
+    "weather": false,
+    "overviewStyle": "auto"
   },
   "osd": {
     "osdStyle": "dotmatrix",

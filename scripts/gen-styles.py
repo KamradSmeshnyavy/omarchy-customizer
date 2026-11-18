@@ -330,9 +330,9 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}
-# Части райса (дом, Deck, Super+M, меню выключения, буфер) — auto: вид выбирает сам виджет по райсу из style.json
+# Части райса (дом, Deck, Super+M, меню выключения, буфер, обзор столов) — auto: вид выбирает сам виджет по райсу из style.json
 # ("rice", пишет вкладка «Райсы»), а без райса — по стилю (Widgets.qml → partFor). Сменил райс — части подстроились.
-PARTS = ("homeLayout", "homeCards", "deckLayout", "deckCards", "settingsPanel", "powerStyle", "clipboardPanel")
+PARTS = ("homeLayout", "homeCards", "deckLayout", "deckCards", "settingsPanel", "powerStyle", "clipboardPanel", "overviewStyle")
 for name, st in styles.items():
     st["widgets"].update({k: "auto" for k in PARTS})
 for name, st in styles.items():

@@ -67,7 +67,8 @@
     "clipboardPanel": "auto",
     "mediaStyle": "default",
     "sysinfoStyle": "rings",
-    "weather": false
+    "weather": false,
+    "overviewStyle": "auto"
   },
   "osd": {
     "osdStyle": "edge",
