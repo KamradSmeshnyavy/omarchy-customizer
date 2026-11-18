@@ -1,0 +1,10 @@
+{
+  "name": "Retro CRT Cyan",
+  "name_ru": "Retro CRT Циан",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): the Retro CRT style on the crt-cyan theme — the cyan tube; its street wallpaper traced in lines; the whole screen goes through its CRT shader (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): стиль Retro CRT на теме crt-cyan — бирюзовая трубка; его улица, прорисованная контурами; весь экран идёт через его ЭЛТ-шейдер (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-cyan",
+  "wallpaper": "~/.config/omarchy/themes/crt-cyan/backgrounds/0r-gru-04.png",
+  "fonts": "crt"
+}

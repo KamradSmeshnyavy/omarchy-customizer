@@ -286,6 +286,38 @@
       }
     },
     {
+      "id": "crt",
+      "name": "Retro CRT",
+      "after": "elifouts/Dotfiles (GPL-3.0)",
+      "note": "An old green-screen terminal: the whole screen goes through its CRT shader (scanlines, bend, glow; Super+Alt+C turns it off for games), wallpapers traced or dithered into the tube colour, a thin text bar of readouts, a status-screen dashboard, every window as a table, a numbered program menu as the launcher, the «main menu» of a computer on Super+M, uppercase Terminess, its sharp snap motion.",
+      "note_ru": "Старый терминал с зелёным экраном: весь экран идёт через его ЭЛТ-шейдер (строки развёртки, выпуклость, свечение; Super+Alt+C выключает для игр), обои прорисованы или задизерены в цвет трубки, тонкий текстовый бар из показаний, дашборд — экран состояния, все окна таблицей, лаунчер — нумерованное меню программ, на Super+M — «Главное меню ЭВМ», Terminess капсом, его резкие анимации snap.",
+      "variants": [
+        {
+          "preset": "Retro-CRT-Phosphor",
+          "name": "Phosphor",
+          "name_ru": "Фосфор"
+        },
+        {
+          "preset": "Retro-CRT-Amber",
+          "name": "Amber",
+          "name_ru": "Янтарь"
+        },
+        {
+          "preset": "Retro-CRT-Cyan",
+          "name": "Cyan",
+          "name_ru": "Циан"
+        },
+        {
+          "preset": "Retro-CRT-Paper",
+          "name": "Paper",
+          "name_ru": "Бумага"
+        }
+      ],
+      "dynamic": {
+        "wallhaven": "retro computer"
+      }
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",

@@ -960,5 +960,6 @@
   "⬇ Install the themes of the rices…": "⬇ Установить темы райсов…",
   "%s themes of the rices are not installed. They live in the omarchy-rices repo: bash install.sh --with rices (from the Customizer repo) or github.com/KamradSmeshnyavy/omarchy-rices.": "Не установлено тем райсов: %s. Они в репо omarchy-rices: bash install.sh --with rices (из репо Customizer) или github.com/KamradSmeshnyavy/omarchy-rices.",
   "Add images or live wallpapers to the rice: locally (%s, not in git) or into the repo (omarchy-rices/<rice>/wallpapers).": "Добавить в райс картинки или живые обои: локально (%s, не в git) или в репо (omarchy-rices/<райс>/wallpapers).",
-  "omarchy-rices/%s/wallpapers — mind the licence of the pictures: the repo is public": "omarchy-rices/%s/wallpapers — следи за лицензией картинок: репо публичный"
+  "omarchy-rices/%s/wallpapers — mind the licence of the pictures: the repo is public": "omarchy-rices/%s/wallpapers — следи за лицензией картинок: репо публичный",
+  "Retro CRT SCREENS: a double frame over the whole screen, square thumbnails in tube-coloured frames, Terminess captions and hints": "Экран SCREENS Retro CRT: двойная рамка во весь экран, прямые миниатюры в рамках цвета трубки, подписи и подсказки Terminess"
 }

@@ -1,0 +1,119 @@
+{
+  "name": "Retro CRT",
+  "name_ru": "Retro CRT",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): an old green-screen terminal — the whole screen goes through its CRT shader (Super+Alt+C), wallpapers are traced or dithered into the tube colour, a thin text bar of readouts, uppercase Terminess, square windows with a 1 px border in the tube colour, no blur or shadows, its sharp snap motion.",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): старый терминал с зелёным экраном — весь экран идёт через его ЭЛТ-шейдер (Super+Alt+C), обои прорисованы или задизерены в цвет трубки, тонкий текстовый бар из показаний, Terminess капсом, квадратные окна с рамкой 1 px цветом трубки, без размытия и теней, его резкие анимации snap.",
+  "anims": "crt",
+  "opacity": "solid",
+  "blur": "off",
+  "shader": "retro-crt",
+  "hyprGeometry": {
+    "gapsIn": 3,
+    "gapsOut": 8,
+    "borderSize": 1,
+    "rounding": 0,
+    "shadow": false,
+    "noGaps": false
+  },
+  "barSkin": "crt",
+  "barLayout": "crt",
+  "barTransparent": false,
+  "lock": {
+    "design": "crt",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "crt",
+    "backdrop": 0.6
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 400,
+    "easing": "Linear"
+  },
+  "imagePicker": {
+    "style": "crt",
+    "cardRadius": 0,
+    "selectedBorder": 1,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "big",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "crt",
+    "dashFollowBar": false,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 0.86,
+    "dashRadius": 0,
+    "dashBorder": true,
+    "dashAnimation": "fade",
+    "dashDuration": 300,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default",
+    "weather": false,
+    "overviewStyle": "auto"
+  },
+  "osd": {
+    "osdStyle": "crt",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 0.86,
+    "osdRadius": 0,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "stock",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 0.86,
+    "notifyRadius": 0,
+    "notifyCards": "crt",
+    "notifyCorner": "top-right",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "retro",
+    "windowSounds": false
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "crt",
+  "look": {
+    "texture": "",
+    "elevation": 0,
+    "motion": 1.0,
+    "material": "solid",
+    "cornerScale": 0,
+    "typeface": "shell"
+  },
+  "theme": {
+    "dark": "crt-phosphor",
+    "light": "crt-phosphor"
+  }
+}

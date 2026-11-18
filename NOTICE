@@ -53,3 +53,7 @@ This project includes or is based on:
   The Liquid Glass presets (presets/Liquid-*.json) follow its themes (themes/*.toml); the theme fonts in fonts/vitreus
   come from Google Fonts under the SIL Open Font License 1.1 (fonts/vitreus/OFL.txt): Audiowide, Mochiy Pop One, Orbitron,
   Zen Kurenaido, Kalam, Fuzzy Bubbles, Titan One — Mochiy Pop One and Zen Kurenaido subset to Latin and Cyrillic.
+
+- shaders/retro-crt.frag, animations/crt.lua, styles/crt.json and the Retro CRT presets: after the Retro style of
+  elifouts/Dotfiles (https://github.com/elifouts/Dotfiles), Copyright (c) Eli Fouts, GPL-3.0 — the shader is his
+  Retro/base/crt.frag with the defines of his crt.lua baked in (phosphor tube), the motion is his style.lua.

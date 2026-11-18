@@ -1,0 +1,10 @@
+{
+  "name": "Retro CRT Amber",
+  "name_ru": "Retro CRT Янтарь",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): the Retro CRT style on the crt-amber theme — the amber tube; its nature wallpaper dithered into amber; the whole screen goes through its CRT shader (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): стиль Retro CRT на теме crt-amber — янтарная трубка; его пейзаж, задизеренный в янтарь; весь экран идёт через его ЭЛТ-шейдер (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-amber",
+  "wallpaper": "~/.config/omarchy/themes/crt-amber/backgrounds/0r-nat-09.png",
+  "fonts": "crt"
+}

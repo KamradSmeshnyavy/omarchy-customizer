@@ -18,6 +18,7 @@ projects licensed under GPL-3.0:
 | `bruteon` | after [Bruteon](https://github.com/Darkkal44/Bruteon) (screenshots only — own feel): quick springy pop-ins of windows and layers |
 | `unit3` | from [Unit-3](https://github.com/samyns/Unit-3) by samyns (MIT): its `niercurve` bezier — windows slide in / out, workspaces slide vertically |
 | `space` | from the Space style of [elifouts/Dotfiles](https://github.com/elifouts/Dotfiles) (GPL-3.0): its `style.lua` — windows pop in on the `easy` spring, quick fades, layers and workspaces on `easeOutQuint` |
+| `crt` | from the Retro style of [elifouts/Dotfiles](https://github.com/elifouts/Dotfiles) (GPL-3.0): its `style.lua` — everything on the sharp `snap` curve, windows pop in at 96 % and close on a `step`, workspaces slide-fade 8 % |
 
 Add your own presets to `~/.config/omarchy/customizer/animations/*.lua`: they show up in the list, and a
 file with the same name overrides the bundled one.

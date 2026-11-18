@@ -21,7 +21,8 @@ Item {
     "honeycomb": { expandedWidth: 286,  expandedHeight: 330, sliceWidth: 130, sliceHeight: 150, spacing: 10,   skew: 0,  radius: 0,  tilt: 0 },
     "dots":      { expandedWidth: 720,  expandedHeight: 450, sliceWidth: 120, sliceHeight: 120, spacing: 18,   skew: 0,  radius: 60, tilt: 0 },
     "glyph":     { expandedWidth: 720,  expandedHeight: 450, sliceWidth: 120, sliceHeight: 120, spacing: 18,   skew: 0,  radius: 60, tilt: 0 },
-    "space":     { expandedWidth: 300,  expandedHeight: 170, sliceWidth: 56,  sliceHeight: 150, spacing: 6,    skew: 0,  radius: 0,  tilt: 0 }
+    "space":     { expandedWidth: 300,  expandedHeight: 170, sliceWidth: 56,  sliceHeight: 150, spacing: 6,    skew: 0,  radius: 0,  tilt: 0 },
+    "crt":       { expandedWidth: 270,  expandedHeight: 152, sliceWidth: 66,  sliceHeight: 126, spacing: 4,    skew: 0,  radius: 0,  tilt: 0 }
   })
   readonly property var preset: presets[style] || presets.slices
   function num(key, fallback) {

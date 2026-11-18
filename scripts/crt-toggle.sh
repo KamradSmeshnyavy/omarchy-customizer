@@ -37,7 +37,7 @@ damage_mode() {
     code="$(sed 's://.*$::' "$1")"
     if grep -qE '\buniform\s+float\s+time\b' <<<"$code"; then
         echo 0
-    elif grep -qE '\b(WARP|CURVATURE|BARREL)\s*=\s*0*\.?0*[1-9]' <<<"$code"; then
+    elif grep -qE '\b(WARP|CURVATURE|BARREL|BEND)(\s*=\s*|\s+)0*\.?0*[1-9]' <<<"$code"; then
         echo 1
     else
         echo 2

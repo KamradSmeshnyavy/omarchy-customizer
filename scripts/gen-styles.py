@@ -267,6 +267,16 @@ styles = {
         picker="space", dash_anim="fade", sound_pack="neon", window_sounds=False, fonts="space",
         attach="floating",
         look={"elevation": 0, "motion": 1.0, "material": "glass", "cornerScale": 0, "typeface": "shell"}),
+    "crt": plain(
+        "Retro CRT", "Retro CRT",
+        "After the Retro style of elifouts/Dotfiles (GPL-3.0): an old green-screen terminal — the whole screen goes through its CRT shader (Super+Alt+C), wallpapers are traced or dithered into the tube colour, a thin text bar of readouts, uppercase Terminess, square windows with a 1 px border in the tube colour, no blur or shadows, its sharp snap motion.",
+        "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): старый терминал с зелёным экраном — весь экран идёт через его ЭЛТ-шейдер (Super+Alt+C), обои прорисованы или задизерены в цвет трубки, тонкий текстовый бар из показаний, Terminess капсом, квадратные окна с рамкой 1 px цветом трубки, без размытия и теней, его резкие анимации snap.",
+        geom={"gapsIn": 3, "gapsOut": 8, "borderSize": 1, "rounding": 0, "shadow": False},
+        bar="crt", opacity="solid", blur="off", anims="crt", lock="crt", launcher="crt",
+        radius=0, alpha=0.86, cards="bordered", fx={"type": "fade", "duration": 400, "easing": "Linear"},
+        picker="crt", dash_anim="fade", sound_pack="retro", window_sounds=False, fonts="crt",
+        attach="floating",
+        look={"elevation": 0, "motion": 1.0, "material": "solid", "cornerScale": 0, "typeface": "shell"}),
 
 }
 
@@ -316,6 +326,13 @@ styles["space"]["widgets"].update(dashStyle="space", dashFollowBar=False, dashBa
 styles["space"]["notifications"].update(notifyStyle="stock", notifyCards="space", notifyRadius=0, notifyWidth=340,
                                          notifyCorner="bottom-left")
 styles["space"]["osd"].update(osdStyle="space")  # его OSD: квадратная плашка внизу по центру (SpaceOsd.qml)
+# Retro CRT: текстовый бар, экран состояния, таблица окон, карточки уведомлений с двойной рамкой, шейдер трубки
+styles["crt"]["barLayout"] = "crt"
+styles["crt"]["osd"].update(osdStyle="crt")  # его OSD: плашка с клетками внизу по центру (CrtOsd.qml)
+styles["crt"]["shader"] = "retro-crt"
+styles["crt"]["widgets"].update(dashStyle="crt", dashFollowBar=False, dashBackground="background")
+styles["crt"]["notifications"].update(notifyStyle="stock", notifyCards="crt", notifyRadius=0, notifyWidth=380,
+                                       notifyCorner="top-right")
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
@@ -327,7 +344,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper"), "space": ("space-dusk", "")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper"), "space": ("space-dusk", ""), "crt": ("crt-phosphor", "")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}
