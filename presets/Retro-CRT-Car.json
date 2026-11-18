@@ -1,0 +1,13 @@
+{
+  "name": "Retro CRT Car",
+  "name_ru": "Retro CRT Машина",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his saved profile Car — gruvbox, the Audi traced in lines, the zen bar, see-through windows, a soft bend and heavy scanlines; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его сохранённый профиль Car — gruvbox, Audi контурами, бар zen, полупрозрачные окна, лёгкая выпуклость и густые строки; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-car",
+  "wallpaper": "~/.config/omarchy/themes/crt-car/backgrounds/0-original.png",
+  "fonts": "crt",
+  "barLayout": "crt-zen",
+  "opacity": "crt-car",
+  "blur": "crt"
+}

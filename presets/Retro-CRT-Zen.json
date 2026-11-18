@@ -1,0 +1,12 @@
+{
+  "name": "Retro CRT Zen",
+  "name_ru": "Retro CRT Дзен",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his saved profile Zen — the pywal palette of an industrial photo in big pixels, the zen bar, glow without scanlines; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его сохранённый профиль Zen — pywal-палитра индустриального фото крупными пикселями, бар zen, свечение без строк; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-zen",
+  "wallpaper": "~/.config/omarchy/themes/crt-zen/backgrounds/0-original.png",
+  "fonts": "crt",
+  "barLayout": "crt-zen",
+  "blur": "crt"
+}

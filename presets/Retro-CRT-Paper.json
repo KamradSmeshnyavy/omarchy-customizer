@@ -1,10 +1,10 @@
 {
   "name": "Retro CRT Paper",
   "name_ru": "Retro CRT Бумага",
-  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): the Retro CRT style on the crt-paper theme — the white paper-white tube; its wallpaper traced in lines; the whole screen goes through its CRT shader (Super+Alt+C toggles it).",
-  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): стиль Retro CRT на теме crt-paper — белая «бумажная» трубка; его обои, прорисованные контурами; весь экран идёт через его ЭЛТ-шейдер (Super+Alt+C — вкл/выкл).",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his default profile with the paper-white tube; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его профиль по умолчанию с белой трубкой; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
   "style": "crt",
   "theme": "crt-paper",
-  "wallpaper": "~/.config/omarchy/themes/crt-paper/backgrounds/0r-cat-10.png",
+  "wallpaper": "~/.config/omarchy/themes/crt-paper/backgrounds/0-black.png",
   "fonts": "crt"
 }

@@ -1040,6 +1040,18 @@
           "section": "Quote of the day"
         },
         {
+          "key": "term",
+          "type": "bool",
+          "default": false,
+          "label": "Terminal on the wallpaper (a real bash in a transparent kitty panel; click it and type)"
+        },
+        {
+          "key": "termAnchor",
+          "type": "enum",
+          "values": ["top-left", "top", "top-right", "left", "center", "right", "bottom-left", "bottom", "bottom-right", "free"],
+          "label": "Terminal: position"
+        },
+        {
           "key": "quote",
           "type": "bool",
           "default": false,

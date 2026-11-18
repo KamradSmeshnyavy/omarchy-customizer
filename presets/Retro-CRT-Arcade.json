@@ -1,0 +1,11 @@
+{
+  "name": "Retro CRT Arcade",
+  "name_ru": "Retro CRT Аркада",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his saved profile Arcade — the pywal palette of his wallpaper, reduced to it with a coarse bayer dither, strong glow and grain, no tint; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его сохранённый профиль Arcade — pywal-палитра его обоев, картинка сведена к ней грубым bayer, сильное свечение и зерно, без подкраски; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-arcade",
+  "wallpaper": "~/.config/omarchy/themes/crt-arcade/backgrounds/0-original.png",
+  "fonts": "crt",
+  "blur": "crt"
+}

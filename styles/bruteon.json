@@ -65,6 +65,8 @@
     "settingsPanel": "auto",
     "powerStyle": "auto",
     "clipboardPanel": "auto",
+    "term": false,
+    "termAnchor": "top-left",
     "mediaStyle": "bruteon",
     "weather": true,
     "sysinfoStyle": "rings",

@@ -1,10 +1,10 @@
 {
   "name": "Retro CRT Phosphor",
   "name_ru": "Retro CRT Фосфор",
-  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): the Retro CRT style on the crt-phosphor theme — the green phosphor tube of its default profile, a black screen as on its screenshots; the whole screen goes through its CRT shader (Super+Alt+C toggles it).",
-  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): стиль Retro CRT на теме crt-phosphor — зелёная фосфорная трубка его профиля по умолчанию, чёрный экран, как на его скриншотах; весь экран идёт через его ЭЛТ-шейдер (Super+Alt+C — вкл/выкл).",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his default profile — the green phosphor tube on a black screen; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его профиль по умолчанию — зелёная фосфорная трубка на чёрном экране; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
   "style": "crt",
   "theme": "crt-phosphor",
-  "wallpaper": "~/.config/omarchy/themes/crt-phosphor/backgrounds/1-black.png",
+  "wallpaper": "~/.config/omarchy/themes/crt-phosphor/backgrounds/0-black.png",
   "fonts": "crt"
 }

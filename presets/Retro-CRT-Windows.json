@@ -1,0 +1,19 @@
+{
+  "name": "Retro CRT Windows",
+  "name_ru": "Retro CRT Окна",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his saved profile Windows — github dark dimmed, a flat screen without bend, see-through windows over a strong blur; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его сохранённый профиль Windows — github dark dimmed, плоский экран без выпуклости, полупрозрачные окна над сильным размытием; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-windows",
+  "wallpaper": "~/.config/omarchy/themes/crt-windows/backgrounds/0-original.png",
+  "fonts": "crt",
+  "opacity": "crt-windows",
+  "blur": "crt-windows",
+  "hyprGeometry": {
+    "gapsIn": 3,
+    "gapsOut": 2,
+    "borderSize": 1,
+    "rounding": 0,
+    "shadow": false
+  }
+}

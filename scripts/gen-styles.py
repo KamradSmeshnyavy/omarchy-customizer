@@ -91,6 +91,8 @@ def plain(name, name_ru, note, note_ru, *, geom, bar, opacity, blur, anims, lock
             "home": False, "deck": False, "homeLayout": "glyph", "homeCards": "style", "homeHideWidgets": True,
             "deckLayout": "panel", "deckCards": "style", "deckTrigger": "dwell", "settingsPanel": "drawer",
             "powerStyle": "edge", "clipboardPanel": "stock",
+            # терминал на обоях — свой у Retro CRT (его term-виджет), остальные стили его убирают
+            "term": False, "termAnchor": "top-left",
         },
         "osd": {
             "osdStyle": "edge", "osdFollowBar": True, "osdAttach": attach, "osdBackground": "background",
@@ -330,7 +332,7 @@ styles["space"]["osd"].update(osdStyle="space")  # его OSD: квадратн�
 styles["crt"]["barLayout"] = "crt"
 styles["crt"]["osd"].update(osdStyle="crt")  # его OSD: плашка с клетками внизу по центру (CrtOsd.qml)
 styles["crt"]["shader"] = "retro-crt"
-styles["crt"]["widgets"].update(dashStyle="crt", dashFollowBar=False, dashBackground="background")
+styles["crt"]["widgets"].update(dashStyle="crt", dashFollowBar=False, dashBackground="background", term=True, termAnchor="top-left")
 styles["crt"]["notifications"].update(notifyStyle="stock", notifyCards="crt", notifyRadius=0, notifyWidth=380,
                                        notifyCorner="top-right")
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
@@ -353,6 +355,8 @@ for name, st in styles.items():
 PARTS = ("homeLayout", "homeCards", "deckLayout", "deckCards", "settingsPanel", "powerStyle", "clipboardPanel", "overviewStyle")
 for name, st in styles.items():
     st["widgets"].update({k: "auto" for k in PARTS})
+    st["widgets"].setdefault("term", False)  # терминал на обоях — только у Retro CRT, остальные стили его убирают
+    st["widgets"].setdefault("termAnchor", "top-left")
 for name, st in styles.items():
     with open(os.path.join(out, name + ".json"), "w") as f:
         json.dump(st, f, ensure_ascii=False, indent=2)

@@ -311,6 +311,31 @@
           "preset": "Retro-CRT-Paper",
           "name": "Paper",
           "name_ru": "Бумага"
+        },
+        {
+          "preset": "Retro-CRT-Car",
+          "name": "Car",
+          "name_ru": "Машина"
+        },
+        {
+          "preset": "Retro-CRT-Arcade",
+          "name": "Arcade",
+          "name_ru": "Аркада"
+        },
+        {
+          "preset": "Retro-CRT-Wallpaper",
+          "name": "Wallpaper",
+          "name_ru": "Обои"
+        },
+        {
+          "preset": "Retro-CRT-Windows",
+          "name": "Windows",
+          "name_ru": "Окна"
+        },
+        {
+          "preset": "Retro-CRT-Zen",
+          "name": "Zen",
+          "name_ru": "Дзен"
         }
       ],
       "dynamic": {

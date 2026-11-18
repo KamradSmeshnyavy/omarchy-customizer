@@ -26,6 +26,8 @@ PRESETS=(
     "glass   0.90 0.80"
     "frosted 0.85 0.70"
     "space   0.80 0.70"
+    "crt-car 0.75 0.58"
+    "crt-windows 0.73 0.73"
 )
 DEFAULT=subtle
 

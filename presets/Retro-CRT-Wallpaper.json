@@ -1,0 +1,10 @@
+{
+  "name": "Retro CRT Wallpaper",
+  "name_ru": "Retro CRT Обои",
+  "note": "After the Retro style of elifouts/Dotfiles (GPL-3.0): his saved profile Wallpaper — the pywal palette of the retro computers photo, the photo itself finely dithered; the whole screen goes through his CRT shader with this profile's knobs (Super+Alt+C toggles it).",
+  "note_ru": "По мотивам стиля Retro из elifouts/Dotfiles (GPL-3.0): его сохранённый профиль Wallpaper — pywal-палитра фото со старыми компьютерами, само фото с мелким дизерингом; весь экран идёт через его ЭЛТ-шейдер с ручками этого профиля (Super+Alt+C — вкл/выкл).",
+  "style": "crt",
+  "theme": "crt-wallpaper",
+  "wallpaper": "~/.config/omarchy/themes/crt-wallpaper/backgrounds/0-original.png",
+  "fonts": "crt"
+}

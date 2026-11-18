@@ -150,7 +150,9 @@
     "sysinfoStyle": "rings",
     "mediaStyle": "default",
     "weather": false,
-    "overviewStyle": "auto"
+    "overviewStyle": "auto",
+    "term": false,
+    "termAnchor": "top-left"
   },
   "osd": {
     "osdStyle": "dotmatrix",
