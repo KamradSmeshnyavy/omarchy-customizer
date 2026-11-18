@@ -754,6 +754,17 @@
           "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile)"
         },
         {
+          "key": "starmapNav",
+          "type": "enum",
+          "values": ["route", "free"],
+          "label": "Star map (Space): controls it opens with — route (h/l along the workspace route, k/j to the uncharted belt, arrows show where a key leads) · free (WASD flight like the original); F switches"
+        },
+        {
+          "key": "starmapSpin",
+          "type": "bool",
+          "label": "Star map (Space): planets spin inside a system (30 steps a second; costs GPU while you look)"
+        },
+        {
           "key": "overviewStyle",
           "type": "enum",
           "values": ["auto", "grid", "starmap"],
