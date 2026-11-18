@@ -71,7 +71,7 @@
     "overviewStyle": "auto"
   },
   "osd": {
-    "osdStyle": "edge",
+    "osdStyle": "space",
     "osdFollowBar": true,
     "osdAttach": "floating",
     "osdBackground": "background",

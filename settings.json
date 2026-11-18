@@ -1140,8 +1140,8 @@
         {
           "key": "osdStyle",
           "type": "enum",
-          "values": ["edge", "dotmatrix", "stock"],
-          "label": "OSD: style (edge — slides out of the screen edge / frame)"
+          "values": ["edge", "dotmatrix", "space", "stock"],
+          "label": "OSD: style (edge — slides out of the screen edge / frame · space — square HUD plate at the bottom, from the Space rice)"
         },
         {
           "key": "osdFollowBar",

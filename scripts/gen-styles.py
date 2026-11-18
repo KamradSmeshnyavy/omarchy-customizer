@@ -315,6 +315,7 @@ styles["space"]["barLayout"] = "space"
 styles["space"]["widgets"].update(dashStyle="space", dashFollowBar=False, dashBackground="background", dashAlpha=0.4)
 styles["space"]["notifications"].update(notifyStyle="stock", notifyCards="space", notifyRadius=0, notifyWidth=340,
                                          notifyCorner="bottom-left")
+styles["space"]["osd"].update(osdStyle="space")  # его OSD: квадратная плашка внизу по центру (SpaceOsd.qml)
 styles["surface"]["widgets"].update(dashStyle="surface", powerStyle="auto", clockStyle="minimal")
 for st in styles.values():
     st["widgets"].setdefault("sysinfoStyle", "rings")
