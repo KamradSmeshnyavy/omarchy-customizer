@@ -31,6 +31,7 @@ ANIM_DIR = paths.PLUGIN / "animations"
 ANIM_BACKUP = paths.RUN / "active_animations.lua"
 SKIN_BACKUP = paths.RUN / "bar-skin.json"
 PLAY_SOUND = paths.PLUGIN / "scripts/play-sound.sh"
+RICE_TRANSITION = paths.PLUGIN / "scripts/rice-transition.sh"
 RECOLOR = paths.PLUGIN / "scripts/recolor-wallpapers"
 DOTIFY = paths.PLUGIN / "scripts/dotify.py"
 THUMB_DIR = paths.CACHE / "omarchy-customizer/thumbs"
@@ -339,11 +340,35 @@ def _now(fmt):
 # ── Пресеты ──
 
 def apply_preset(path, theme=None, wallpaper=None):
-    """theme / wallpaper — вместо темы и обоев пресета (вариант Dynamic райса: облик пресета, тема dynamic-<райс>)."""
+    """theme / wallpaper — вместо темы и обоев пресета (вариант Dynamic райса: облик пресета, тема dynamic-<райс>).
+    Смена райса — под переходом (scripts/rice-transition.sh: застывший кадр под размытием, потом тает)."""
     path = str(path)
     if not os.path.isfile(path):
         notify("-u", "critical", "Presets", t("Preset not found: %s", path))
         raise Exit(1)
+    covered = _transition_begin(path)
+    try:
+        _apply_preset(path, theme, wallpaper)
+    finally:
+        if covered:
+            spawn([str(RICE_TRANSITION), "reveal"])
+
+
+def _transition_begin(path):
+    """Переход — только когда меняется сам райс (не профиль внутри него) и он не выключен (presetTransition)."""
+    if not state.section_on(state.PRESET_CFG, "presetTransition") or not RICE_TRANSITION.is_file() or not fsutil.which("qs"):
+        return False
+    new = state.rice_of(os.path.basename(path)[:-5])
+    look = jsonio.read(LOOK_CFG)
+    old = look.get("rice", "") if isinstance(look, dict) else ""
+    if not new or new == old:
+        return False
+    label = next((r["name"] for r in state.rices() if r["id"] == new), new)
+    sh([str(RICE_TRANSITION), "begin", label])
+    return True
+
+
+def _apply_preset(path, theme=None, wallpaper=None):
     label = state.preset_name(path)
     is_backup = os.path.realpath(path) == os.path.realpath(state.LAST_PRESET)
     d = jsonio.read(path)

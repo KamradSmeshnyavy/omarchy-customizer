@@ -779,7 +779,7 @@
         {
           "key": "bootIntro",
           "type": "bool",
-          "label": "Modern: his boot animation when the session starts (rings, HYPRLAND, config lines typing) — once per login"
+          "label": "Boot animation once per login: Modern — his own (rings, HYPRLAND, config lines typing), other rices — the wallpaper fading in from black with the rice name"
         },
         {
           "key": "clipboardPanel",
@@ -1818,6 +1818,12 @@
       "items": [
         {
           "section": "Apply from presets"
+        },
+        {
+          "key": "presetTransition",
+          "type": "bool",
+          "default": true,
+          "label": "Presets: transition when switching rices (frozen frame under a blur with a loading bar)"
         },
         {
           "key": "presetTheme",
