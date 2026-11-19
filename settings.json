@@ -777,6 +777,11 @@
           "label": "Workspace overview — auto (by the rice) · grid (workspaces with live windows, drag to move) · starmap (3D star map: a galaxy of your workspaces and an uncharted belt, windows are planets; route or free flight) · voyage (the star map of elifouts as it is: take off from the land, fly freely with the mouse and WASD, land on a planet; Space's default)"
         },
         {
+          "key": "bootIntro",
+          "type": "bool",
+          "label": "Modern: his boot animation when the session starts (rings, HYPRLAND, config lines typing) — once per login"
+        },
+        {
           "key": "clipboardPanel",
           "type": "enum",
           "values": ["auto", "stock", "glyph"],
