@@ -124,6 +124,8 @@ Your settings stay in `~/.config/omarchy/customizer.json`, `~/.config/omarchy/cu
 | r | surprise me |
 | ? · q / Esc | all keys · close |
 
+Outside the overlay: `scripts/rice-profile.py next | prev | list` switches to the next / previous profile of the current rice (its variants and your saved profiles), e.g. bound to Super+Alt+P / Super+Alt+Shift+P.
+
 Everything also works with the mouse: drag sliders, click switches, segments and tiles. Keys work in any keyboard layout (they follow the physical key, like in the US layout); typing in search stays as typed.
 
 ## How your choices survive a reload
