@@ -860,7 +860,6 @@
   "Calendar: position": "Календарь: место",
   "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too)": "Плеер: вид — default (обложка и кнопки) · yami (широкая карточка с визуализатором, видна и без плеера)",
   "Rumda's launcher: a small window in the middle with square corners and a 2 px light accent border, «Search...», names only, the selected row filled with the accent, the pixel Dogica Pixel": "Лаунчер Rumda: маленькое окно по центру с квадратными углами и рамкой 2 px светлым акцентом, «Search...», одни названия, выбор залит акцентом, пиксельный Dogica Pixel",
-  "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile)": "Меню выключения — auto (по райсу) · edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice) · cassini (список шрифтом с засечками рядом со снимком Сатурна миссии Cassini, из surface-dots) · cozytile (пять крупных значков на фоне обоев, по мотивам Cozytile)",
   "Weather card (city — Dashboard: weather city)": "Карточка погоды (город — Дашборд: город для погоды)",
   "Weather: position": "Погода: позиция",
   "Border colour of the active window (default — from the theme)": "Цвет рамки активного окна (default — из темы)",
@@ -966,5 +965,6 @@
   "Terminal: position": "Терминал: положение",
   "Settings sheet skin (Super+Alt+I): auto — by the rice": "Скин панели настроек (Super+Alt+I): auto — по райсу",
   "Presets: transition when switching rices (frozen frame under a blur with a loading bar)": "Пресеты: переход при смене райса (застывший кадр под размытием с полосой загрузки)",
-  "Boot animation once per login: Modern — his own (rings, HYPRLAND, config lines typing), other rices — the wallpaper fading in from black with the rice name": "Заставка раз за вход: Modern — его собственная (кольца, HYPRLAND, печать конфигов), остальные райсы — обои из чёрного с именем райса"
+  "Boot animation once per login: Modern — his own (rings, HYPRLAND, config lines typing), other rices — the wallpaper fading in from black with the rice name": "Заставка раз за вход: Modern — его собственная (кольца, HYPRLAND, печать конфигов), остальные райсы — обои из чёрного с именем райса",
+  "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile) · dial (actions on a ring, hold to confirm the dangerous ones; Modern's default)": "Меню выключения — auto (по райсу) · edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice) · cassini (список шрифтом с засечками рядом со снимком Сатурна миссии Cassini, из surface-dots) · cozytile (пять крупных значков на фоне обоев, по мотивам Cozytile) · dial (действия по кругу, опасные — удержанием; у Modern по умолчанию)"
 }

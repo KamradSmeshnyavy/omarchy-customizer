@@ -750,8 +750,8 @@
         {
           "key": "powerStyle",
           "type": "enum",
-          "values": ["auto", "edge", "glyph", "cassini", "cozytile"],
-          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile)"
+          "values": ["auto", "edge", "glyph", "cassini", "cozytile", "dial"],
+          "label": "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile) · dial (actions on a ring, hold to confirm the dangerous ones; Modern's default)"
         },
         {
           "key": "starmapNav",
