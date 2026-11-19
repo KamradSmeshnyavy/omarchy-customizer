@@ -44,7 +44,7 @@
     "network": false,
     "networkAnchor": "top-left",
     "media": true,
-    "mediaAnchor": "bottom-left",
+    "mediaAnchor": "bottom-right",
     "dashStyle": "modern",
     "dashFollowBar": false,
     "dashAttach": "floating",

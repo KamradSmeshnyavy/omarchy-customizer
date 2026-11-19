@@ -340,7 +340,8 @@ styles["space"]["notifications"].update(notifyStyle="stock", notifyCards="space"
 styles["space"]["osd"].update(osdStyle="space")  # его OSD: квадратная плашка внизу по центру (SpaceOsd.qml)
 # Modern: пилюли бара с карточками, Home на весь экран, OSD и уведомления как у него
 styles["modern"]["barLayout"] = "modern"
-styles["modern"]["widgets"].update(dashStyle="modern", dashFollowBar=False, dashBackground="background")
+styles["modern"]["widgets"].update(dashStyle="modern", dashFollowBar=False, dashBackground="background",
+                                    mediaAnchor="bottom-right")  # снизу слева — уведомления
 styles["modern"]["osd"].update(osdStyle="modern")
 styles["modern"]["notifications"].update(notifyStyle="stock", notifyCards="modern", notifyRadius=14, notifyWidth=380,
                                           notifyCorner="bottom-left")
