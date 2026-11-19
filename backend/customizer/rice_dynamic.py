@@ -72,7 +72,7 @@ def base_preset(r) -> str:
     """Облик по умолчанию: dynamic.preset из rices.json, вариант с темой dynamic-<райс>, иначе первый."""
     if r.get("dynamic"):
         return r["dynamic"]
-    for v in r["variants"]:
+    for v in r["looks"]:
         if _preset_theme(v["preset"]) == f"dynamic-{r['id']}":
             return v["preset"]
     return r["variants"][0]["preset"] if r["variants"] else ""
@@ -80,11 +80,11 @@ def base_preset(r) -> str:
 
 def look_of(r, cfg) -> str:
     look = cfg.get("look") or ""
-    return look if any(v["preset"] == look for v in r["variants"]) else base_preset(r)
+    return look if any(v["preset"] == look for v in r["looks"]) else base_preset(r)
 
 
 def _variant_name(r, stem):
-    return next((v["name"] for v in r["variants"] if v["preset"] == stem), stem)
+    return next((v["name"] for v in r["looks"] if v["preset"] == stem), stem)
 
 
 def _rice(rid):
@@ -240,7 +240,7 @@ def plain_rows(cfg=None) -> list:
 def rows(r, cfg) -> list:
     rid, name = r["id"], r["name"]
     theme = f"dynamic-{rid}"
-    if any(_preset_theme(v["preset"]) == theme for v in r["variants"]):
+    if any(_preset_theme(v["preset"]) == theme for v in r["looks"]):
         return []  # вариант райса уже и есть dynamic (Vitreus · Стекло)
     on = state.theme_name() == theme
     src = os.path.basename(marker(rid).get("image", "")) or t("current wallpaper")
@@ -276,7 +276,7 @@ def tab() -> list:
     out.append(f"{t('Dynamic is on') if on else t('Turn Dynamic on')}\tdynamic:{rid}\t{tl.get('on', '')}\t{'1' if on else '0'}\t"
                + t("The look of %s with colours from the wallpaper (%s).", name, src) + NL + NL
                + t("Colours are taken from the wallpaper and follow it: pick another wallpaper of the rice and the theme recolours itself. Theme: %s.", theme))
-    if len(r["variants"]) > 1:  # облик выбирать есть из чего
+    if len(r["looks"]) > 1:  # облик выбирать есть из чего
         out.append(f"{t('look: %s', _variant_name(r, look))}\tdynamic-look:{rid}\t{tl.get('look', '')}\t0\t"
                    + t("The variant whose form the theme wears: its style, bar, fonts and corners, in the wallpaper's colours. Retro with the wallpaper's colours is still Retro, as in Vitreus."))
     note = t(dict(SCHEMES).get(scheme, scheme))
@@ -350,7 +350,7 @@ def apply(value):
             return
         if kind not in ("dynamic-scheme", "dynamic-mode"):
             raise Exit(1)
-        r = {"id": PLAIN, "name": "Dynamic", "variants": []}
+        r = {"id": PLAIN, "name": "Dynamic", "variants": [], "looks": []}
     else:
         r = _rice(rid)
     if not r:
@@ -364,7 +364,7 @@ def apply(value):
             raise Exit(1)
         apply_preset(str(state.PRESET_DIR / f"{look_of(r, cfg)}.json"), theme=theme, wallpaper=marker(rid).get("image"))
     elif kind == "dynamic-look":
-        rows_ = [x for v in r["variants"] for x in (v["preset"], v["name"])]
+        rows_ = [x for v in r["looks"] for x in (v["preset"], v["name"])]
         pick = _zenity(["--list", f"--title={t('Look of %s', r['name'])}", "--width=420", "--height=420",
                         "--print-column=1", "--hide-column=1", "--column=id", f"--column={t('Variant')}", *rows_])
         if not pick:

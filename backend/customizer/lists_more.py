@@ -61,7 +61,7 @@ def rices():
     dyn = rice_dynamic.info() if rice_dynamic.available() else {}
     # темы райсов — в отдельном репо omarchy-rices; нет их — сказать, как поставить (иначе вариант падает «не установлена»)
     from .apply_ops import theme_exists
-    themes_ = [jsonio.read(state.PRESET_DIR / f"{v['preset']}.json") for r in state.rices() for v in r["variants"]]
+    themes_ = [jsonio.read(state.PRESET_DIR / f"{v['preset']}.json") for r in state.rices() for v in r["looks"]]
     missing = [d.get("theme") for d in themes_ if isinstance(d, dict) and d.get("theme")
                and not str(d["theme"]).startswith("dynamic") and not theme_exists(d["theme"])]
     if missing:
@@ -76,7 +76,9 @@ def rices():
                 continue
             _name, note = state.meta(f)
             s = state.preset_summary(f)
-            out.append(f"{r['name']} · {v['name']}\t{f}\t{f}\t{_cur(v['preset'] == cur)}\t{r['note']}{NL}{NL}{note}{NL}{NL}{after}{NL}{NL}{s}\t{s}")
+            # одна запись на райс: она отмечена, если на столе любой его профиль
+            on = v['preset'] == cur or (len(r["variants"]) == 1 and any(x["preset"] == cur for x in r["looks"]))
+            out.append(f"{r['name']} · {v['name']}\t{f}\t{f}\t{_cur(on)}\t{r['note']}{NL}{NL}{note}{NL}{NL}{after}{NL}{NL}{s}\t{s}")
         if r["id"] in dyn:
             out += rice_dynamic.rows(r, dyn[r["id"]])
     return out

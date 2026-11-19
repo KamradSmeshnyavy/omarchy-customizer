@@ -258,7 +258,16 @@ def rices() -> list:
         for v in r.get("variants") or []:
             if isinstance(v, dict) and v.get("preset"):
                 vs.append({"preset": str(v["preset"]), "name": str(alt(v.get("name_" + lang), v.get("name"), v["preset"]))})
-        out.append({"id": str(r["id"]), "name": str(alt(r.get("name_" + lang), r.get("name"), r["id"])),
+        # looks — всё, во что райс одевается: его записи и профили (профили живут в панели настроек; Dynamic берёт
+        # облик из них)
+        looks = list(vs)
+        for stem in [str(x) for x in (r.get("profiles") or []) if x]:
+            if any(x["preset"] == stem for x in looks):
+                continue
+            pd = jsonio.read(PRESET_DIR / f"{stem}.json")
+            pd = pd if isinstance(pd, dict) else {}
+            looks.append({"preset": stem, "name": str(alt(pd.get("name_" + lang), pd.get("name"), stem))})
+        out.append({"id": str(r["id"]), "name": str(alt(r.get("name_" + lang), r.get("name"), r["id"])), "looks": looks,
                     "note": str(alt(r.get("note_" + lang), r.get("note"), "")), "after": str(r.get("after") or ""), "variants": vs,
                     "profiles": [str(x) for x in (r.get("profiles") or []) if x],
                     "dynamic": str((r.get("dynamic") or {}).get("preset") or "") if isinstance(r.get("dynamic"), dict) else "",

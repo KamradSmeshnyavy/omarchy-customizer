@@ -11,48 +11,23 @@
       "variants": [
         {
           "preset": "Liquid-Glass",
-          "name": "Glass",
-          "name_ru": "Стекло"
-        },
-        {
-          "preset": "Liquid-Retro",
-          "name": "Retro",
-          "name_ru": "Retro"
-        },
-        {
-          "preset": "Liquid-Cyber",
-          "name": "Cyber",
-          "name_ru": "Cyber"
-        },
-        {
-          "preset": "Liquid-Paper",
-          "name": "Paper",
-          "name_ru": "Бумага"
-        },
-        {
-          "preset": "Liquid-Doodle",
-          "name": "Doodle",
-          "name_ru": "Doodle"
-        },
-        {
-          "preset": "Liquid-Milkbox",
-          "name": "Milkbox",
-          "name_ru": "Milkbox"
-        },
-        {
-          "preset": "Liquid-Proxy",
-          "name": "Proxy",
-          "name_ru": "Proxy"
-        },
-        {
-          "preset": "Liquid-UwU",
-          "name": "UwU",
-          "name_ru": "UwU"
+          "name": "Vitreus",
+          "name_ru": "Vitreus"
         }
       ],
       "dynamic": {
         "wallhaven": "liquid abstract gradient"
-      }
+      },
+      "profiles": [
+        "Liquid-Glass",
+        "Liquid-Retro",
+        "Liquid-Cyber",
+        "Liquid-Paper",
+        "Liquid-Doodle",
+        "Liquid-Milkbox",
+        "Liquid-Proxy",
+        "Liquid-UwU"
+      ]
     },
     {
       "id": "glyph",
@@ -80,43 +55,22 @@
       "variants": [
         {
           "preset": "Yami-Blood",
-          "name": "Blood",
-          "name_ru": "Кровь"
-        },
-        {
-          "preset": "Yami-Ash",
-          "name": "Ash",
-          "name_ru": "Пепел"
-        },
-        {
-          "preset": "Yami-Sakura",
-          "name": "Sakura",
-          "name_ru": "Сакура"
-        },
-        {
-          "preset": "Yami-Amber",
-          "name": "Amber",
-          "name_ru": "Янтарь"
-        },
-        {
-          "preset": "Yami-Venom",
-          "name": "Venom",
-          "name_ru": "Яд"
-        },
-        {
-          "preset": "Yami-Ice",
-          "name": "Ice",
-          "name_ru": "Лёд"
-        },
-        {
-          "preset": "Yami-Dusk",
-          "name": "Dusk",
-          "name_ru": "Сумрак"
+          "name": "yami",
+          "name_ru": "yami"
         }
       ],
       "dynamic": {
         "wallhaven": "dark pixel art"
-      }
+      },
+      "profiles": [
+        "Yami-Blood",
+        "Yami-Ash",
+        "Yami-Sakura",
+        "Yami-Amber",
+        "Yami-Venom",
+        "Yami-Ice",
+        "Yami-Dusk"
+      ]
     },
     {
       "id": "rumda",
@@ -127,18 +81,17 @@
       "variants": [
         {
           "preset": "Rumda-Dark",
-          "name": "Dark",
-          "name_ru": "Тёмная"
-        },
-        {
-          "preset": "Rumda-Light",
-          "name": "Light",
-          "name_ru": "Светлая"
+          "name": "Rumda",
+          "name_ru": "Rumda"
         }
       ],
       "dynamic": {
         "wallhaven": "cozy illustration"
-      }
+      },
+      "profiles": [
+        "Rumda-Dark",
+        "Rumda-Light"
+      ]
     },
     {
       "id": "surface",
@@ -149,28 +102,19 @@
       "variants": [
         {
           "preset": "Surface-Dark",
-          "name": "Dark",
-          "name_ru": "Тёмная"
-        },
-        {
-          "preset": "Surface-Light",
-          "name": "Light",
-          "name_ru": "Светлая"
-        },
-        {
-          "preset": "Surface-Taskbar-Dark",
-          "name": "Taskbar dark",
-          "name_ru": "Таскбар тёмный"
-        },
-        {
-          "preset": "Surface-Taskbar-Light",
-          "name": "Taskbar light",
-          "name_ru": "Таскбар светлый"
+          "name": "surface",
+          "name_ru": "surface"
         }
       ],
       "dynamic": {
         "wallhaven": "minimalist landscape"
-      }
+      },
+      "profiles": [
+        "Surface-Dark",
+        "Surface-Light",
+        "Surface-Taskbar-Dark",
+        "Surface-Taskbar-Light"
+      ]
     },
     {
       "id": "cozytile",
@@ -181,33 +125,20 @@
       "variants": [
         {
           "preset": "Cozytile-Cozy",
-          "name": "Cozy",
-          "name_ru": "Cozy"
-        },
-        {
-          "preset": "Cozytile-Sakura",
-          "name": "Sakura",
-          "name_ru": "Сакура"
-        },
-        {
-          "preset": "Cozytile-Natura",
-          "name": "Natura",
-          "name_ru": "Natura"
-        },
-        {
-          "preset": "Cozytile-Everforest",
-          "name": "Everforest",
-          "name_ru": "Everforest"
-        },
-        {
-          "preset": "Cozytile-Carbon",
-          "name": "Carbon",
-          "name_ru": "Carbon"
+          "name": "Cozytile",
+          "name_ru": "Cozytile"
         }
       ],
       "dynamic": {
         "wallhaven": "cozy pixel art"
-      }
+      },
+      "profiles": [
+        "Cozytile-Cozy",
+        "Cozytile-Sakura",
+        "Cozytile-Natura",
+        "Cozytile-Everforest",
+        "Cozytile-Carbon"
+      ]
     },
     {
       "id": "bruteon",
@@ -218,18 +149,17 @@
       "variants": [
         {
           "preset": "Bruteon",
-          "name": "Light",
-          "name_ru": "Светлая"
-        },
-        {
-          "preset": "Bruteon-Dark",
-          "name": "Dark",
-          "name_ru": "Тёмная"
+          "name": "Bruteon",
+          "name_ru": "Bruteon"
         }
       ],
       "dynamic": {
         "wallhaven": "brutalist poster"
-      }
+      },
+      "profiles": [
+        "Bruteon",
+        "Bruteon-Dark"
+      ]
     },
     {
       "id": "unit3",
@@ -240,18 +170,17 @@
       "variants": [
         {
           "preset": "Unit-3",
-          "name": "Dark",
-          "name_ru": "Тёмная"
-        },
-        {
-          "preset": "Unit-3-Paper",
-          "name": "Paper",
-          "name_ru": "Бумага"
+          "name": "Unit-3",
+          "name_ru": "Unit-3"
         }
       ],
       "dynamic": {
         "wallhaven": "nier automata"
-      }
+      },
+      "profiles": [
+        "Unit-3",
+        "Unit-3-Paper"
+      ]
     },
     {
       "id": "space",
@@ -262,28 +191,19 @@
       "variants": [
         {
           "preset": "Space-Dusk",
-          "name": "Dusk",
-          "name_ru": "Сумерки"
-        },
-        {
-          "preset": "Space-Mars",
-          "name": "Mars",
-          "name_ru": "Марс"
-        },
-        {
-          "preset": "Space-Atlas",
-          "name": "Atlas",
-          "name_ru": "Атлас"
-        },
-        {
-          "preset": "Space-Frost",
-          "name": "Frost",
-          "name_ru": "Иней"
+          "name": "Space",
+          "name_ru": "Space"
         }
       ],
       "dynamic": {
         "wallhaven": "no man's sky"
-      }
+      },
+      "profiles": [
+        "Space-Dusk",
+        "Space-Mars",
+        "Space-Atlas",
+        "Space-Frost"
+      ]
     },
     {
       "id": "crt",
