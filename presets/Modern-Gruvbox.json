@@ -8,6 +8,7 @@
   "wallpaper": "~/.config/omarchy/themes/modern-gruvbox/backgrounds/0-original.jpg",
   "fonts": "modern",
   "barLayout": "modern-experimental",
+  "barSkin": "modern-attached",
   "opacity": "modern-gruvbox",
   "blur": "modern-gruvbox",
   "hyprGeometry": {

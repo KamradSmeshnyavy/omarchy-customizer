@@ -8,6 +8,7 @@
   "wallpaper": "~/.config/omarchy/themes/modern-neon/backgrounds/0-original.jpg",
   "fonts": "modern",
   "barLayout": "modern-attached",
+  "barSkin": "modern-attached",
   "opacity": "modern-neon",
   "blur": "modern-neon",
   "hyprGeometry": {

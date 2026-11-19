@@ -8,6 +8,7 @@
   "wallpaper": "~/.config/omarchy/themes/modern-zen/backgrounds/0-original.jpg",
   "fonts": "modern",
   "barLayout": "modern-full",
+  "barSkin": "modern-full",
   "opacity": "solid",
   "blur": "modern-zen",
   "hyprGeometry": {
