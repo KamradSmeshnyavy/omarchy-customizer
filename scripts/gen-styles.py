@@ -269,6 +269,16 @@ styles = {
         picker="space", dash_anim="fade", sound_pack="neon", window_sounds=False, fonts="space",
         attach="floating",
         look={"elevation": 0, "motion": 1.0, "material": "glass", "cornerScale": 0, "typeface": "shell"}),
+    "modern": plain(
+        "Modern", "Modern",
+        "After the Modern style of elifouts/Dotfiles (GPL-3.0): dark frosted glass over the wallpaper — colours from the wallpaper (pywal), windows without a border with corners of 10, see-through 0.78 / 0.7 over a blur and a soft shadow, bar pills that grow into cards on hover, a radial launcher, a home screen of cards, his fluid motion, Code New Roman.",
+        "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): тёмное матовое стекло поверх обоев — цвета из обоев (pywal), окна без рамки со скруглением 10, прозрачность 0.78 / 0.7 над размытием и мягкая тень, пилюли бара вырастают в карточки при наведении, радиальный лаунчер, домашний экран из карточек, его плавные анимации, Code New Roman.",
+        geom={"gapsIn": 2, "gapsOut": 10, "borderSize": 0, "rounding": 10, "shadow": True},
+        bar="modern", opacity="modern", blur="modern", anims="modern", lock="modern", launcher="modern",
+        radius=14, alpha=0.6, cards="modern", fx={"type": "fade", "duration": 500, "easing": "OutCubic"},
+        picker="modern", dash_anim="fade", sound_pack="neon", window_sounds=False, fonts="modern",
+        attach="floating",
+        look={"elevation": 1, "motion": 1.0, "material": "glass", "cornerScale": 1, "typeface": "shell"}),
     "crt": plain(
         "Retro CRT", "Retro CRT",
         "After the Retro style of elifouts/Dotfiles (GPL-3.0): an old green-screen terminal — the whole screen goes through its CRT shader (Super+Alt+C), wallpapers are traced or dithered into the tube colour, a thin text bar of readouts, uppercase Terminess, square windows with a 1 px border in the tube colour, no blur or shadows, its sharp snap motion.",
@@ -328,6 +338,12 @@ styles["space"]["widgets"].update(dashStyle="space", dashFollowBar=False, dashBa
 styles["space"]["notifications"].update(notifyStyle="stock", notifyCards="space", notifyRadius=0, notifyWidth=340,
                                          notifyCorner="bottom-left")
 styles["space"]["osd"].update(osdStyle="space")  # его OSD: квадратная плашка внизу по центру (SpaceOsd.qml)
+# Modern: пилюли бара с карточками, Home на весь экран, OSD и уведомления как у него
+styles["modern"]["barLayout"] = "modern"
+styles["modern"]["widgets"].update(dashStyle="modern", dashFollowBar=False, dashBackground="background")
+styles["modern"]["osd"].update(osdStyle="modern")
+styles["modern"]["notifications"].update(notifyStyle="stock", notifyCards="modern", notifyRadius=14, notifyWidth=380,
+                                          notifyCorner="bottom-left")
 # Retro CRT: текстовый бар, экран состояния, таблица окон, карточки уведомлений с двойной рамкой, шейдер трубки
 styles["crt"]["barLayout"] = "crt"
 styles["crt"]["osd"].update(osdStyle="crt")  # его OSD: плашка с клетками внизу по центру (CrtOsd.qml)
@@ -346,7 +362,7 @@ THEMES = {"dotmatrix": ("nothing-steel-mono", "nothing-ashlight-mono"), "glyph":
           "glass": ("catppuccin", "catppuccin-latte"), "liquid": ("catppuccin", "catppuccin-latte"), "fluent": ("tokyo-night", "rose-pine"),
           "paper": ("kanagawa", "kanagawa-lotus"), "neumorph": ("nord", "bliss"),
           "brutal": ("gruvbox-material", "flexoki-light"), "retro": ("ibm", "bliss"), "neon": ("cyber-aura", ""),
-          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper"), "space": ("space-dusk", ""), "crt": ("crt-phosphor", "")}
+          "yami": ("yami-ash", ""), "rumda": ("rumda-dark", "rumda-light"), "surface": ("surface-dark", "surface-light"), "cozytile": ("cozytile-cozy", "cozytile-carbon"), "bruteon": ("bruteon-dark", "bruteon-light"), "unit3": ("unit3-dark", "unit3-paper"), "space": ("space-dusk", ""), "crt": ("crt-phosphor", ""), "modern": ("modern-default", "")}
 for name, st in styles.items():
     dark, light = THEMES[name]
     st["theme"] = {"dark": dark, "light": light or dark}

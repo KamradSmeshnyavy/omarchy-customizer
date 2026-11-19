@@ -1,0 +1,11 @@
+{
+  "name": "Modern Default",
+  "name_ru": "Modern По умолчанию",
+  "note": "After the Modern style of elifouts/Dotfiles (GPL-3.0): his default profile — pywal colours of the dusk nature picture, the default bar.",
+  "note_ru": "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): его профиль по умолчанию — цвета pywal по вечерней природе, бар default.",
+  "style": "modern",
+  "theme": "modern-default",
+  "wallpaper": "~/.config/omarchy/themes/modern-default/backgrounds/0-original.jpg",
+  "fonts": "modern",
+  "barLayout": "modern"
+}

@@ -28,6 +28,9 @@ PRESETS=(
     "space   0.80 0.70"
     "crt-car 0.75 0.58"
     "crt-windows 0.73 0.73"
+    "modern  0.78 0.70"
+    "modern-gruvbox 0.90 0.80"
+    "modern-neon 0.88 0.75"
 )
 DEFAULT=subtle
 

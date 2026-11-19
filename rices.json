@@ -314,6 +314,30 @@
       ]
     },
     {
+      "id": "modern",
+      "name": "Modern",
+      "after": "elifouts/Dotfiles (GPL-3.0)",
+      "note": "Dark frosted glass over the wallpaper with colours from it (pywal): bar pills that grow into cards on hover (workspaces, music, Wi-Fi, sound, power), a radial launcher with apps, commands and keybinds, a home screen of cards, an island that unfolds from the bar on Super+M, a music card with a visualizer, his boot animation, fluid motion. Profiles (Default, Sun, Gruvbox, Neon, Zen) and colours are chosen in the settings sheet (Super+Alt+I).",
+      "note_ru": "Тёмное матовое стекло поверх обоев с цветами из них (pywal): пилюли бара вырастают в карточки при наведении (столы, музыка, Wi-Fi, звук, питание), радиальный лаунчер с приложениями, командами и сочетаниями клавиш, домашний экран из карточек, остров из бара на Super+M, карточка музыки с визуализатором, его заставка при входе, плавные анимации. Профили (Default, Sun, Gruvbox, Neon, Zen) и цвета выбираются в панели настроек (Super+Alt+I).",
+      "variants": [
+        {
+          "preset": "Modern-Default",
+          "name": "Modern",
+          "name_ru": "Modern"
+        }
+      ],
+      "profiles": [
+        "Modern-Default",
+        "Modern-Sun",
+        "Modern-Gruvbox",
+        "Modern-Neon",
+        "Modern-Zen"
+      ],
+      "dynamic": {
+        "wallhaven": "dark moody nature"
+      }
+    },
+    {
       "id": "dotmatrix",
       "name": "DOT-MATRIX",
       "after": "own",

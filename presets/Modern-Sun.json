@@ -1,0 +1,11 @@
+{
+  "name": "Modern Sun",
+  "name_ru": "Modern Солнце",
+  "note": "After the Modern style of elifouts/Dotfiles (GPL-3.0): his profile Sun — the same picture with the zen bar.",
+  "note_ru": "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): его профиль Sun — та же картинка с баром zen.",
+  "style": "modern",
+  "theme": "modern-sun",
+  "wallpaper": "~/.config/omarchy/themes/modern-sun/backgrounds/0-original.jpg",
+  "fonts": "modern",
+  "barLayout": "modern-zen"
+}

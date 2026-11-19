@@ -1,0 +1,121 @@
+{
+  "name": "Modern",
+  "name_ru": "Modern",
+  "note": "After the Modern style of elifouts/Dotfiles (GPL-3.0): dark frosted glass over the wallpaper — colours from the wallpaper (pywal), windows without a border with corners of 10, see-through 0.78 / 0.7 over a blur and a soft shadow, bar pills that grow into cards on hover, a radial launcher, a home screen of cards, his fluid motion, Code New Roman.",
+  "note_ru": "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): тёмное матовое стекло поверх обоев — цвета из обоев (pywal), окна без рамки со скруглением 10, прозрачность 0.78 / 0.7 над размытием и мягкая тень, пилюли бара вырастают в карточки при наведении, радиальный лаунчер, домашний экран из карточек, его плавные анимации, Code New Roman.",
+  "anims": "modern",
+  "opacity": "modern",
+  "blur": "modern",
+  "shader": "off",
+  "hyprGeometry": {
+    "gapsIn": 2,
+    "gapsOut": 10,
+    "borderSize": 0,
+    "rounding": 10,
+    "shadow": true,
+    "noGaps": false
+  },
+  "barSkin": "modern",
+  "barLayout": "modern",
+  "barTransparent": false,
+  "lock": {
+    "design": "modern",
+    "wallpaperBlur": 0,
+    "wallpaperDim": 0.35
+  },
+  "launcher": {
+    "skin": "modern",
+    "backdrop": 0.6
+  },
+  "wallpaperFx": {
+    "type": "fade",
+    "duration": 500,
+    "easing": "OutCubic"
+  },
+  "imagePicker": {
+    "style": "modern",
+    "cardRadius": 14,
+    "selectedBorder": 1,
+    "dim": 0.5
+  },
+  "widgets": {
+    "widgetStyle": "style",
+    "clockStyle": "big",
+    "network": false,
+    "networkAnchor": "top-left",
+    "media": true,
+    "mediaAnchor": "bottom-left",
+    "dashStyle": "modern",
+    "dashFollowBar": false,
+    "dashAttach": "floating",
+    "dashBackground": "background",
+    "dashAlpha": 0.6,
+    "dashRadius": 14,
+    "dashBorder": true,
+    "dashAnimation": "fade",
+    "dashDuration": 350,
+    "home": false,
+    "deck": false,
+    "homeLayout": "auto",
+    "homeCards": "auto",
+    "homeHideWidgets": true,
+    "deckLayout": "auto",
+    "deckCards": "auto",
+    "deckTrigger": "dwell",
+    "settingsPanel": "auto",
+    "powerStyle": "auto",
+    "clipboardPanel": "auto",
+    "term": false,
+    "termAnchor": "top-left",
+    "sysinfoStyle": "rings",
+    "mediaStyle": "default",
+    "weather": false,
+    "overviewStyle": "auto"
+  },
+  "osd": {
+    "osdStyle": "modern",
+    "osdFollowBar": true,
+    "osdAttach": "floating",
+    "osdBackground": "background",
+    "osdAlpha": 0.6,
+    "osdRadius": 14,
+    "osdSide": "right",
+    "osdAlign": "center"
+  },
+  "notifications": {
+    "notifyStyle": "stock",
+    "notifyFollowBar": true,
+    "notifyAttach": "floating",
+    "notifyBackground": "background",
+    "notifyAlpha": 0.6,
+    "notifyRadius": 14,
+    "notifyCards": "modern",
+    "notifyCorner": "bottom-left",
+    "notifyWidth": 380
+  },
+  "sounds": {
+    "soundPack": "neon",
+    "windowSounds": false
+  },
+  "glyph": {
+    "glyphEnabled": false,
+    "glyphColor": "foreground",
+    "glyphCriticalColor": "urgent",
+    "glyphDuration": 1100,
+    "glyphThickness": 2.5,
+    "glyphInsetMode": "auto"
+  },
+  "fonts": "modern",
+  "look": {
+    "texture": "",
+    "elevation": 1,
+    "motion": 1.0,
+    "material": "glass",
+    "cornerScale": 1,
+    "typeface": "shell"
+  },
+  "theme": {
+    "dark": "modern-default",
+    "light": "modern-default"
+  }
+}

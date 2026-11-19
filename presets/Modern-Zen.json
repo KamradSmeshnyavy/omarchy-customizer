@@ -1,0 +1,20 @@
+{
+  "name": "Modern Zen",
+  "name_ru": "Modern Дзен",
+  "note": "After the Modern style of elifouts/Dotfiles (GPL-3.0): his profile Zen — pywal colours of a misty picture, the full bar, solid windows with almost no gaps over a heavy blur.",
+  "note_ru": "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): его профиль Zen — цвета pywal туманной картинки, бар full, непрозрачные окна почти без отступов над сильным размытием.",
+  "style": "modern",
+  "theme": "modern-zen",
+  "wallpaper": "~/.config/omarchy/themes/modern-zen/backgrounds/0-original.jpg",
+  "fonts": "modern",
+  "barLayout": "modern-full",
+  "opacity": "solid",
+  "blur": "modern-zen",
+  "hyprGeometry": {
+    "gapsIn": 1,
+    "gapsOut": 2,
+    "borderSize": 0,
+    "rounding": 0,
+    "shadow": false
+  }
+}

@@ -30,6 +30,10 @@ PRESETS=(
     "space    4  2 0.17 0.000"
     "crt      8  1 0.17 0.012"
     "crt-windows 12 4 0.17 0.012"
+    "modern   3  5 0.17 0.012"
+    "modern-gruvbox 3 4 0.20 0.012"
+    "modern-neon 6 4 0.50 0.012"
+    "modern-zen 20 8 0.20 0.045"
 )
 DEFAULT=medium
 

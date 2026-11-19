@@ -1,0 +1,20 @@
+{
+  "name": "Modern Neon",
+  "name_ru": "Modern Неон",
+  "note": "After the Modern style of elifouts/Dotfiles (GPL-3.0): his profile Neon — pywal colours of an industrial night picture, the attached bar, square windows with a 2 px border.",
+  "note_ru": "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): его профиль Neon — цвета pywal ночной индустриальной картинки, бар attached, квадратные окна с рамкой 2 px.",
+  "style": "modern",
+  "theme": "modern-neon",
+  "wallpaper": "~/.config/omarchy/themes/modern-neon/backgrounds/0-original.jpg",
+  "fonts": "modern",
+  "barLayout": "modern-attached",
+  "opacity": "modern-neon",
+  "blur": "modern-neon",
+  "hyprGeometry": {
+    "gapsIn": 4,
+    "gapsOut": 8,
+    "borderSize": 2,
+    "rounding": 0,
+    "shadow": true
+  }
+}

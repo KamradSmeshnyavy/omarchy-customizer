@@ -1,0 +1,20 @@
+{
+  "name": "Modern Gruvbox",
+  "name_ru": "Modern Gruvbox",
+  "note": "After the Modern style of elifouts/Dotfiles (GPL-3.0): his profile Gruvbox — the gruvbox scheme, the experimental bar, corners of 5, gaps 6 / 0.",
+  "note_ru": "По мотивам стиля Modern из elifouts/Dotfiles (GPL-3.0): его профиль Gruvbox — схема gruvbox, бар experimental, скругление 5, отступы 6 / 0.",
+  "style": "modern",
+  "theme": "modern-gruvbox",
+  "wallpaper": "~/.config/omarchy/themes/modern-gruvbox/backgrounds/0-original.jpg",
+  "fonts": "modern",
+  "barLayout": "modern-experimental",
+  "opacity": "modern-gruvbox",
+  "blur": "modern-gruvbox",
+  "hyprGeometry": {
+    "gapsIn": 6,
+    "gapsOut": 0,
+    "borderSize": 0,
+    "rounding": 5,
+    "shadow": true
+  }
+}
