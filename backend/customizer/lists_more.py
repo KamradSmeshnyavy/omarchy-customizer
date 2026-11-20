@@ -702,7 +702,8 @@ def sddm_lock_ids():
 def _skin_desc(sk: str) -> str:
     fixed = {"dotmatrix": "DOT-MATRIX hardware bump with concave fillets, monochrome app grid, > actions and = LED calculator",
              "sketchbook": "Sketchbook page: polaroid cards on a ruled sheet, pencil circle, tape and a sticky note",
-             "liquid": "Liquid glass card after Vitreus: a big clock, a search pill, quick-mode hints, rows with an icon, name and description; the card is blurred by Hyprland",
+             "liquid": "Liquid glass card after Vitreus: drops out of the top frame edge and settles above the middle, as in his video; a big clock, a search pill, quick-mode hints, rows with an icon, name and description",
+             "liquid-bar": "The same Vitreus card, but it flows out of the menu button on the bar as one piece with it",
              "yami": "yami's launcher: a graphite window with a one-pixel border and a hard shadow, APPS / CLIPBOARD tabs, a field with a block cursor and rows of name and description in the pixel Tiny5",
              "rumda": "Rumda's launcher: a small window in the middle with square corners and a 2 px light accent border, «Search...», names only, the selected row filled with the accent, the pixel Dogica Pixel",
              "glyph": "glyph-rice's launcher: a panel in the middle, a search pill with a red caret and mode chips, a grid of circles with dotted icons; charms and the calculator in the same look"}

@@ -8,7 +8,7 @@
   "wallpaper": "~/.config/omarchy/themes/vitreus-uwu/backgrounds/0-original.jpg",
   "fonts": "vitreus-uwu",
   "base": "uwu",
-  "barSkin": "vitreus-frame",
+  "barSkin": "vitreus-frame-uwu",
   "barLayout": "vitreus-frame-left",
   "hyprGeometry": {
     "gapsIn": 8,

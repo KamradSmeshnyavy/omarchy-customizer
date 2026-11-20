@@ -376,7 +376,23 @@ def _apply_preset(path, theme=None, wallpaper=None):
     theme = theme or jq_str(alt(d.get("theme"), ""))
     # тема райса из обоев (omarchy-rice-dynamic): собрать до применения — её может ещё не быть, а пул обоев мог вырасти
     if theme.startswith("dynamic-") and not wallpaper and fsutil.which("omarchy-rice-dynamic"):
-        if sh(["omarchy-rice-dynamic", "build", theme[8:], "--no-apply"])[0] == 0:
+        # профиль, чья тема — dynamic самого райса (Vitreus Glass): разовая сборка в его облике и его режиме
+        # (пресет "dynamic": {engine, scheme, mode}; облик — сам пресет) и на его обоях, а не в настройках вкладки Dynamic,
+        # оставшихся от прошлого профиля (иначе Glass собирался «в облике Paper»)
+        cmd = ["omarchy-rice-dynamic", "build", theme[8:]]
+        dyn = d.get("dynamic") if isinstance(d.get("dynamic"), dict) else None
+        if dyn is not None:
+            pw = os.path.expanduser(jq_str(d.get("wallpaper") or ""))
+            if pw and os.path.isfile(pw):
+                cmd.append(os.path.realpath(pw))
+            flags = ["--look", os.path.splitext(os.path.basename(path))[0]]
+            for k in ("engine", "scheme", "mode"):
+                if dyn.get(k):
+                    flags += [f"--{k}", str(dyn[k])]
+            # и запомнить их во вкладке Dynamic: хук смены обоев пересобирает тему по сохранённым настройкам
+            sh(["omarchy-rice-dynamic", "set", theme[8:], "--no-apply"] + flags)
+            cmd += flags
+        if sh(cmd + ["--no-apply"])[0] == 0:
             try:
                 wallpaper = json.loads((P / "themes" / theme / ".omarchy-wallpaper-theme").read_text()).get("image")
             except (OSError, ValueError):
