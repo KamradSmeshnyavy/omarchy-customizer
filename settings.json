@@ -1731,6 +1731,15 @@
           "type": "color",
           "default": "default",
           "label": "Hard shadow colour (default — the text colour)"
+        },
+        {
+          "section": "How panels appear"
+        },
+        {
+          "key": "panelAppear",
+          "type": "enum",
+          "values": ["auto", "drip", "classic"],
+          "label": "Panels appear: auto (as the style sets it) · drip (flow out of the bar like a drop, the bar ripples — Vitreus) · classic"
         }
       ]
     },

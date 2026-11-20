@@ -969,5 +969,7 @@
   "Power menu — auto (by the rice) · edge (strip at the screen edge) · glyph (column of Doto words and an uptime ring, from glyph-rice) · cassini (serif list next to a Cassini photo of Saturn, from surface-dots) · cozytile (five big icons on the wallpaper, after Cozytile) · dial (actions on a ring, hold to confirm the dangerous ones; Modern's default)": "Меню выключения — auto (по райсу) · edge (полоса у края экрана) · glyph (столбец слов Doto и кольцо аптайма, из glyph-rice) · cassini (список шрифтом с засечками рядом со снимком Сатурна миссии Cassini, из surface-dots) · cozytile (пять крупных значков на фоне обоев, по мотивам Cozytile) · dial (действия по кругу, опасные — удержанием; у Modern по умолчанию)",
   "This rice has no other profiles": "У этого райса нет других профилей",
   "No rice is active": "Райс не выбран",
-  "Profile": "Профиль"
+  "Profile": "Профиль",
+  "How panels appear": "Как появляются панели",
+  "Panels appear: auto (as the style sets it) · drip (flow out of the bar like a drop, the bar ripples — Vitreus) · classic": "Появление панелей: auto (как задумано стилем) · drip (вытекают из бара каплей, бар колышется — Vitreus) · classic"
 }
