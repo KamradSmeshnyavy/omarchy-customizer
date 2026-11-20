@@ -73,7 +73,7 @@
     "overviewStyle": "auto"
   },
   "osd": {
-    "osdStyle": "edge",
+    "osdStyle": "vitreus",
     "osdFollowBar": true,
     "osdAttach": "auto",
     "osdBackground": "background",

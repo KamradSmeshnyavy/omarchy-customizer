@@ -971,5 +971,6 @@
   "No rice is active": "Райс не выбран",
   "Profile": "Профиль",
   "How panels appear": "Как появляются панели",
-  "Panels appear: auto (as the style sets it) · drip (flow out of the bar like a drop, the bar ripples — Vitreus) · classic": "Появление панелей: auto (как задумано стилем) · drip (вытекают из бара каплей, бар колышется — Vitreus) · classic"
+  "Panels appear: auto (as the style sets it) · drip (flow out of the bar like a drop, the bar ripples — Vitreus) · classic": "Появление панелей: auto (как задумано стилем) · drip (вытекают из бара каплей, бар колышется — Vitreus) · classic",
+  "OSD: style (edge — slides out of the screen edge / frame · space — square HUD plate at the bottom, from the Space rice · vitreus — a drop out of the right frame edge with a pencil slider)": "OSD: стиль (edge — выезжает из края экрана / рамки · space — квадратная плашка HUD внизу, из райса Space · vitreus — капля из правой кромки рамки с карандашной шкалой)"
 }
