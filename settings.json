@@ -933,8 +933,8 @@
         {
           "key": "mediaStyle",
           "type": "enum",
-          "values": ["default", "yami", "bruteon"],
-          "label": "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too)"
+          "values": ["default", "yami", "bruteon", "vitreus"],
+          "label": "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too) · vitreus (Vitreus's card: cover, visualizer bars, seek bar; a grip and a pin when it floats)"
         },
         {
           "key": "mediaAnchor",

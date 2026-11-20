@@ -972,5 +972,6 @@
   "Profile": "Профиль",
   "How panels appear": "Как появляются панели",
   "Panels appear: auto (as the style sets it) · drip (flow out of the bar like a drop, the bar ripples — Vitreus) · classic": "Появление панелей: auto (как задумано стилем) · drip (вытекают из бара каплей, бар колышется — Vitreus) · classic",
-  "OSD: style (edge — slides out of the screen edge / frame · space — square HUD plate at the bottom, from the Space rice · vitreus — a drop out of the right frame edge with a pencil slider)": "OSD: стиль (edge — выезжает из края экрана / рамки · space — квадратная плашка HUD внизу, из райса Space · vitreus — капля из правой кромки рамки с карандашной шкалой)"
+  "OSD: style (edge — slides out of the screen edge / frame · space — square HUD plate at the bottom, from the Space rice · vitreus — a drop out of the right frame edge with a pencil slider)": "OSD: стиль (edge — выезжает из края экрана / рамки · space — квадратная плашка HUD внизу, из райса Space · vitreus — капля из правой кромки рамки с карандашной шкалой)",
+  "Player: look — default (cover and buttons) · yami (a wide card with the visualizer, shown without a player too) · vitreus (Vitreus's card: cover, visualizer bars, seek bar; a grip and a pin when it floats)": "Плеер: вид — default (обложка и кнопки) · yami (широкая карточка с визуализатором, видна и без плеера) · vitreus (карточка Vitreus: обложка, полосы визуализатора, шкала; плавающая — с ручкой и булавкой)"
 }

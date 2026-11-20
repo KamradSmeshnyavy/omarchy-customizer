@@ -40,7 +40,7 @@
   },
   "widgets": {
     "widgetStyle": "style",
-    "clockStyle": "big",
+    "clockStyle": "vitreus",
     "network": false,
     "networkAnchor": "top-left",
     "media": true,
@@ -67,8 +67,8 @@
     "clipboardPanel": "auto",
     "term": false,
     "termAnchor": "top-left",
-    "sysinfoStyle": "rings",
-    "mediaStyle": "default",
+    "sysinfoStyle": "vitreus",
+    "mediaStyle": "vitreus",
     "weather": false,
     "overviewStyle": "auto"
   },

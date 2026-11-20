@@ -348,7 +348,8 @@ styles["modern"]["notifications"].update(notifyStyle="stock", notifyCards="moder
 # Retro CRT: текстовый бар, экран состояния, таблица окон, карточки уведомлений с двойной рамкой, шейдер трубки
 styles["crt"]["barLayout"] = "crt"
 styles["crt"]["osd"].update(osdStyle="crt")  # его OSD: плашка с клетками внизу по центру (CrtOsd.qml)
-styles["liquid"]["osd"].update(osdStyle="vitreus")  # его OSD: капля из правой кромки с карандашной шкалой (VitreusOsd.qml)
+styles["liquid"]["osd"].update(osdStyle="vitreus")
+styles["liquid"]["widgets"].update(mediaStyle="vitreus", clockStyle="vitreus", sysinfoStyle="vitreus")  # его плеер, часы «2/42» и кольца  # его OSD: капля из правой кромки с карандашной шкалой (VitreusOsd.qml)
 styles["crt"]["shader"] = "retro-crt"
 styles["crt"]["widgets"].update(dashStyle="crt", dashFollowBar=False, dashBackground="background", term=True, termAnchor="top-left")
 styles["crt"]["notifications"].update(notifyStyle="stock", notifyCards="crt", notifyRadius=0, notifyWidth=380,
