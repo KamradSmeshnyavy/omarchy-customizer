@@ -7,6 +7,7 @@
   "theme": "dynamic-vitreus",
   "fonts": "vitreus-glass",
   "base": "glass",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-cyber/backgrounds/0r-wallhaven-6oqzgq.jpg",
   "barSkin": "vitreus-frame",
   "barLayout": "vitreus-frame-left",
   "hyprGeometry": {

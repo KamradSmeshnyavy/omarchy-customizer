@@ -5,7 +5,7 @@
   "note_ru": "По мотивам темы Vitreus Paper (MIT): стиль «Жидкое стекло» на vitreus-paper. Скрапбук: тёплая бумага с выцветшим синим, заголовки Fuzzy Bubbles.",
   "style": "liquid",
   "theme": "vitreus-paper",
-  "wallpaper": "~/.config/omarchy/themes/vitreus-paper/backgrounds/1-liquid.png",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-paper/backgrounds/0-original.jpg",
   "fonts": "vitreus-paper",
   "base": "paper",
   "barSkin": "vitreus-frame-plastic",

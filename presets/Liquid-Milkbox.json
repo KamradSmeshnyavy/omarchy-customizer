@@ -5,7 +5,7 @@
   "note_ru": "По мотивам темы Vitreus Milkbox (MIT): стиль «Жидкое стекло» на vitreus-milk. Мягкий: молочный серо-голубой с барвинком, заголовки Zen Kurenaido.",
   "style": "liquid",
   "theme": "vitreus-milk",
-  "wallpaper": "~/.config/omarchy/themes/vitreus-milk/backgrounds/1-liquid.png",
+  "wallpaper": "~/.config/omarchy/themes/vitreus-milk/backgrounds/0-original.jpg",
   "fonts": "vitreus-milk",
   "base": "milk",
   "barSkin": "vitreus-frame-plastic",
