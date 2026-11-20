@@ -8,7 +8,7 @@
   "wallpaper": "~/.config/omarchy/themes/vitreus-cyber/backgrounds/0-original.jpg",
   "fonts": "vitreus-cyber",
   "base": "cyber",
-  "barSkin": "vitreus-frame",
+  "barSkin": "vitreus-frame-cyber",
   "barLayout": "vitreus-frame-left",
   "hyprGeometry": {
     "gapsIn": 8,
